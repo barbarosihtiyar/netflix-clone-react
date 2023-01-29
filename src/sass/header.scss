@@ -1,0 +1,26 @@
+.headerContainer{
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    z-index: 99;
+    .headerWrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        padding-right: 55px;
+        padding-left: 55px;
+        .logo-links{
+            img{
+                width: 100px;
+                height: 25px;
+                background-color: transparent;
+                }
+        }
+        .search-user{
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

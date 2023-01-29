@@ -9,13 +9,13 @@
   */
   * {
     margin: 0;
-    background-color: #111;
   }
   /*
     3. Allow percentage-based heights in the application
   */
   html, body {
     height: 100%;
+    background-color: #111;
   }
   /*
     Typographic tweaks!

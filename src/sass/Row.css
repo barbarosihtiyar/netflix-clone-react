@@ -1,12 +1,16 @@
 .moviesContainer {
   display: flex;
   flex-direction: column;
-  padding-left: 5px;
+  padding-left: 50px;
 }
 .moviesContainer h3 {
-  color: #fff;
-  padding: 15px 0;
+  color: #e5e5e5;
+  padding-top: 40px;
+  padding-bottom: 5px;
   padding-left: 3px;
+}
+.moviesContainer h3:nth-child(1) {
+  padding-top: 0;
 }
 .moviesContainer .moviesWrapper {
   display: flex;
@@ -14,12 +18,14 @@
   overflow-x: scroll;
 }
 .moviesContainer .moviesWrapper .movie {
+  cursor: pointer;
   width: 100%;
   padding: 4px;
 }
 .moviesContainer .moviesWrapper .movie img {
-  max-height: 250px;
+  max-height: 300px;
   max-width: 250px;
+  border-radius: 5px;
 }
 .moviesContainer .moviesWrapper .movie :hover {
   scale: 1.08;

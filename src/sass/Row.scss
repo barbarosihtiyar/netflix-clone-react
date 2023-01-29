@@ -1,11 +1,16 @@
 .moviesContainer {
     display: flex;
     flex-direction: column;
-    padding-left: 5px;
+    padding-left: 50px;
     h3 {
-        color: #fff;
-        padding: 15px 0;
+        color: #e5e5e5;
+        padding-top: 40px;
+        padding-bottom: 5px;
         padding-left: 3px;
+
+        &:nth-child(1){
+            padding-top: 0;
+        }
     }
 
     .moviesWrapper {
@@ -14,11 +19,13 @@
         overflow-x: scroll;
 
         .movie {
+            cursor: pointer;
             width: 100%;
             padding: 4px;
             img {
-                max-height: 250px;
+                max-height: 300px;
                 max-width: 250px;
+                border-radius: 5px;
             }
 
             :hover {
