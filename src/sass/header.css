@@ -9,16 +9,100 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   padding-right: 55px;
   padding-left: 55px;
 }
+.headerContainer .headerWrapper .logo-links {
+  display: flex;
+  align-items: center;
+}
 .headerContainer .headerWrapper .logo-links img {
   width: 100px;
-  height: 25px;
+  height: 35px;
   background-color: transparent;
+  cursor: pointer;
+}
+.headerContainer .headerWrapper .logo-links .links {
+  color: #fff;
+}
+.headerContainer .headerWrapper .logo-links .links ul {
+  list-style-type: none;
+  display: flex;
+  gap: 5%;
+}
+.headerContainer .headerWrapper .logo-links .links ul li {
+  cursor: pointer;
+}
+.headerContainer .headerWrapper .logo-links .links ul li:nth-child(4) {
+  width: 170px;
+}
+.headerContainer .headerWrapper .logo-links .links ul li:hover {
+  opacity: 0.8;
 }
 .headerContainer .headerWrapper .search-user {
-  width: 32px;
-  height: 32px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: 40px;
+}
+.headerContainer .headerWrapper .search-user .avatar-avatarOptions {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.headerContainer .headerWrapper .search-user .avatar-avatarOptions img {
+  width: 33px;
+  height: 33px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.headerContainer .headerWrapper .search-user .avatar-avatarOptions svg {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.headerContainer .headerWrapper .search-user .avatar-avatarOptions:hover svg {
+  transform: rotate(180deg);
+}
+.headerContainer .headerWrapper .search-user .buttonInput {
+  display: flex;
+  padding: 3px;
+}
+.headerContainer .headerWrapper .search-user .buttonInput button {
+  width: 40px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.headerContainer .headerWrapper .search-user .buttonInput button svg {
+  color: #fff;
+  font-size: 30px;
+  transform: rotate(-15deg);
+}
+.headerContainer .headerWrapper .search-user .buttonInput input {
+  border: none;
+  outline: none;
+  background-color: #111;
+  width: 0;
+  visibility: hidden;
+  transition: width 0.61s;
+  color: #fff;
+}
+
+.black {
+  background-color: #111;
+}
+
+.buttonInputOpen {
+  border: 1px solid #fff;
+}
+
+.inputSearchOpen {
+  width: 250px !important;
+  visibility: visible !important;
+}
+
+.buttonSearch {
+  font-size: 30px !important;
 }/*# sourceMappingURL=header.css.map */

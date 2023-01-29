@@ -9,9 +9,6 @@
   padding-bottom: 5px;
   padding-left: 3px;
 }
-.moviesContainer h3:nth-child(1) {
-  padding-top: 0;
-}
 .moviesContainer .moviesWrapper {
   display: flex;
   overflow-y: hidden;

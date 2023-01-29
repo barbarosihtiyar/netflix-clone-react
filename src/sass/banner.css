@@ -1,7 +1,48 @@
 .bannerContainer {
   position: relative;
+  margin-bottom: -20px;
 }
 .bannerContainer .bannerWrapper .bannerImage img {
   height: 47.25vw;
   width: 100%;
+}
+.bannerContainer .bannerWrapper .bannerImage .bannerDesc {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: #fff;
+  bottom: 20%;
+  left: 3%;
+}
+.bannerContainer .bannerWrapper .bannerImage .bannerDesc h1 {
+  font-size: 50px;
+}
+.bannerContainer .bannerWrapper .bannerImage .bannerDesc p {
+  width: 35%;
+  margin-bottom: 2%;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+.bannerContainer .bannerWrapper .bannerImage .bannerDesc .bannerIcons {
+  cursor: pointer;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  font-size: 25px;
+  width: 150px;
+  background-color: #fff;
+  justify-content: center;
+  border-radius: 5px;
+}
+.bannerContainer .bannerWrapper .bannerImage .bannerDesc .bannerIcons:hover {
+  opacity: 0.8;
+}
+.bannerContainer .bannerWrapper .bannerImage .bannerDesc .bannerIcons span {
+  font-size: 20px;
+  color: #111;
+}
+.bannerContainer .bannerWrapper .bannerImage .bannerDesc .bannerIcons svg {
+  color: #111;
 }/*# sourceMappingURL=banner.css.map */

@@ -8,19 +8,104 @@
         justify-content: space-between;
         align-items: center;
         padding-top: 20px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
         padding-right: 55px;
         padding-left: 55px;
         .logo-links{
+            display: flex;
+            align-items: center;
             img{
                 width: 100px;
-                height: 25px;
+                height: 35px;
                 background-color: transparent;
+                cursor: pointer;
+                }
+                .links{
+                    color: #fff;
+                    ul{
+                        list-style-type: none;
+                        display: flex;
+                        gap: 5%;
+                        li{
+                            cursor: pointer;
+                            &:nth-child(4){
+                                width: 170px;
+                            }
+                            &:hover{
+                                opacity: .8;
+                            }
+                        }
+                    }
                 }
         }
         .search-user{
-            width: 32px;
-            height: 32px;
+            display: flex;
+            gap:10px;
+            align-items: center;
+            height: 40px;
+            .avatar-avatarOptions{
+                display: flex;
+                align-items: center;
+                gap: 3px;
+                img{
+                    width: 33px;
+                    height: 33px;    
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+                svg{
+                    color: #fff;
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+                &:hover{
+                    svg{
+                        transform: rotate(180deg);
+                    }
+                }
+                }
+            .buttonInput{
+                display: flex;
+                padding: 3px;
+
+                button{
+                    width: 40px;
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                    svg{
+                        color: #fff;
+                        font-size: 30px;
+                        transform: rotate(-15deg);
+                    }
+                }
+                input{
+                    border: none;
+                    outline: none;
+                    background-color: #111;
+                    width: 0;
+                    visibility: hidden;
+                    transition: width .61s;
+                    color: #fff;
+                }
+                }
         }
     }
+}
+
+.black{
+    background-color: #111;
+}
+
+.buttonInputOpen{
+    border: 1px solid #fff;
+}
+
+.inputSearchOpen{
+    width: 250px !important;
+    visibility: visible !important;
+}
+
+.buttonSearch{
+    font-size: 30px !important;
 }
