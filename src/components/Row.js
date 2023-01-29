@@ -1,7 +1,7 @@
 import React from 'react'
-import axios from './axios'
+import axios from '../axios'
 import { useState,useEffect } from 'react';
-import "./sass/Row.css";
+import "../sass/Row.css";
 
 function Row({title,fetchURL}) {
   const [movies,setMovies] = useState([]);
@@ -15,7 +15,6 @@ function Row({title,fetchURL}) {
 
   },[fetchURL])
   const base_URL = "https://image.tmdb.org/t/p/original";
-  console.log(movies);
   
   return (
       <div className="moviesContainer">

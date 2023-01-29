@@ -1,12 +1,14 @@
 import requests from "./requests";
-import Row from "./Row";
+import Row from "./components/Row";
 import "./reset.css"
+import Header from "./components/Header";
+import Banner from "./components/Banner";
 
 function App() {
   return (
     <div className="App">
-    NETFLİX APP YOU ARE WELCOME
-
+    <Header />
+    <Banner />
     <Row title={"Trending Now"} fetchURL={requests.fetchTrending} />
     <Row title={"Netflix Original"} fetchURL={requests.fetchNetflixOriginals} />
     <Row title={"Top Rated"} fetchURL={requests.fetchTopRated} />
