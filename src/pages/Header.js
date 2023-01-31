@@ -7,7 +7,6 @@ import { BiSearchAlt2 } from "react-icons/bi";
 import { BiCaretDown } from "react-icons/bi";
 
 
-
 function Header() {
   const [bg,setBg] = useState(false);
   const [check,setCheck] = useState(false);

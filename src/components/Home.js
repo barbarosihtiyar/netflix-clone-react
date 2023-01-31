@@ -1,7 +1,7 @@
 import React from 'react'
-import Banner from '../components/Banner'
-import Header from '../components/Header'
-import Row from '../components/Row'
+import Banner from '../pages/Banner'
+import Header from '../pages/Header'
+import Row from '../pages/Row'
 import requests from "../requests";
 
 function Home() {
