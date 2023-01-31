@@ -13,7 +13,8 @@
     .moviesWrapper {
         display: flex;
         overflow-y: hidden;
-        overflow-x: scroll;
+        overflow-x: hidden;
+        position: relative;
 
         .movie {
             cursor: pointer;
@@ -34,4 +35,43 @@
             display: none;
         }
     }
+}
+
+
+
+.alice-carousel__stage-item{
+    width: 210px !important;
+}
+
+.alice-carousel__dots-item{
+    display: none !important;
+}
+
+.alice-carousel__prev-btn{
+    position: absolute;
+    font-size: 80px;
+    color: #fff;
+    height: 50px;
+    left: 3%;
+    top: 22%;
+    z-index: 1000;
+    text-align: inherit;
+}
+
+.alice-carousel__next-btn{
+    position: absolute;
+    font-size: 80px;
+    color: #fff;
+    height: 50px;
+    top: 22%;
+    left: 92%;
+    z-index: 1000;
+}
+
+.alice-carousel__dots{
+    display: none;
+}
+
+.alice-carousel__next-btn-wrapper,.alice-carousel__prev-btn-wrapper{
+    width: 61px;
 }
