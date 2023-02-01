@@ -18,6 +18,7 @@ function Row({title,fetchURL}) {
   },[fetchURL])
   const base_URL = "https://image.tmdb.org/t/p/original";
   
+
   
   return (
       <div className="moviesContainer">
