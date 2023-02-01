@@ -25,15 +25,36 @@
                     ul{
                         list-style-type: none;
                         display: flex;
-                        gap: 5%;
+                        gap: 50px;
                         li{
+                            position: relative;
+                            &:hover ul{
+                                display: flex;
+                            }
+                            ul{
+                                position: absolute;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 0;
+                                padding: 0;
+                                padding-top: 10px;
+                                display: none;
+                                li{
+                                    padding-bottom: 10px;
+                                }
+                            }
                             cursor: pointer;
                             &:nth-child(4){
                                 width: 170px;
                             }
+                            a{
+                                text-decoration: none;
+                                color: #fff;
+                            }
                             &:hover{
                                 opacity: .8;
                             }
+
                         }
                     }
                 }
