@@ -35,6 +35,9 @@
   position: relative;
   cursor: pointer;
 }
+.headerContainer .headerWrapper .logo-links .links ul li:hover {
+  opacity: 0.8;
+}
 .headerContainer .headerWrapper .logo-links .links ul li:hover ul {
   display: flex;
 }
@@ -56,9 +59,6 @@
 .headerContainer .headerWrapper .logo-links .links ul li a {
   text-decoration: none;
   color: #fff;
-}
-.headerContainer .headerWrapper .logo-links .links ul li:hover {
-  opacity: 0.8;
 }
 .headerContainer .headerWrapper .search-user {
   display: flex;
