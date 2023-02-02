@@ -15,7 +15,6 @@ function Banner({fetchURL}) {
         mainReq();
     }, [fetchURL])
 
-    console.log(mainMovie);
     
     const image_URL ="https://image.tmdb.org/t/p/original";
 

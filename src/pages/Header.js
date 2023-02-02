@@ -41,7 +41,7 @@ function Header({ change, setChange }) {
                 Movies
                 <ul>
                   {" "}
-                  <li>Action Movies</li>
+                  <Link to={"/action"}><li>Action Movies</li></Link>
                   <li>Comedy Movies</li>
                   <li>Horror Movies</li>
                   <li>Romance Movies</li>
