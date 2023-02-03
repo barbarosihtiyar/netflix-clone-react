@@ -34,7 +34,7 @@ function Header({ change, setChange }) {
           </Link>
           <div className="links">
             <ul>
-              <li style={{ fontWeight: 700 }}>
+              <li>
                 <Link to="/">Home</Link>
               </li>
               <li>
@@ -42,8 +42,8 @@ function Header({ change, setChange }) {
                 <ul>
                   {" "}
                   <Link to={"/action"}><li>Action Movies</li></Link>
-                  <li>Comedy Movies</li>
-                  <li>Horror Movies</li>
+                  <Link to={"/comedy"}><li>Comedy Movies</li></Link>
+                  <Link to={"/horror"}><li>Horror Movies</li></Link>
                   <li>Romance Movies</li>
                   <li>Documentaries</li>
                 </ul>
