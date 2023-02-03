@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "../pages/Banner";
 import "../sass/movies.css";
 import requests from "../requests";
-import MoviesRow from "../pages/MoviesRow";
+import MoviesRow from "../pages/ActionRow";
 
 function Action() {
   return (
