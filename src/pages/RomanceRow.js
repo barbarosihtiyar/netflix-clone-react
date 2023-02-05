@@ -2,7 +2,11 @@ import React from 'react'
 
 function RomanceRow() {
   return (
-    <div>RomanceRow</div>
+    <div class="romanceContainer">
+    <div className="romanceWrapper">
+      <div className="romance"></div>
+    </div>
+    </div>
   )
 }
 

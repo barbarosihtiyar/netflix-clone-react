@@ -1,8 +1,14 @@
 import React from 'react'
+import Banner from "../pages/Banner"
+import Romance from "../pages/Romance"
+
 
 function Romance() {
   return (
-    <div>Romance</div>
+    <>
+      <Banner />
+      <Romance />
+    </>
   )
 }
 
