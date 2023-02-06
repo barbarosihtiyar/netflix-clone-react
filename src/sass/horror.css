@@ -1,1 +1,29 @@
-/*# sourceMappingURL=horror.css.map */
+.horrorRowContainer .horrorRowWrapper {
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.horrorRowContainer .horrorRowWrapper h1 {
+  color: #e5e5e5;
+  padding-top: 40px;
+  padding-bottom: 5px;
+  padding-left: 3px;
+}
+.horrorRowContainer .horrorRowWrapper .horror {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.horrorRowContainer .horrorRowWrapper .horror .movie {
+  padding-bottom: 5px;
+}
+.horrorRowContainer .horrorRowWrapper .horror .movie img {
+  max-height: 300px;
+  max-width: 250px;
+  border-radius: 5px;
+}
+.horrorRowContainer .horrorRowWrapper .horror .movie img:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}/*# sourceMappingURL=horror.css.map */
