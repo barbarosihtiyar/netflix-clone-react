@@ -41,11 +41,21 @@ function Header({ change, setChange }) {
                 Movies
                 <ul>
                   {" "}
-                  <Link to={"/action"}><li>Action Movies</li></Link>
-                  <Link to={"/comedy"}><li>Comedy Movies</li></Link>
-                  <Link to={"/horror"}><li>Horror Movies</li></Link>
-                  <li>Romance Movies</li>
-                  <li>Documentaries</li>
+                  <Link to={"/action"}>
+                    <li>Action Movies</li>
+                  </Link>
+                  <Link to={"/comedy"}>
+                    <li>Comedy Movies</li>
+                  </Link>
+                  <Link to={"/horror"}>
+                    <li>Horror Movies</li>
+                  </Link>
+                  <Link to={"/romance"}>
+                    <li>Romance Movies</li>
+                  </Link>
+                  <Link to={"/documentary"}>
+                    <li>Documentaries</li>
+                  </Link>
                 </ul>
               </li>
             </ul>

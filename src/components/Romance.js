@@ -1,13 +1,14 @@
 import React from 'react'
 import Banner from "../pages/Banner"
-import Romance from "../pages/Romance"
+import RomanceRow from "../pages/RomanceRow"
+import requests from "../requests"
 
 
 function Romance() {
   return (
     <>
-      <Banner />
-      <Romance />
+      <Banner fetchURL={requests.fetchRomanceMovies} />
+      <RomanceRow title="Romance Movies" fetchURL={requests.fetchRomanceMovies}/>
     </>
   )
 }
