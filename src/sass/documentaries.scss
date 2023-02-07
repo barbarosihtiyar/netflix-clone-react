@@ -1,5 +1,5 @@
-.romanceRowContainer {
-    .romanceRowWrapper {
+.documentaryRowContainer {
+    .documentaryRowWrapper {
         padding-left: 50px;
         display: flex;
         flex-direction: column;
@@ -10,15 +10,15 @@
             padding-bottom: 5px;
             padding-left: 3px;
         }
-        .romance {
+        .documentary{
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             .movie {
                 padding-bottom: 5px;
                 img {
-                    height: 300px;
-                    max-width: 200px;
+                    max-height: 300px;
+                    max-width: 250px;
                     border-radius: 5px;
                     &:hover {
                         transform: scale(1.08);

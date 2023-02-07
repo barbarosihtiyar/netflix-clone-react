@@ -1,1 +1,29 @@
-/*# sourceMappingURL=romance.css.map */
+.romanceRowContainer .romanceRowWrapper {
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.romanceRowContainer .romanceRowWrapper h1 {
+  color: #e5e5e5;
+  padding-top: 40px;
+  padding-bottom: 5px;
+  padding-left: 3px;
+}
+.romanceRowContainer .romanceRowWrapper .romance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.romanceRowContainer .romanceRowWrapper .romance .movie {
+  padding-bottom: 5px;
+}
+.romanceRowContainer .romanceRowWrapper .romance .movie img {
+  height: 300px;
+  max-width: 200px;
+  border-radius: 5px;
+}
+.romanceRowContainer .romanceRowWrapper .romance .movie img:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}/*# sourceMappingURL=romance.css.map */

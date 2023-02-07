@@ -1,0 +1,29 @@
+.documentaryRowContainer .documentaryRowWrapper {
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.documentaryRowContainer .documentaryRowWrapper h1 {
+  color: #e5e5e5;
+  padding-top: 40px;
+  padding-bottom: 5px;
+  padding-left: 3px;
+}
+.documentaryRowContainer .documentaryRowWrapper .documentary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.documentaryRowContainer .documentaryRowWrapper .documentary .movie {
+  padding-bottom: 5px;
+}
+.documentaryRowContainer .documentaryRowWrapper .documentary .movie img {
+  max-height: 300px;
+  max-width: 250px;
+  border-radius: 5px;
+}
+.documentaryRowContainer .documentaryRowWrapper .documentary .movie img:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}/*# sourceMappingURL=documentaries.css.map */
