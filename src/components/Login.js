@@ -2,7 +2,11 @@ import React from 'react'
 
 function Login() {
   return (
-    <div>Login</div>
+    <div className="loginContainer">
+      <div className="loginWrapper">
+        
+      </div>
+    </div>
   )
 }
 
