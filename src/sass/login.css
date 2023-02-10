@@ -1,0 +1,109 @@
+section {
+  background-image: url(../images/loginImageBg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+}
+section .loginContainer {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+section .loginContainer .loginWrapper {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section .loginContainer .loginWrapper .loginHeader {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+section .loginContainer .loginWrapper .loginHeader img {
+  width: 167px;
+}
+section .loginContainer .loginWrapper .login {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.75);
+  justify-content: center;
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+section .loginContainer .loginWrapper .login h6 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  width: 314px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+section .loginContainer .loginWrapper .login form {
+  text-align: center;
+}
+section .loginContainer .loginWrapper .login form input {
+  width: 314px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+section .loginContainer .loginWrapper .login form input[type=text],
+section .loginContainer .loginWrapper .login form input[type=password] {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 0 10px;
+}
+section .loginContainer .loginWrapper .login form button {
+  width: 314px;
+  height: 50px;
+  background-color: #e50914;
+  color: #fff;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+section .loginContainer .loginWrapper .login .info {
+  margin: 0 auto;
+}
+section .loginContainer .loginWrapper .login .info .rememberMe {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  width: 314px;
+  margin-bottom: 20px;
+}
+section .loginContainer .loginWrapper .login .info .rememberMe input[type=checkbox] {
+  width: auto;
+  margin: 0;
+}
+section .loginContainer .loginWrapper .login .info .rememberMe .checkRemember {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+section .loginContainer .loginWrapper .login .info .rememberMe .checkRemember label {
+  cursor: pointer;
+  margin-bottom: -3px;
+}
+section .loginContainer .loginWrapper .login .info .rememberMe .rememberSpan {
+  cursor: pointer;
+}
+section .loginContainer .loginWrapper .login .invite {
+  margin: 0 auto;
+  width: 314px;
+  color: #737373;
+  font-size: 20px;
+}
+section .loginContainer .loginWrapper .login .invite .special {
+  margin-left: 10px;
+  color: #fff;
+}/*# sourceMappingURL=login.css.map */

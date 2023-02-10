@@ -1,0 +1,110 @@
+section {
+    background-image: url(../images/loginImageBg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+    .loginContainer {
+        max-width: 1250px;
+        margin: 0 auto;
+        .loginWrapper {
+            padding-top: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .loginHeader {
+                position: absolute;
+                top: 2%;
+                left: 2%;
+
+                img {
+                    width: 167px;
+                }
+            }
+            .login {
+                display: flex;
+                flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.75);
+                justify-content: center;
+                width: 450px;
+                height: 450px;
+                margin: 0 auto;
+                margin-bottom: 30px;
+                h6 {
+                    color: #fff;
+                    font-size: 40px;
+                    font-weight: 600;
+                    width: 314px;
+                    padding-top: 10px;
+                    margin-bottom: 20px;
+                    margin: 0 auto;
+                    margin-top: 30px;
+                }
+                form {
+                    text-align: center;
+                    input {
+                        width: 314px;
+                        height: 50px;
+                        border: none;
+                        outline: none;
+                        border-radius: 4px;
+                        margin-bottom: 20px;
+                        color: #fff;
+                    }
+                    input[type="text"],
+                    input[type="password"] {
+                        background-color: rgba(0, 0, 0, 0.75);
+                        padding: 0 10px;
+                    }
+                    button {
+                        width: 314px;
+                        height: 50px;
+                        background-color: #e50914;
+                        color: #fff;
+                        border-radius: 4px;
+                        margin-bottom: 20px;
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                }
+                .info {
+                    margin: 0 auto;
+                    .rememberMe {
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        font-size: 12px;
+                        width: 314px;
+                        margin-bottom: 20px;
+                        input[type="checkbox"] {
+                            width: auto;
+                            margin: 0;
+                        }
+                        .checkRemember {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                            label {
+                                cursor: pointer;
+                                margin-bottom: -3px;
+                            }
+                        }
+                        .rememberSpan {
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .invite {
+                    margin: 0 auto;
+                    width: 314px;
+                    color: #737373;
+                    font-size: 20px;
+                    .special {
+                        margin-left: 10px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
