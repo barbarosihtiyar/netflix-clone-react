@@ -1,10 +1,12 @@
 import Banner from "../pages/Banner";
+import Header from "../pages/Header";
 import Row from "../pages/Row";
 import requests from "../requests";
 
 function Home() {
   return (
     <>
+      <Header />
       <Banner fetchURL={requests.fetchTrending} />
       <Row title={"Trending Now"} fetchURL={requests.fetchTrending} />
       <Row

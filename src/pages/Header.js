@@ -35,7 +35,7 @@ function Header({ change, setChange }) {
           <div className="links">
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/home">Home</Link>
               </li>
               <li>
                 Movies
