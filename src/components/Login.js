@@ -1,31 +1,41 @@
 import React from 'react'
 import netflixLogo from "../images/netflix.png";
-
+import "../sass/login.css"
+import {loginImageBg} from "../images/loginImageBg.jpg"
+ 
 function Login() {
   return (
-    <div className="loginContainer">
+    <section className="login">
+    <div className="loginContainer" >
       <div className="loginWrapper">
         <div className="loginHeader">
           <img src={netflixLogo} alt="" />
         </div>
         <div className="login">
           <h6>Login</h6>
+          <form>
           <input type="text" placeholder='email or phone number' />
           <input type="password" placeholder='password' />
           <button type='button'>Login</button>
+          </form>
           <div className="info">
           <div className="rememberMe">
-          <span htmlFor='rememberMe'>Remember Me</span>
+          <div className="checkRemember">
             <input type="checkbox" id='rememberMe' />
+            <label htmlFor='remembersMe'>Remember Me</label>
           </div>
-          <span>Could you help?</span>
+            <div className="rememberSpan">
+            <span>Could you help?</span>
+            </div>
+          </div>
           </div>
           <div className="invite">
-            <span>Could you join Netflix?</span><span className="special">Register now.</span>
+            Could you join Netflix?<span className="special">Register now.</span>
           </div>
         </div>
       </div>
     </div>
+    </section>
   )
 }
 
