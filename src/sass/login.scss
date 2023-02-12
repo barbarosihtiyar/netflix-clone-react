@@ -64,6 +64,7 @@ section {
                         margin-bottom: 20px;
                         font-size: 20px;
                         font-weight: 600;
+                        cursor: pointer;
                     }
                 }
                 .info {
@@ -102,6 +103,8 @@ section {
                     .special {
                         margin-left: 10px;
                         color: #fff;
+                        text-decoration:underline;
+                        cursor: pointer;
                     }
                 }
             }

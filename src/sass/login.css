@@ -68,6 +68,7 @@ section .loginContainer .loginWrapper .login form button {
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 600;
+  cursor: pointer;
 }
 section .loginContainer .loginWrapper .login .info {
   margin: 0 auto;
@@ -106,4 +107,6 @@ section .loginContainer .loginWrapper .login .invite {
 section .loginContainer .loginWrapper .login .invite .special {
   margin-left: 10px;
   color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
 }/*# sourceMappingURL=login.css.map */
