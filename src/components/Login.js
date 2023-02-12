@@ -2,6 +2,7 @@ import React from 'react'
 import netflixLogo from "../images/netflix.png";
 import "../sass/login.css"
 import {loginImageBg} from "../images/loginImageBg.jpg"
+import {Link} from "react-router-dom"
  
 function Login() {
   return (
@@ -16,7 +17,7 @@ function Login() {
           <form>
           <input type="text" placeholder='email or phone number' />
           <input type="password" placeholder='password' />
-          <button type='button'>Login</button>
+          <Link to="/home"><button type='button'>Login</button></Link>
           </form>
           <div className="info">
           <div className="rememberMe">
