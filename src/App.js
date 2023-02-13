@@ -7,12 +7,14 @@ import Horror from "./components/Horror";
 import Romance from "./components/Romance";
 import Documentary from "./components/Documentary";
 import Login from "./components/Login";
+import Register from "./components/Register";
 
 function App() {
   return (
     <div className="App">
     <Routes>
     <Route exact path="/" element={<Login />} />
+    <Route exact path="/register" element={<Register />} />
     <Route exact path="/home" element={<Home />} />
     <Route path="/action" element={<Action />} />
     <Route path="/comedy" element={<Comedy />} />
