@@ -1,4 +1,4 @@
-section {
+.section {
     background-image: url(../images/loginImageBg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -6,8 +6,11 @@ section {
     .loginContainer {
         max-width: 1250px;
         margin: 0 auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         .loginWrapper {
-            padding-top: 100px;
             display: flex;
             flex-direction: column;
             justify-content: center;
