@@ -1,10 +1,10 @@
-.section {
+.sectionLogin {
   background-image: url(../images/loginImageBg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 1000px;
 }
-.section .loginContainer {
+.sectionLogin .loginContainer {
   max-width: 1250px;
   margin: 0 auto;
   height: 100%;
@@ -12,20 +12,20 @@
   flex-direction: column;
   justify-content: center;
 }
-.section .loginContainer .loginWrapper {
+.sectionLogin .loginContainer .loginWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.section .loginContainer .loginWrapper .loginHeader {
+.sectionLogin .loginContainer .loginWrapper .loginHeader {
   position: absolute;
   top: 2%;
   left: 2%;
 }
-.section .loginContainer .loginWrapper .loginHeader img {
+.sectionLogin .loginContainer .loginWrapper .loginHeader img {
   width: 167px;
 }
-.section .loginContainer .loginWrapper .login {
+.sectionLogin .loginContainer .loginWrapper .login {
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.75);
@@ -35,7 +35,7 @@
   margin: 0 auto;
   margin-bottom: 30px;
 }
-.section .loginContainer .loginWrapper .login h6 {
+.sectionLogin .loginContainer .loginWrapper .login h6 {
   color: #fff;
   font-size: 40px;
   font-weight: 600;
@@ -45,10 +45,10 @@
   margin: 0 auto;
   margin-top: 30px;
 }
-.section .loginContainer .loginWrapper .login form {
+.sectionLogin .loginContainer .loginWrapper .login form {
   text-align: center;
 }
-.section .loginContainer .loginWrapper .login form input {
+.sectionLogin .loginContainer .loginWrapper .login form input {
   width: 314px;
   height: 50px;
   border: none;
@@ -57,12 +57,12 @@
   margin-bottom: 20px;
   color: #fff;
 }
-.section .loginContainer .loginWrapper .login form input[type=text],
-.section .loginContainer .loginWrapper .login form input[type=password] {
+.sectionLogin .loginContainer .loginWrapper .login form input[type=text],
+.sectionLogin .loginContainer .loginWrapper .login form input[type=password] {
   background-color: rgba(0, 0, 0, 0.75);
   padding: 0 10px;
 }
-.section .loginContainer .loginWrapper .login form button {
+.sectionLogin .loginContainer .loginWrapper .login form button {
   width: 314px;
   height: 50px;
   background-color: #e50914;
@@ -73,10 +73,10 @@
   font-weight: 600;
   cursor: pointer;
 }
-.section .loginContainer .loginWrapper .login .info {
+.sectionLogin .loginContainer .loginWrapper .login .info {
   margin: 0 auto;
 }
-.section .loginContainer .loginWrapper .login .info .rememberMe {
+.sectionLogin .loginContainer .loginWrapper .login .info .rememberMe {
   color: #fff;
   display: flex;
   align-items: center;
@@ -85,29 +85,29 @@
   width: 314px;
   margin-bottom: 20px;
 }
-.section .loginContainer .loginWrapper .login .info .rememberMe input[type=checkbox] {
+.sectionLogin .loginContainer .loginWrapper .login .info .rememberMe input[type=checkbox] {
   width: auto;
   margin: 0;
 }
-.section .loginContainer .loginWrapper .login .info .rememberMe .checkRemember {
+.sectionLogin .loginContainer .loginWrapper .login .info .rememberMe .checkRemember {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.section .loginContainer .loginWrapper .login .info .rememberMe .checkRemember label {
+.sectionLogin .loginContainer .loginWrapper .login .info .rememberMe .checkRemember label {
   cursor: pointer;
   margin-bottom: -3px;
 }
-.section .loginContainer .loginWrapper .login .info .rememberMe .rememberSpan {
+.sectionLogin .loginContainer .loginWrapper .login .info .rememberMe .rememberSpan {
   cursor: pointer;
 }
-.section .loginContainer .loginWrapper .login .invite {
+.sectionLogin .loginContainer .loginWrapper .login .invite {
   margin: 0 auto;
   width: 314px;
   color: #737373;
   font-size: 20px;
 }
-.section .loginContainer .loginWrapper .login .invite .special {
+.sectionLogin .loginContainer .loginWrapper .login .invite .special {
   margin-left: 10px;
   color: #fff;
   text-decoration: underline;
