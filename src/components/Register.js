@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useState } from "react";
 import netflixLogo from "../images/netflix.png";
 import "../sass/register.css";
 import { Link } from "react-router-dom";
@@ -9,6 +10,11 @@ import KidsMovie from "../images/kidsMovie.png";
 import { AiOutlinePlus } from "react-icons/ai";
 
 function Login() {
+  const [vis,setVis] = useState(true);
+
+  const changeVis = () => {
+    setVis(!vis);
+  }
   return (
     <section>
       <section className="sectionRegister">
@@ -114,21 +120,21 @@ function Login() {
           </div>
         </div>
         <div className="infoContainer">
-          <div className="infoWrapper">
+          <div className="infoWrapper"> 
             <div className="askedQuestions">
               <h1>Frequently Asked Questions</h1>
               <div className="asked askedFirst">
-                <button className="askedButton">
+                <button onClick={changeVis} className="askedButton">
                   <span>What is Netflix?</span>
-                  <AiOutlinePlus className="plusIcon" />
+                  <AiOutlinePlus className={vis ? "plusIcon " : "plusIcon rotate  "} />
                 </button>
-                <div className="answer answerFirst">
-                  <p>
+                <div className={vis ? "answer answerFirst" : "block answerFirst"}>
+                  <p className={vis ? "" : "collapse"}>
                     Netflix is a streaming service that offers a wide variety of
                     award-winning TV shows, movies, anime, documentaries, and
                     more on thousands of internet-connected devices.
                   </p>
-                  <p>
+                  <p className={vis ? "" : "collapse"}>
                     You can watch as much as you want, whenever you want without
                     a single commercial – all for one low monthly price. There's
                     always something new to discover and new TV shows and movies
