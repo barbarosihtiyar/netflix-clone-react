@@ -108,6 +108,9 @@ section {
                     .image{
                         position: relative;
                         z-index: 2;
+                        img{
+
+                        }
                         .video{
                             position: absolute;
                             bottom: 52%;
@@ -141,6 +144,10 @@ section {
                             display: flex;
                             border: none;
                             outline: none;
+                            cursor: pointer;
+                            .rotate{
+                                transform: rotate(45deg);
+                            }
                             span{
                                 width: 98%;
                                 text-align: left;
@@ -150,12 +157,28 @@ section {
                             }
                         }
                         .plusIcon{
-
+                            transition: all .5s;
                         }
                         .answer{
                             @include font(20px,500,#fff);
-                            height: 0;
+                            height: 0px;
+                            transition: height .6s;
                             visibility: hidden;
+                            p{
+                                visibility: hidden;
+                            }
+                        }
+                        .block{
+                            height: 155px;
+                            transition: height .6s;
+                            
+                            .collapse{
+                                padding-bottom: 10px;
+                                @include font(18px,500,#fff);
+                                max-width: 761px;
+                                margin: 0 auto;
+                                visibility: visible;
+                            }
                         }
                     }
                 }
