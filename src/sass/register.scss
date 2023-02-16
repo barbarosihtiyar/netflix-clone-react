@@ -2,11 +2,13 @@
 
 section {
     background-color: #000;
+
     .sectionRegister {
         background: url(../images/loginImageBg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height: 720px;
+
         &::after {
             content: "";
             position: absolute;
@@ -17,6 +19,7 @@ section {
             background-color: rgba(0, 0, 0, 0.4);
             opacity: 0.3;
         }
+
         .registerContainer {
             max-width: 1250px;
             margin: 0 auto;
@@ -24,10 +27,12 @@ section {
             display: flex;
             flex-direction: column;
             justify-content: center;
+
             .registerWrapper {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+
                 .registerHeader {
                     position: absolute;
                     top: 2%;
@@ -37,11 +42,14 @@ section {
                         width: 167px;
                     }
                 }
+
                 .register {
                     margin: 0 auto;
+
                     .registerTitle {
                         display: flex;
                         flex-direction: column;
+
                         h1 {
                             @include font(50px, 800, #fff);
                             width: 600px;
@@ -49,19 +57,23 @@ section {
                             text-align: center;
                             padding-bottom: 5px;
                         }
+
                         h6 {
                             @include font(25px, 600, #fff);
                             text-align: center;
                             padding-bottom: 12px;
                         }
+
                         span {
                             @include font(18px, 600, #fff);
                             text-align: center;
                             padding-bottom: 8px;
                         }
+
                         .registerInput {
                             form {
                                 display: flex;
+
                                 input {
                                     width: 460px;
                                     height: 60px;
@@ -69,6 +81,7 @@ section {
                                     border: none;
                                     padding: 0 10px;
                                 }
+
                                 button {
                                     width: 212px;
                                     border: none;
@@ -84,126 +97,146 @@ section {
             }
         }
     }
+
     .info {
         .infoContainer {
             padding-top: 50px;
             padding-bottom: 50px;
             border-bottom: 5px solid #222;
+
             .infoWrapper {
                 max-width: 1000px;
-                margin: 0 auto;    
+                margin: 0 auto;
+
                 .part {
                     display: flex;
-                    align-items: center;    
+                    align-items: center;
+
                     .text {
                         h1 {
                             @include font(3.125rem, 600, #fff);
                             width: 84%;
                         }
+
                         h6 {
                             @include font(1.625rem, 400, #fff);
-                            width:84%;
+                            width: 84%;
                         }
                     }
-                    .image{
+
+                    .image {
                         position: relative;
                         z-index: 2;
-                        img{
 
-                        }
-                        .video{
+                        img {}
+
+                        .video {
                             position: absolute;
                             bottom: 52%;
-                            transform: translate(-50%,50%);
+                            transform: translate(-50%, 50%);
                             left: 50%;
                             z-index: -1;
-                            video{
+
+                            video {
                                 max-width: 265px;
-                                
+
                             }
                         }
                     }
                 }
-                .askedQuestions{
+
+                .askedQuestions {
                     max-width: 1000px;
-                    h1{
-                        @include font(3.125rem,600,#fff);
+
+                    h1 {
+                        @include font(3.125rem, 600, #fff);
                         text-align: center;
                         padding-bottom: 30px;
                     }
-                    .asked{
+
+                    .asked {
                         max-width: 815px;
                         margin: 0 auto;
                         background-color: #303030;
                         margin-bottom: 10px;
-                        .askedButton{
+
+                        .askedButton {
                             background-color: transparent;
                             padding: 20px;
-                            @include font(25px,500,#fff);
+                            @include font(25px, 500, #fff);
                             width: 100%;
                             display: flex;
                             border: none;
                             outline: none;
                             cursor: pointer;
-                            .rotate{
+
+                            .rotate {
                                 transform: rotate(45deg);
                             }
-                            span{
+
+                            span {
                                 width: 98%;
                                 text-align: left;
                             }
-                            .plusIcon{
-                                @include font(30px,500,#fff);
+
+                            .plusIcon {
+                                @include font(30px, 500, #fff);
                             }
                         }
-                        .plusIcon{
-                            transition: all .5s;
+
+                        .plusIcon {
+                            transition: transform .3s;
                         }
-                        .answer{
-                            @include font(20px,500,#fff);
-                            height: 0px;
-                            transition: height .6s;
-                            visibility: hidden;
-                            p{
-                                visibility: hidden;
+
+                        .answer {
+                            @include font(20px, 500, #fff);
+                            max-height: 0px;
+                            transition: max-height 1s;
+                            visibility: collapse;
+
+                            p {
+                                max-height: 0px;
                             }
                         }
-                        .block{
-                            height: 155px;
-                            transition: height .6s;
-                            
-                            .collapse{
+
+                        .block {
+                            max-height: 1200px;
+                            transition: max-height 1s;
+
+                            .collapse {
                                 padding-bottom: 10px;
-                                @include font(18px,500,#fff);
+                                @include font(18px, 500, #fff);
                                 max-width: 761px;
                                 margin: 0 auto;
-                                visibility: visible;
                             }
                         }
                     }
                 }
-               
+
             }
         }
     }
 }
 
-.partInfoThird{
-    .video{
+.partInfoThird {
+    .video {
         bottom: 66% !important;
-        video{
+
+        video {
             max-width: 210px !important;
         }
     }
 }
 
-.partInfoSecond{
+.partInfoSecond {
     flex-flow: row-reverse;
-    h1{
+
+    h1 {
         margin-left: auto;
         width: 78%;
     }
-    h6{
+
+    h6 {
         margin-left: auto;
     }
 }

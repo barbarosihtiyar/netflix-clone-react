@@ -153,6 +153,10 @@ section .info .infoContainer .infoWrapper .askedQuestions .asked .askedButton {
   display: flex;
   border: none;
   outline: none;
+  cursor: pointer;
+}
+section .info .infoContainer .infoWrapper .askedQuestions .asked .askedButton .rotate {
+  transform: rotate(45deg);
 }
 section .info .infoContainer .infoWrapper .askedQuestions .asked .askedButton span {
   width: 98%;
@@ -163,12 +167,31 @@ section .info .infoContainer .infoWrapper .askedQuestions .asked .askedButton .p
   font-weight: 500;
   color: #fff;
 }
+section .info .infoContainer .infoWrapper .askedQuestions .asked .plusIcon {
+  transition: transform 0.3s;
+}
 section .info .infoContainer .infoWrapper .askedQuestions .asked .answer {
   font-size: 20px;
   font-weight: 500;
   color: #fff;
-  height: 0;
-  visibility: hidden;
+  max-height: 0px;
+  transition: max-height 1s;
+  visibility: collapse;
+}
+section .info .infoContainer .infoWrapper .askedQuestions .asked .answer p {
+  max-height: 0px;
+}
+section .info .infoContainer .infoWrapper .askedQuestions .asked .block {
+  max-height: 1200px;
+  transition: max-height 1s;
+}
+section .info .infoContainer .infoWrapper .askedQuestions .asked .block .collapse {
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  max-width: 761px;
+  margin: 0 auto;
 }
 
 .partInfoThird .video {
