@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import netflixLogo from "../images/netflix.png";
 import "../sass/register.css";
@@ -10,11 +9,11 @@ import KidsMovie from "../images/kidsMovie.png";
 import { AiOutlinePlus } from "react-icons/ai";
 
 function Login() {
-  const [vis,setVis] = useState(true);
+  const [vis, setVis] = useState(true);
 
   const changeVis = () => {
     setVis(!vis);
-  }
+  };
   return (
     <section>
       <section className="sectionRegister">
@@ -120,20 +119,103 @@ function Login() {
           </div>
         </div>
         <div className="infoContainer">
-          <div className="infoWrapper"> 
+          <div className="infoWrapper">
             <div className="askedQuestions">
               <h1>Frequently Asked Questions</h1>
               <div className="asked askedFirst">
                 <button onClick={changeVis} className="askedButton">
                   <span>What is Netflix?</span>
-                  <AiOutlinePlus className={vis ? "plusIcon " : "plusIcon rotate  "} />
+                  <AiOutlinePlus
+                    className={vis ? "plusIcon " : "plusIcon rotate  "}
+                  />
                 </button>
-                <div className={vis ? "answer answerFirst" : "block answerFirst"}>
+                <div
+                  className={vis ? "answer answerFirst" : "block answerFirst"}
+                >
                   <p className={vis ? "" : "collapse"}>
                     Netflix is a streaming service that offers a wide variety of
                     award-winning TV shows, movies, anime, documentaries, and
                     more on thousands of internet-connected devices.
+                    <br />
+                    <br />
+                    You can watch as much as you want, whenever you want without
+                    a single commercial – all for one low monthly price. There's
+                    always something new to discover and new TV shows and movies
+                    are added every week!
                   </p>
+                </div>
+              </div>
+              <div className="asked askedFirst">
+                <button onClick={changeVis} className="askedButton">
+                  <span>How much does Netflix cost?</span>
+                  <AiOutlinePlus
+                    className={vis ? "plusIcon " : "plusIcon rotate  "}
+                  />
+                </button>
+                <div
+                  className={vis ? "answer answerFirst" : "block answerFirst"}
+                >
+                  <p className={vis ? "" : "collapse"}>
+                    Watch Netflix on your smartphone, tablet, Smart TV, laptop,
+                    or streaming device, all for one fixed monthly fee. Plans
+                    range from 63.99 TL to 130.99 TL a month. No extra costs, no
+                    contracts.
+                  </p>
+                </div>
+              </div>
+              <div className="asked askedFirst">
+                <button onClick={changeVis} className="askedButton">
+                  <span>Where can I watch?</span>
+                  <AiOutlinePlus
+                    className={vis ? "plusIcon " : "plusIcon rotate  "}
+                  />
+                </button>
+                <div
+                  className={vis ? "answer answerFirst" : "block answerFirst"}
+                >
+                  <p className={vis ? "" : "collapse"}>
+                    Watch anywhere, anytime. Sign in with your Netflix account
+                    to watch instantly on the web at netflix.com from your
+                    personal computer or on any internet-connected device that
+                    offers the Netflix app, including smart TVs, smartphones,
+                    tablets, streaming media players and game consoles.
+                    <br />
+                    <br />
+                    You can also download your favorite shows with the iOS,
+                    Android, or Windows 10 app. Use downloads to watch while
+                    you're on the go and without an internet connection. Take
+                    Netflix with you anywhere.
+                  </p>
+                </div>
+              </div>
+              <div className="asked askedFirst">
+                <button onClick={changeVis} className="askedButton">
+                  <span>How do I cancel?</span>
+                  <AiOutlinePlus
+                    className={vis ? "plusIcon " : "plusIcon rotate  "}
+                  />
+                </button>
+                <div
+                  className={vis ? "answer answerFirst" : "block answerFirst"}
+                >
+                  <p className={vis ? "" : "collapse"}>
+                    Netflix is flexible. There are no pesky contracts and no
+                    commitments. You can easily cancel your account online in
+                    two clicks. There are no cancellation fees – start or stop
+                    your account anytime.
+                  </p>
+                </div>
+              </div>
+              <div className="asked askedFirst">
+                <button onClick={changeVis} className="askedButton">
+                  <span>What can I watch on Netflix?</span>
+                  <AiOutlinePlus
+                    className={vis ? "plusIcon " : "plusIcon rotate  "}
+                  />
+                </button>
+                <div
+                  className={vis ? "answer answerFirst" : "block answerFirst"}
+                >
                   <p className={vis ? "" : "collapse"}>
                     You can watch as much as you want, whenever you want without
                     a single commercial – all for one low monthly price. There's
@@ -143,36 +225,26 @@ function Login() {
                 </div>
               </div>
               <div className="asked askedFirst">
-                <button className="askedButton">
-                  <span> How much does Netflix cost?</span>
-                  <AiOutlinePlus className="plusIcon" />
+                <button onClick={changeVis} className="askedButton">
+                  <span>Is Netflix good for kids?</span>
+                  <AiOutlinePlus
+                    className={vis ? "plusIcon " : "plusIcon rotate  "}
+                  />
                 </button>
-              </div>
-
-              <div className="asked askedFirst">
-                <button className="askedButton">
-                  <span> Where can I watch?</span>
-
-                  <AiOutlinePlus className="plusIcon" />
-                </button>
-              </div>
-              <div className="asked askedFirst">
-                <button className="askedButton">
-                  <span> How do I cancel?</span>
-                  <AiOutlinePlus className="plusIcon" />
-                </button>
-              </div>
-              <div className="asked askedFirst">
-                <button className="askedButton">
-                  <span> What can I watch on Netflix?</span>
-                  <AiOutlinePlus className="plusIcon" />
-                </button>
-              </div>
-              <div className="asked askedFirst">
-                <button className="askedButton">
-                  <span> Is Netflix good for kids?</span>
-                  <AiOutlinePlus className="plusIcon" />
-                </button>
+                <div
+                  className={vis ? "answer answerFirst" : "block answerFirst"}
+                >
+                  <p className={vis ? "" : "collapse"}>
+                    The Netflix Kids experience is included in your membership
+                    to give parents control while kids enjoy family-friendly TV
+                    shows and movies in their own space.
+                    <br />
+                    <br />
+                    Kids profiles come with PIN-protected parental controls that
+                    let you restrict the maturity rating of content kids can
+                    watch and block specific titles you don’t want kids to see.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
