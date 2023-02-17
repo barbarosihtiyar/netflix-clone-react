@@ -9,10 +9,10 @@ import KidsMovie from "../images/kidsMovie.png";
 import { AiOutlinePlus } from "react-icons/ai";
 
 function Login() {
-  const [vis, setVis] = useState(true);
+  const [vis, setVis] = useState(false);
 
-  const changeVis = () => {
-    setVis(!vis);
+  const changeVis = (e) => {
+    e.target.classList.contains("collapse") ? setVis(false) : setVis(true);
   };
   return (
     <section>
@@ -32,7 +32,7 @@ function Login() {
                 </span>
                 <div className="registerInput">
                   <form>
-                    <input type="email" placeholder="Email adress" />
+                    <input type="text" placeholder="Email adress" />
                     <button type="button">Get Started</button>
                   </form>
                 </div>
@@ -136,8 +136,8 @@ function Login() {
                     Netflix is a streaming service that offers a wide variety of
                     award-winning TV shows, movies, anime, documentaries, and
                     more on thousands of internet-connected devices.
-                    <br />
-                    <br />
+                  <br/>
+                  <br/>
                     You can watch as much as you want, whenever you want without
                     a single commercial – all for one low monthly price. There's
                     always something new to discover and new TV shows and movies
@@ -160,7 +160,7 @@ function Login() {
                     or streaming device, all for one fixed monthly fee. Plans
                     range from 63.99 TL to 130.99 TL a month. No extra costs, no
                     contracts.
-                  </p>
+                    </p>
                 </div>
               </div>
               <div className="asked askedFirst">
@@ -179,8 +179,8 @@ function Login() {
                     personal computer or on any internet-connected device that
                     offers the Netflix app, including smart TVs, smartphones,
                     tablets, streaming media players and game consoles.
-                    <br />
-                    <br />
+                    <br/>
+                  <br/>
                     You can also download your favorite shows with the iOS,
                     Android, or Windows 10 app. Use downloads to watch while
                     you're on the go and without an internet connection. Take
@@ -238,8 +238,8 @@ function Login() {
                     The Netflix Kids experience is included in your membership
                     to give parents control while kids enjoy family-friendly TV
                     shows and movies in their own space.
-                    <br />
-                    <br />
+                  <br/>
+                  <br/>
                     Kids profiles come with PIN-protected parental controls that
                     let you restrict the maturity rating of content kids can
                     watch and block specific titles you don’t want kids to see.
