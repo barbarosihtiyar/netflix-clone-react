@@ -1,8 +1,7 @@
-
-
 .moviesRowContainer{
     .moviesRowWrapper{
         padding-left: 50px;
+        padding-right: 50px;
         display: flex;
         flex-direction: column;
         padding-bottom: 10px;
@@ -15,9 +14,11 @@
         .movies{
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 8px;
         .movie{
             padding-bottom: 5px;
+            margin: 0 auto;
+            position: relative;
             img{
                 max-height: 300px;
                 max-width: 250px;
@@ -27,6 +28,19 @@
                     cursor: pointer;
                 }
             }
+            .vote_avertage{
+
+            }
+            .play{
+
+            }
+            .add{
+
+            }
+            .like{
+                
+            }
         }
     }
 }        }
+
