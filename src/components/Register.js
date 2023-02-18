@@ -8,14 +8,67 @@ import Computer from "../images/computer.png";
 import KidsMovie from "../images/kidsMovie.png";
 import { AiOutlinePlus } from "react-icons/ai";
 
-function Login() {
-  const [vis, setVis] = useState(false);
+function Register() {
+  const [firstVis, setFirstVis] = useState(true);
+  const [secondVis, setSecondVis] = useState(true);
+  const [thirdVis, setThirdVis] = useState(true);
+  const [fourthVis, setFourthVis] = useState(true);
+  const [fivethVis, setFivethVis] = useState(true);
+  const [sixthVis, setSixthVis] = useState(true);
+  const [vis, setVis] = useState(true);
 
-  const changeVis = (e) => {
-    e.target.classList.contains("collapse") ? setVis(false) : setVis(true);
-  };
+  
+  const changesVisFirst = () => {
+   setFirstVis(!firstVis);
+   setSecondVis(true);
+   setThirdVis(true);
+   setFourthVis(true);
+   setFivethVis(true);
+   setSixthVis(true);
+  }
+  const changesVisSecond = () => {
+    setSecondVis(!secondVis);
+    setFirstVis(true);
+    setThirdVis(true);
+    setFourthVis(true);
+    setFivethVis(true);
+    setSixthVis(true);
+   }
+   const changesVisThird = () => {
+    setThirdVis(!thirdVis);
+    setSecondVis(true);
+    setFirstVis(true);
+    setFourthVis(true);
+    setFivethVis(true);
+    setSixthVis(true);
+   }
+   const changesVisFourth = () => {
+    setFourthVis(!fourthVis);
+    setSecondVis(true);
+    setThirdVis(true);
+    setFirstVis(true);
+    setFivethVis(true);
+    setSixthVis(true);
+   }
+   const changesVisFiveth = () => {
+    setFivethVis(!fivethVis);
+    setSecondVis(true);
+    setThirdVis(true);
+    setFourthVis(true);
+    setFirstVis(true);
+    setSixthVis(true);
+   }
+   const changesVisSixth = () => {
+    setSixthVis(!sixthVis);
+    setSecondVis(true);
+    setThirdVis(true);
+    setFourthVis(true);
+    setFivethVis(true);
+    setFirstVis(true);
+   }     
+
   return (
-    <section>
+    <main>
       <section className="sectionRegister">
         <div className="registerContainer">
           <div className="registerWrapper">
@@ -32,8 +85,8 @@ function Login() {
                 </span>
                 <div className="registerInput">
                   <form>
-                    <input type="text" placeholder="Email adress" />
-                    <button type="button">Get Started</button>
+                    <input id="inputInfo" type="text" placeholder="Email adress" />
+                    <button type="submit" style={{cursor:"pointer"}}>Get Started</button>
                   </form>
                 </div>
               </div>
@@ -123,16 +176,16 @@ function Login() {
             <div className="askedQuestions">
               <h1>Frequently Asked Questions</h1>
               <div className="asked askedFirst">
-                <button onClick={changeVis} className="askedButton">
+                <button  className="askedButton askedButtonFirst" onClick={changesVisFirst}>
                   <span>What is Netflix?</span>
                   <AiOutlinePlus
-                    className={vis ? "plusIcon " : "plusIcon rotate  "}
+                    className={firstVis ? "plusIcon " : "plusIcon rotate  "}
                   />
                 </button>
                 <div
-                  className={vis ? "answer answerFirst" : "block answerFirst"}
+                  className={firstVis ? "answer answerFirst" : "block answerFirst"}
                 >
-                  <p className={vis ? "" : "collapse"}>
+                  <p className={firstVis ? "" : "collapse"}>
                     Netflix is a streaming service that offers a wide variety of
                     award-winning TV shows, movies, anime, documentaries, and
                     more on thousands of internet-connected devices.
@@ -146,16 +199,16 @@ function Login() {
                 </div>
               </div>
               <div className="asked askedFirst">
-                <button onClick={changeVis} className="askedButton">
+                <button onClick={changesVisSecond} className="askedButton">
                   <span>How much does Netflix cost?</span>
                   <AiOutlinePlus
-                    className={vis ? "plusIcon " : "plusIcon rotate  "}
+                    className={secondVis ? "plusIcon " : "plusIcon rotate  "}
                   />
                 </button>
                 <div
-                  className={vis ? "answer answerFirst" : "block answerFirst"}
+                  className={secondVis ? "answer answerFirst" : "block answerFirst"}
                 >
-                  <p className={vis ? "" : "collapse"}>
+                  <p className={secondVis ? "" : "collapse"}>
                     Watch Netflix on your smartphone, tablet, Smart TV, laptop,
                     or streaming device, all for one fixed monthly fee. Plans
                     range from 63.99 TL to 130.99 TL a month. No extra costs, no
@@ -164,16 +217,16 @@ function Login() {
                 </div>
               </div>
               <div className="asked askedFirst">
-                <button onClick={changeVis} className="askedButton">
+                <button  className="askedButton"  onClick={changesVisThird}>
                   <span>Where can I watch?</span>
                   <AiOutlinePlus
-                    className={vis ? "plusIcon " : "plusIcon rotate  "}
+                    className={thirdVis ? "plusIcon " : "plusIcon rotate  "}
                   />
                 </button>
                 <div
-                  className={vis ? "answer answerFirst" : "block answerFirst"}
+                  className={thirdVis ? "answer answerFirst" : "block answerFirst"}
                 >
-                  <p className={vis ? "" : "collapse"}>
+                  <p className={thirdVis ? "" : "collapse"}>
                     Watch anywhere, anytime. Sign in with your Netflix account
                     to watch instantly on the web at netflix.com from your
                     personal computer or on any internet-connected device that
@@ -189,16 +242,16 @@ function Login() {
                 </div>
               </div>
               <div className="asked askedFirst">
-                <button onClick={changeVis} className="askedButton">
+                <button  className="askedButton" onClick={changesVisFourth}>
                   <span>How do I cancel?</span>
                   <AiOutlinePlus
-                    className={vis ? "plusIcon " : "plusIcon rotate  "}
+                    className={fourthVis ? "plusIcon " : "plusIcon rotate  "}
                   />
                 </button>
                 <div
-                  className={vis ? "answer answerFirst" : "block answerFirst"}
+                  className={fourthVis ? "answer answerFirst" : "block answerFirst"}
                 >
-                  <p className={vis ? "" : "collapse"}>
+                  <p className={fourthVis ? "" : "collapse"}>
                     Netflix is flexible. There are no pesky contracts and no
                     commitments. You can easily cancel your account online in
                     two clicks. There are no cancellation fees – start or stop
@@ -207,16 +260,16 @@ function Login() {
                 </div>
               </div>
               <div className="asked askedFirst">
-                <button onClick={changeVis} className="askedButton">
+                <button  className="askedButton" onClick={changesVisFiveth}>
                   <span>What can I watch on Netflix?</span>
                   <AiOutlinePlus
-                    className={vis ? "plusIcon " : "plusIcon rotate  "}
+                    className={fivethVis ? "plusIcon " : "plusIcon rotate  "}
                   />
                 </button>
                 <div
-                  className={vis ? "answer answerFirst" : "block answerFirst"}
+                  className={fivethVis ? "answer answerFirst" : "block answerFirst"}
                 >
-                  <p className={vis ? "" : "collapse"}>
+                  <p className={fivethVis ? "" : "collapse"}>
                     You can watch as much as you want, whenever you want without
                     a single commercial – all for one low monthly price. There's
                     always something new to discover and new TV shows and movies
@@ -225,16 +278,16 @@ function Login() {
                 </div>
               </div>
               <div className="asked askedFirst">
-                <button onClick={changeVis} className="askedButton">
+                <button  className="askedButton" onClick={changesVisSixth}>
                   <span>Is Netflix good for kids?</span>
                   <AiOutlinePlus
-                    className={vis ? "plusIcon " : "plusIcon rotate  "}
+                    className={sixthVis ? "plusIcon " : "plusIcon rotate  "}
                   />
                 </button>
                 <div
-                  className={vis ? "answer answerFirst" : "block answerFirst"}
+                  className={sixthVis ? "answer answerFirst" : "block answerFirst"}
                 >
-                  <p className={vis ? "" : "collapse"}>
+                  <p className={sixthVis ? "" : "collapse"}>
                     The Netflix Kids experience is included in your membership
                     to give parents control while kids enjoy family-friendly TV
                     shows and movies in their own space.
@@ -250,8 +303,8 @@ function Login() {
           </div>
         </div>
       </section>
-    </section>
+    </main>
   );
 }
 
-export default Login;
+export default Register;
