@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "../axios";
+import { BsFillInfoCircleFill } from "react-icons/bs";
+import { AiFillPlayCircle } from "react-icons/ai";
+import { GrAddCircle } from "react-icons/gr";
+import { AiTwotoneLike } from "react-icons/ai";
 
 function ActionRow({ fetchURL, title }) {
   const [action, setAction] = useState([]);
@@ -21,7 +25,21 @@ function ActionRow({ fetchURL, title }) {
         <div className="movies">
           {action.map((movie, index) => (
             <div key={index} className="movie">
-              <img src={`${base_URL}${movie.poster_path}`} alt={movie.name} />
+            <div className="image">
+            <img src={`${base_URL}${movie.poster_path}`} alt={movie.name} />
+            <div className="absolute">
+                <BsFillInfoCircleFill />
+              </div>
+              <div className="play">
+                <AiFillPlayCircle  />
+              </div>
+              <div className="like">
+                <GrAddCircle />
+              </div>
+              <div className="addShortList">
+                <AiTwotoneLike />
+              </div>
+            </div>
             </div>
           ))}
         </div>
