@@ -19,14 +19,28 @@
 .moviesRowContainer .moviesRowWrapper .movies .movie {
   padding-bottom: 5px;
   margin: 0 auto;
-  position: relative;
 }
-.moviesRowContainer .moviesRowWrapper .movies .movie img {
+.moviesRowContainer .moviesRowWrapper .movies .movie .image img {
   max-height: 300px;
   max-width: 250px;
   border-radius: 5px;
 }
-.moviesRowContainer .moviesRowWrapper .movies .movie img:hover {
-  transform: scale(1.08);
+.moviesRowContainer .moviesRowWrapper .movies .movie .image:hover {
+  position: relative;
+  transform: rotateY(180deg);
   cursor: pointer;
+  z-index: 99;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.moviesRowContainer .moviesRowWrapper .movies .movie .image .absolute {
+  position: absolute;
+  position: absolute;
+  top: 2%;
+  font-size: 20px;
+  z-index: 1000;
+  right: 5%;
+  color: #fff;
 }/*# sourceMappingURL=movies.css.map */

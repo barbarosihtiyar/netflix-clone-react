@@ -1,46 +1,57 @@
-.moviesRowContainer{
-    .moviesRowWrapper{
+.moviesRowContainer {
+    .moviesRowWrapper {
         padding-left: 50px;
         padding-right: 50px;
         display: flex;
         flex-direction: column;
         padding-bottom: 10px;
-        h1{
+
+        h1 {
             color: #e5e5e5;
             padding-top: 40px;
             padding-bottom: 5px;
             padding-left: 3px;
         }
-        .movies{
+
+        .movies {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-        .movie{
-            padding-bottom: 5px;
-            margin: 0 auto;
-            position: relative;
-            img{
-                max-height: 300px;
-                max-width: 250px;
-                border-radius: 5px;
-                &:hover{
-                    transform: scale(1.08);
-                    cursor: pointer;
+
+            .movie {
+                padding-bottom: 5px;
+                margin: 0 auto;
+
+                .image {
+                    img {
+                        max-height: 300px;
+                        max-width: 250px;
+                        border-radius: 5px;
+                    }
+
+                    &:hover {
+                        position: relative;
+                        transform: rotateY(180deg);
+                        cursor: pointer;
+                        z-index: 99;
+                        -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
+                        transform-style: preserve-3d;
+                        transition: transform .8s;
+                    }
+
+                    .absolute {
+                        position: absolute;
+                        position: absolute;
+                        top: 2%;
+                        font-size: 20px;
+                        z-index: 1000;
+                        right: 5%;
+                        color: #fff;
+                    }
                 }
-            }
-            .vote_avertage{
 
-            }
-            .play{
-
-            }
-            .add{
-
-            }
-            .like{
-                
             }
         }
     }
-}        }
-
+}
