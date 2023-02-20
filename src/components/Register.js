@@ -15,7 +15,6 @@ function Register() {
   const [fourthVis, setFourthVis] = useState(true);
   const [fivethVis, setFivethVis] = useState(true);
   const [sixthVis, setSixthVis] = useState(true);
-  const [vis, setVis] = useState(true);
 
   
   const changesVisFirst = () => {
