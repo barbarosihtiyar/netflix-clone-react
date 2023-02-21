@@ -1,0 +1,89 @@
+@import "variables";
+
+.signup{
+    display: flex;
+    justify-content: center;
+    .signupContainer{
+        max-width: 800px;
+        margin: auto;
+        padding: 15px 30px;
+        margin-top: 150px;
+        .signupWrapper{
+            .registerHeader {
+                position: absolute;
+                top: 2%;
+                left: 2%;
+
+                img {
+                    width: 167px;
+                }
+            }
+            h1{
+                 @include font(40px,700,#fff);
+                 padding-bottom: 30px;
+                 text-align: center;
+            }
+            .signupForm{
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 600px;
+                    label{
+                        @include font(20px,600,#fff);
+                    }
+                    input{
+                        margin-bottom: 10px;
+                        padding: 8px 10px;
+                        border-radius: 5px;
+                        outline: none;
+                        border: none;
+                        @include font(15px,800,#000);
+
+                    }
+                    button{
+                        width: 50%;
+                        padding: 15px;
+                        margin: 0 auto;
+                        border: none;
+                        outline: none;
+                        @include font(25px,700,#000);
+                        cursor: pointer;
+                    }
+                    .malefemale{
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        @include font(30px,600,#fff);
+                    }
+                    input[type=radio]{
+                        margin-right: 5px;
+                    }
+                    .checkbox{
+                        display: flex;
+                        gap: 5px;
+                        padding-top: 15px;
+                        padding-bottom: 30px;
+                        align-items: flex-start;
+                        input{
+                            padding: 5px;
+                            margin: 0;
+                            width: auto;
+                            margin-top: 5px;
+                        }
+                    }
+                    
+                }
+                span{
+                    @include font(25px,600,#fff);
+                    width: 100%;
+                    text-align: center;
+                    a{
+                        @include font(25px,600,#fff);
+                    }
+                    display: inline-block;
+                    padding-top: 30px;
+                }
+            }
+        }
+    }
+}

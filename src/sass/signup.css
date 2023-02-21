@@ -1,0 +1,94 @@
+.signup {
+  display: flex;
+  justify-content: center;
+}
+.signup .signupContainer {
+  max-width: 800px;
+  margin: auto;
+  padding: 15px 30px;
+  margin-top: 150px;
+}
+.signup .signupContainer .signupWrapper .registerHeader {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+.signup .signupContainer .signupWrapper .registerHeader img {
+  width: 167px;
+}
+.signup .signupContainer .signupWrapper h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.signup .signupContainer .signupWrapper .signupForm form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+.signup .signupContainer .signupWrapper .signupForm form label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.signup .signupContainer .signupWrapper .signupForm form input {
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 800;
+  color: #000;
+}
+.signup .signupContainer .signupWrapper .signupForm form button {
+  width: 50%;
+  padding: 15px;
+  margin: 0 auto;
+  border: none;
+  outline: none;
+  font-size: 25px;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+}
+.signup .signupContainer .signupWrapper .signupForm form .malefemale {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+}
+.signup .signupContainer .signupWrapper .signupForm form input[type=radio] {
+  margin-right: 5px;
+}
+.signup .signupContainer .signupWrapper .signupForm form .checkbox {
+  display: flex;
+  gap: 5px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  align-items: flex-start;
+}
+.signup .signupContainer .signupWrapper .signupForm form .checkbox input {
+  padding: 5px;
+  margin: 0;
+  width: auto;
+  margin-top: 5px;
+}
+.signup .signupContainer .signupWrapper .signupForm span {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding-top: 30px;
+}
+.signup .signupContainer .signupWrapper .signupForm span a {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+}/*# sourceMappingURL=signup.css.map */
