@@ -58,6 +58,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  max-height: 30px;
   font-size: 30px;
   font-weight: 600;
   color: #fff;
@@ -91,4 +92,8 @@
   font-size: 25px;
   font-weight: 600;
   color: #fff;
+}
+
+.redAlert {
+  border: 3px solid red !important;
 }/*# sourceMappingURL=signup.css.map */

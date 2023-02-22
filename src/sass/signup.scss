@@ -53,6 +53,7 @@
                         display: flex;
                         align-items: center;
                         gap: 20px;
+                        max-height: 30px;
                         @include font(30px,600,#fff);
                     }
                     input[type=radio]{
@@ -86,4 +87,8 @@
             }
         }
     }
+}
+
+.redAlert{
+    border: 3px solid red !important;
 }
