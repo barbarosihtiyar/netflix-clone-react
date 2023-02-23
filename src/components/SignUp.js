@@ -4,52 +4,67 @@ import "../sass/signup.css";
 import netflixLogo from "../images/Netflix-Logo-.webp";
 
 function Signup() {
-  const [namesurname,setNameSurname] = useState("");
-  const [username,setUsername] = useState("");
-  const [email,setEmail] = useState("");
-  const [password,setPassword] = useState("");
-  const [passwordAgain,setPasswordAgain] = useState("");
-  const [birthday,setBirthday] = useState("");
-  const [status,setStatus] = useState(true);
-  const [statusUser,setStatusUser] = useState(true);
-  const [statusEmail,setStatusEmail] = useState(true);
-  const [statusPassword,setStatusPassword] = useState(true);
-  const [statusPasswordAgain,setStatusPasswordAgain] = useState(true);
-  const [statusBirthday,setStatusBİrthday] = useState(true);
-
-
+  const [namesurname, setNameSurname] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordAgain, setPasswordAgain] = useState("");
+  const [birthday, setBirthday] = useState("");
+  const [gender, setGender] = useState("");
+  const [checkbox, setCheckbox] = useState("");
+  const [status, setStatus] = useState(true);
+  const [statusUser, setStatusUser] = useState(true);
+  const [statusEmail, setStatusEmail] = useState(true);
+  const [statusPassword, setStatusPassword] = useState(true);
+  const [statusPasswordAgain, setStatusPasswordAgain] = useState(true);
+  const [statusBirthday, setStatusBirthday] = useState(true);
+  const [statusGender, setStatusGender] = useState(true);
+  const [statusCheckBox, setStatusCheckBox] = useState(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(namesurname === "" ){
-      setStatus(false)
-    }else{
-      setStatus(true)
+    if (namesurname === "") {
+      setStatus(false);
+    } else {
+      setStatus(true);
     }
-    if(username === "" ){
-      setStatusUser(false)
-    }else{
-      setStatusUser(true)
-    }if(email === "" ){
-      setStatusEmail(false)
-    }else{
-      setStatusEmail(true)
-    }if(password === "" ){
-      setStatusPassword(false)
-    }else{
-      setStatusPassword(true)
-    }if(passwordAgain === "" ){
-      setStatusPasswordAgain(false)
-    }else{
-      setStatusPasswordAgain(true)
-    }if(birthday === "" ){
-      setStatusBİrthday(false)
-    }else{
-      setStatusBİrthday(true)
+    if (username === "") {
+      setStatusUser(false);
+    } else {
+      setStatusUser(true);
     }
-  }
+    if (email === "") {
+      setStatusEmail(false);
+    } else {
+      setStatusEmail(true);
+    }
+    if (password === "") {
+      setStatusPassword(false);
+    } else {
+      setStatusPassword(true);
+    }
+    if (passwordAgain === "") {
+      setStatusPasswordAgain(false);
+    } else {
+      setStatusPasswordAgain(true);
+    }
+    if (birthday === "") {
+      setStatusBirthday(false);
+    } else {
+      setStatusBirthday(true);
+    }
+    if (gender === "") {
+      setStatusGender(false);
+    } else {
+      setStatusGender(true);
+    }if(checkbox !== "click"){
+      setStatusCheckBox(false);
+    }else{
+      setStatusCheckBox(true);
+    }
+  };
 
-  console.log(email.value);
+  console.log(checkbox);
   return (
     <main>
       <section className="signup">
@@ -132,18 +147,39 @@ function Signup() {
                 <label htmlFor="gender">Gender</label>
                 <div className="malefemale">
                   <div className="male">
-                    <input name="gender" id="male" type="radio" />
+                    <input
+                      name="gender"
+                      id="male"
+                      type="radio"
+                      className={statusGender ? "" : "redAlert"}
+                      value="male"
+                      onChange={(e) => setGender(e.target.value)}
+                    />
                     <label htmlFor="male">Male</label>
                   </div>
                   <div className="female">
-                    <input name="gender" id="female" type="radio" />
+                    <input
+                      name="gender"
+                      id="female"
+                      type="radio"
+                      className={statusGender ? "" : "redAlert"}
+                      value="female"
+                      onChange={(e) => setGender(e.target.value)}
+                    />
                     <label htmlFor="female">Female</label>
                   </div>
                 </div>
 
                 <div className="checkbox">
-                  <input type="checkbox" name="condition" id="condition" />
-                  <label htmlFor="condition">
+                  <input
+                    type="checkbox"
+                    name="condition"
+                    id="condition"
+                    className={statusGender ? "" : "redAlert"}
+                    value="click"
+                    onChange={(e) => setCheckbox(e.target.value)}
+                  />
+                  <label htmlFor="condition" className={statusCheckBox ? "" : "warningColor"}>
                     By ticking this box, you will be deemed to have accepted the
                     terms of use.
                   </label>
@@ -153,7 +189,7 @@ function Signup() {
                     to="/Home"
                     style={{ textDecoration: "none", color: "#000" }}
                   > */}
-                    CREATE ACCOUNT
+                  CREATE ACCOUNT
                   {/* </Link> */}
                 </button>
               </form>
