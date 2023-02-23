@@ -96,4 +96,8 @@
 
 .redAlert {
   border: 3px solid red !important;
+}
+
+.warningColor {
+  color: red !important;
 }/*# sourceMappingURL=signup.css.map */
