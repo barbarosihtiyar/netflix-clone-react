@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../sass/signup.css";
 import netflixLogo from "../images/Netflix-Logo-.webp";
@@ -22,7 +22,6 @@ function Signup() {
   const [statusCheckBox, setStatusCheckBox] = useState(true);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     if (namesurname === "") {
       setStatus(false);
     } else {
@@ -36,6 +35,11 @@ function Signup() {
     if (email === "") {
       setStatusEmail(false);
     } else {
+      setStatusEmail(true);
+    }
+    if(isEmailValid() === false){
+      setStatusEmail(false);
+    }else{
       setStatusEmail(true);
     }
     if (password === "") {
@@ -53,18 +57,26 @@ function Signup() {
     } else {
       setStatusBirthday(true);
     }
-    if (gender === "") {
+    if (gender == "") {
       setStatusGender(false);
     } else {
       setStatusGender(true);
-    }if(checkbox !== "click"){
+    }
+    if (checkbox !== "click") {
       setStatusCheckBox(false);
-    }else{
+    } else {
       setStatusCheckBox(true);
     }
+
+    return false;
   };
 
-  console.log(checkbox);
+  const isEmailValid = () => {
+    const require = /\S+@\S+\.\S+/;
+    return require.test(email);
+  }
+
+
   return (
     <main>
       <section className="signup">
@@ -155,7 +167,12 @@ function Signup() {
                       value="male"
                       onChange={(e) => setGender(e.target.value)}
                     />
-                    <label htmlFor="male">Male</label>
+                    <label
+                      htmlFor="male"
+                      className={statusGender ? "" : "warningColor"}
+                    >
+                      Male
+                    </label>
                   </div>
                   <div className="female">
                     <input
@@ -166,7 +183,12 @@ function Signup() {
                       value="female"
                       onChange={(e) => setGender(e.target.value)}
                     />
-                    <label htmlFor="female">Female</label>
+                    <label
+                      htmlFor="female"
+                      className={statusGender ? "" : "warningColor"}
+                    >
+                      Female
+                    </label>
                   </div>
                 </div>
 
@@ -179,7 +201,10 @@ function Signup() {
                     value="click"
                     onChange={(e) => setCheckbox(e.target.value)}
                   />
-                  <label htmlFor="condition" className={statusCheckBox ? "" : "warningColor"}>
+                  <label
+                    htmlFor="condition"
+                    className={statusCheckBox ? "" : "warningColor"}
+                  >
                     By ticking this box, you will be deemed to have accepted the
                     terms of use.
                   </label>
