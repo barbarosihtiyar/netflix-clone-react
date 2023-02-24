@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../sass/signup.css";
 import netflixLogo from "../images/Netflix-Logo-.webp";
+import { BiShow } from "react-icons/bi";
+import { BiHide } from "react-icons/bi";
 
 function Signup() {
   const [namesurname, setNameSurname] = useState("");
@@ -20,8 +22,17 @@ function Signup() {
   const [statusBirthday, setStatusBirthday] = useState(true);
   const [statusGender, setStatusGender] = useState(true);
   const [statusCheckBox, setStatusCheckBox] = useState(true);
+  const [passwordLengthErrorMessage, setPasswordLengthErrorMessage] =
+    useState(true);
+  const [passwordAgainLengthErrorMessage, setPasswordAgainLengthErrorMessage] =
+    useState(true);
+  const [checkPasswordAlert, setCheckPasswordAlert] = useState(true);
+  const [showPassword, setShowPassword] = useState(true);
+  const [showPasswordAgain, setShowPasswordAgain] = useState(true);
+  // const [disable, setDisable] = useState(true);
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     if (namesurname === "") {
       setStatus(false);
     } else {
@@ -37,9 +48,9 @@ function Signup() {
     } else {
       setStatusEmail(true);
     }
-    if(isEmailValid() === false){
+    if (isEmailValid() === false) {
       setStatusEmail(false);
-    }else{
+    } else {
       setStatusEmail(true);
     }
     if (password === "") {
@@ -57,7 +68,7 @@ function Signup() {
     } else {
       setStatusBirthday(true);
     }
-    if (gender == "") {
+    if (gender === "") {
       setStatusGender(false);
     } else {
       setStatusGender(true);
@@ -67,15 +78,70 @@ function Signup() {
     } else {
       setStatusCheckBox(true);
     }
-
-    return false;
+    // sendInfo();
   };
 
   const isEmailValid = () => {
     const require = /\S+@\S+\.\S+/;
     return require.test(email);
-  }
+  };
 
+  const handleClick = () => {
+    if (password === passwordAgain) {
+      setCheckPasswordAlert(true);
+      if (6 <= password.length && 6 <= passwordAgain.length) {
+      } else {
+        if (5 > password.length) {
+          setPasswordLengthErrorMessage(false);
+        }
+        if (5 > passwordAgain.length) {
+          setPasswordAgainLengthErrorMessage(false);
+        }
+      }
+    } else {
+      console.log("sifre eslesmiyor");
+      setCheckPasswordAlert(false);
+      setPasswordLengthErrorMessage(true);
+      setPasswordAgainLengthErrorMessage(true);
+    }
+    isAvaible();
+  };
+
+  // const sendInfo = () => {
+  //   if (handleClick){
+  //   }
+  // }
+
+  const handleShowHiddenPassword = () => {
+    setShowPassword(!showPassword);
+  };
+  const handleShowHiddenPasswordAgain = () => {
+    setShowPasswordAgain(!showPasswordAgain);
+  };
+
+  const isAvaible = () => {
+    if (
+      namesurname !== "" &&
+      username !== "" &&
+      email !== "" &&
+      password !== "" &&
+      passwordAgain !== "" &&
+      birthday !== "" &&
+      gender !== "" &&
+      checkbox === "click" && 
+      isEmailValid()
+    ) {
+      localStorage.setItem("namesurname", namesurname);
+      localStorage.setItem("username", username);
+      localStorage.setItem("email", email);
+      localStorage.setItem("password", password);
+      localStorage.setItem("passwordAgain", passwordAgain);
+      localStorage.setItem("birthday", birthday);
+      localStorage.setItem("gender", gender);  
+    } else {
+      console.log("Not send user information");
+    }
+  };
 
   return (
     <main>
@@ -124,26 +190,86 @@ function Signup() {
                 />
 
                 <label htmlFor="password">Password</label>
-                <input
-                  name="password"
-                  id="password"
-                  type="password"
-                  placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className={statusPassword ? "" : "redAlert"}
-                />
+                <div className="flex">
+                  <input
+                    name="password"
+                    id="password"
+                    type={showPassword ? "password" : "text"}
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className={statusPassword ? "" : "redAlert"}
+                  />
+                  <div
+                    className="showHidePassword"
+                    onClick={handleShowHiddenPassword}
+                  >
+                    <BiShow
+                      style={{ color: "#fff" }}
+                      className={showPassword ? "" : "none"}
+                    />
+                    <BiHide
+                      style={{ color: "#fff" }}
+                      className={showPassword ? "none" : ""}
+                    />
+                  </div>
+                </div>
+                <label
+                  className={
+                    passwordLengthErrorMessage ? "none" : "passwordErrorMessage"
+                  }
+                >
+                  Password length must be at least 6 characters
+                </label>
+                <label
+                  className={
+                    checkPasswordAlert ? "none" : "passwordErrorMessage"
+                  }
+                >
+                  Passwords Do Not Match
+                </label>
 
                 <label htmlFor="passwordAgain">Password Again</label>
-                <input
-                  name="passwordAgain"
-                  id="passwordAgain"
-                  type="password"
-                  placeholder="Password Again"
-                  value={passwordAgain}
-                  onChange={(e) => setPasswordAgain(e.target.value)}
-                  className={statusPasswordAgain ? "" : "redAlert"}
-                />
+                <div className="flex">
+                  <input
+                    name="passwordAgain"
+                    id="passwordAgain"
+                    type={showPasswordAgain ? "password" : "text"}
+                    placeholder="Password Again"
+                    value={passwordAgain}
+                    onChange={(e) => setPasswordAgain(e.target.value)}
+                    className={statusPasswordAgain ? "" : "redAlert"}
+                  />
+                  <div
+                    className="showHidePassword"
+                    onClick={handleShowHiddenPasswordAgain}
+                  >
+                    <BiShow
+                      style={{ color: "#fff" }}
+                      className={showPasswordAgain ? "" : "none"}
+                    />
+                    <BiHide
+                      style={{ color: "#fff" }}
+                      className={showPasswordAgain ? "none" : ""}
+                    />
+                  </div>
+                </div>
+                <label
+                  className={
+                    passwordAgainLengthErrorMessage
+                      ? "none"
+                      : "passwordErrorMessage"
+                  }
+                >
+                  Password length must be at least 6 characters
+                </label>
+                <label
+                  className={
+                    checkPasswordAlert ? "none" : "passwordErrorMessage"
+                  }
+                >
+                  Passwords Do Not Match
+                </label>
 
                 <label htmlFor="birthday">Birthday</label>
                 <input
@@ -209,7 +335,11 @@ function Signup() {
                     terms of use.
                   </label>
                 </div>
-                <button type="submit">
+                <button
+                  // type={disable ? "submit" : "button"}
+                  type="submit"
+                  onClick={handleClick}
+                >
                   {/* <Link
                     to="/Home"
                     style={{ textDecoration: "none", color: "#000" }}
