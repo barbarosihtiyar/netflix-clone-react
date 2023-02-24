@@ -16,7 +16,10 @@
 .signup .signupContainer .signupWrapper .registerHeader img {
   width: 167px;
 }
-.signup .signupContainer .signupWrapper h1 {
+.signup .signupContainer .signupWrapper .signupTitle {
+  max-width: 600px;
+}
+.signup .signupContainer .signupWrapper .signupTitle h1 {
   font-size: 40px;
   font-weight: 700;
   color: #fff;
@@ -26,7 +29,7 @@
 .signup .signupContainer .signupWrapper .signupForm form {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  max-width: 700px;
 }
 .signup .signupContainer .signupWrapper .signupForm form label {
   font-size: 20px;
@@ -35,13 +38,14 @@
 }
 .signup .signupContainer .signupWrapper .signupForm form input {
   margin-bottom: 10px;
-  padding: 8px 10px;
+  padding: 12px;
   border-radius: 5px;
   outline: none;
   border: none;
   font-size: 15px;
   font-weight: 800;
   color: #000;
+  max-width: 600px;
 }
 .signup .signupContainer .signupWrapper .signupForm form button {
   width: 50%;
@@ -100,4 +104,29 @@
 
 .warningColor {
   color: red !important;
+}
+
+.none {
+  display: none;
+}
+
+.passwordErrorMessage {
+  display: block;
+  color: red !important;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+.flex input {
+  width: 100%;
+}
+.flex .showHidePassword {
+  margin-bottom: 8px;
+  margin-left: 5px;
+}
+
+.checkbox label {
+  max-width: 600px;
 }/*# sourceMappingURL=signup.css.map */
