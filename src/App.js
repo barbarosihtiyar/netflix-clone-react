@@ -8,7 +8,7 @@ import Romance from "./components/Romance";
 import Documentary from "./components/Documentary";
 import Login from "./components/Login";
 import Register from "./components/Register";
-
+const [subsInfo,setSubsInfo] = useState([]) ;
 function App() {
   return (
     <div className="App">
