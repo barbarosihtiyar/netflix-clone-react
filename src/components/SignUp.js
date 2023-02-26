@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import { Link } from "react-router-dom";
 import "../sass/signup.css";
 import netflixLogo from "../images/Netflix-Logo-.webp";
 import { BiShow } from "react-icons/bi";
 import { BiHide } from "react-icons/bi";
+import { MainContext,useContext } from "../context";
 
 function Signup() {
   const [namesurname, setNameSurname] = useState("");
@@ -29,7 +30,12 @@ function Signup() {
   const [checkPasswordAlert, setCheckPasswordAlert] = useState(true);
   const [showPassword, setShowPassword] = useState(true);
   const [showPasswordAgain, setShowPasswordAgain] = useState(true);
-  // const [disable, setDisable] = useState(true);
+  let {subsInfo,setSubsInfo} = useContext(MainContext);
+
+
+  subsInfo = setSubsInfo;
+
+  console.log(subsInfo);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -128,7 +134,7 @@ function Signup() {
       passwordAgain !== "" &&
       birthday !== "" &&
       gender !== "" &&
-      checkbox === "click" && 
+      checkbox === "click" &&
       isEmailValid()
     ) {
       localStorage.setItem("namesurname", namesurname);
@@ -137,7 +143,18 @@ function Signup() {
       localStorage.setItem("password", password);
       localStorage.setItem("passwordAgain", passwordAgain);
       localStorage.setItem("birthday", birthday);
-      localStorage.setItem("gender", gender);  
+      localStorage.setItem("gender", gender);
+        setSubsInfo = {
+      "namesurname" : namesurname,
+      "username" : username,
+      "email" : email,
+      "password" : password,
+      "passwordAgain" : passwordAgain,
+      "birthday" : birthday,
+      "gender" : gender,
+      "checkbox": checkbox,
+  }
+
     } else {
       console.log("Not send user information");
     }
