@@ -8,13 +8,24 @@ import Romance from "./components/Romance";
 import Documentary from "./components/Documentary";
 import Login from "./components/Login";
 import Register from "./components/Register";
-const [subsInfo,setSubsInfo] = useState([]) ;
+import Signup from "./components/Signup";
+import { MainContext } from "./context";
+import { useState } from "react";
+
+
 function App() {
+  const [subsInfo,setSubsInfo] = useState();
+
+  const data = {
+    subsInfo,
+    setSubsInfo
+  }
   return (
-    <div className="App">
+    <MainContext.Provider value={data}>
     <Routes>
     <Route exact path="/" element={<Login />} />
     <Route exact path="/register" element={<Register />} />
+    <Route exact path="/signup" element={<Signup />} />
     <Route exact path="/home" element={<Home />} />
     <Route path="/action" element={<Action />} />
     <Route path="/comedy" element={<Comedy />} />
@@ -22,7 +33,7 @@ function App() {
     <Route path="/romance" element={<Romance />} />
     <Route path="/documentary" element={<Documentary />} />
     </Routes>
-    </div>
+    </MainContext.Provider>
   );
 }
 
