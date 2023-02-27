@@ -4,7 +4,9 @@ import "../sass/signup.css";
 import netflixLogo from "../images/Netflix-Logo-.webp";
 import { BiShow } from "react-icons/bi";
 import { BiHide } from "react-icons/bi";
+import { TiTimes } from "react-icons/ti";
 import { MainContext,useContext } from "../context";
+
 
 function Signup() {
   const [namesurname, setNameSurname] = useState("");
@@ -30,12 +32,17 @@ function Signup() {
   const [checkPasswordAlert, setCheckPasswordAlert] = useState(true);
   const [showPassword, setShowPassword] = useState(true);
   const [showPasswordAgain, setShowPasswordAgain] = useState(true);
+  const [popup,setPopup] = useState(false);
   let {subsInfo,setSubsInfo} = useContext(MainContext);
 
 
   subsInfo = setSubsInfo;
 
   console.log(subsInfo);
+
+  const hiddenPopup = () => {
+    setPopup(!popup);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -84,7 +91,6 @@ function Signup() {
     } else {
       setStatusCheckBox(true);
     }
-    // sendInfo();
   };
 
   const isEmailValid = () => {
@@ -154,6 +160,7 @@ function Signup() {
       "gender" : gender,
       "checkbox": checkbox,
   }
+    setPopup(true);
 
     } else {
       console.log("Not send user information");
@@ -368,6 +375,15 @@ function Signup() {
               <span>
                 Already have an account <Link to="/">Sign In</Link>
               </span>
+            </div>
+            <div className={popup ? "popup max" : "popup min"}>
+            <div className="headerPopup" ><TiTimes onClick={hiddenPopup}/></div>
+            <div className="bodyPopup">
+            <span>You have successfully registered</span>
+            </div>
+            <div className="footerPopup">
+              <button type="button" onClick={hiddenPopup}>OKEY</button>
+            </div>
             </div>
           </div>
         </div>
