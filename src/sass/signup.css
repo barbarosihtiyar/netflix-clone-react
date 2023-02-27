@@ -8,8 +8,11 @@
   padding: 15px 30px;
   margin-top: 150px;
 }
+.signup .signupContainer .signupWrapper {
+  position: relative;
+}
 .signup .signupContainer .signupWrapper .registerHeader {
-  position: absolute;
+  position: fixed;
   top: 2%;
   left: 2%;
 }
@@ -129,4 +132,55 @@
 
 .checkbox label {
   max-width: 600px;
+}
+
+.popup {
+  width: 618px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000;
+  position: absolute;
+  top: 20%;
+  z-index: 99;
+}
+.popup .headerPopup {
+  color: #fff;
+  margin-left: auto;
+  font-size: 2rem;
+  margin-bottom: auto;
+  cursor: pointer;
+}
+.popup .bodyPopup {
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 30px;
+  margin-bottom: auto;
+}
+.popup .footerPopup {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.popup .footerPopup button {
+  border: none;
+  background-color: #fff;
+  color: #000;
+  font-size: 2rem;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.min {
+  transform: translateY(-500px);
+  transition: all 1s;
+  top: -10%;
+}
+
+.max {
+  transform: scale(1);
+  transition: all 1s;
 }/*# sourceMappingURL=signup.css.map */
