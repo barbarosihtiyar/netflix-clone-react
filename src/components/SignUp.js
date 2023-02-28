@@ -230,11 +230,11 @@ function Signup() {
                   >
                     <BiShow
                       style={{ color: "#fff" }}
-                      className={showPassword ? "" : "none"}
+                      className={showPassword ? "none" : ""}
                     />
                     <BiHide
                       style={{ color: "#fff" }}
-                      className={showPassword ? "none" : ""}
+                      className={showPassword ? "" : "none"}
                     />
                   </div>
                 </div>
@@ -270,11 +270,11 @@ function Signup() {
                   >
                     <BiShow
                       style={{ color: "#fff" }}
-                      className={showPasswordAgain ? "" : "none"}
+                      className={showPasswordAgain ? "none" : "none"}
                     />
                     <BiHide
                       style={{ color: "#fff" }}
-                      className={showPasswordAgain ? "none" : ""}
+                      className={showPasswordAgain ? "" : ""}
                     />
                   </div>
                 </div>
