@@ -32,6 +32,17 @@ function Login() {
    }
   }
 
+  const checkPasswordVal = () => {
+    if(subsInfo.password !== password){
+      checkRegister();
+      setCheckPassword(false);
+    }else{
+      checkRegister();
+      setCheckPassword(true);
+   }
+  }
+  
+
 
 
 
