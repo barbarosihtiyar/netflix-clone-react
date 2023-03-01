@@ -22,7 +22,15 @@ function Login() {
    }
   }
 
-
+  const checkEmailVal = () => {
+    if(subsInfo.email !== email){
+      checkRegister();
+      setCheckEmail(false);
+    }else{
+      checkRegister();
+      setCheckEmail(true);
+   }
+  }
 
 
 
