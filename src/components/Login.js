@@ -42,6 +42,12 @@ function Login() {
    }
   }
   
+  const formSubmit = (e) => {
+    e.preventDefault();
+    checkEmailVal();
+    checkPasswordVal();
+    checkRegister();
+  }
 
 
 
