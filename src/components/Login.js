@@ -1,12 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import netflixLogo from "../images/netflix.png";
 import "../sass/login.css"
 import {loginImageBg} from "../images/loginImageBg.jpg"
 import {Link} from "react-router-dom"
- 
+import { MainContext, useContext } from "../context";
+
 function Login() {
+  const [email,setEmail] = useState("");
+  const [password,setPassword] = useState("");
+  const [checkPassword,setCheckPassword] = useState(true);
+  const [checkEmail,setCheckEmail] = useState(true);
+  const [register,setRegister] = useState(false);
+  let {subsInfo} = useContext(MainContext);
+  console.log(subsInfo);
+
+  const checkRegister = () => {
+   if( subsInfo.email === email && subsInfo.password === password){
+    setRegister(true);
+   }else{
+    setRegister(false);
+   }
+  }
+
+
+
+
+
+
   return (
-    <section className="login">
+    <section className="sectionLogin">
     <div className="loginContainer" >
       <div className="loginWrapper">
         <div className="loginHeader">
@@ -14,10 +36,10 @@ function Login() {
         </div>
         <div className="login">
           <h6>Login</h6>
-          <form>
-          <input type="text" placeholder='email or phone number' />
-          <input type="password" placeholder='password' />
-          <Link to="/home"><button type='button'>Login</button></Link>
+          <form onSubmit={formSubmit}>
+          <input type="text" value={email} placeholder='email or phone number' onChange={(e) => setEmail(e.target.value)} />
+          <input value={password} type="password" placeholder='password' onChange={(e) => setPassword(e.target.value)} />
+          <button type= {register ? "submit" : "button"} onClick={checkRegister} >Login<Link to="/home"></Link></button>
           </form>
           <div className="info">
           <div className="rememberMe">
@@ -31,7 +53,7 @@ function Login() {
           </div>
           </div>
           <div className="invite">
-            Could you join Netflix?<span className="special">Register now.</span>
+            Could you join Netflix? <Link to="/register"><span className="special">Register now.</span></Link>
           </div>
         </div>
       </div>
