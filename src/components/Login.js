@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import netflixLogo from "../images/netflix.png";
 import "../sass/login.css"
 import {loginImageBg} from "../images/loginImageBg.jpg"
@@ -10,7 +10,8 @@ function Login() {
   const [password,setPassword] = useState("");
   const [checkPassword,setCheckPassword] = useState(true);
   const [checkEmail,setCheckEmail] = useState(true);
-  const [register,setRegister] = useState(false);
+  const [register,setRegister] = useState();
+  const [link,setLink] = useState();
   let {subsInfo} = useContext(MainContext);
   console.log(subsInfo);
 
@@ -22,32 +23,51 @@ function Login() {
    }
   }
 
-  const checkEmailVal = () => {
-    if(subsInfo.email !== email){
-      checkRegister();
-      setCheckEmail(false);
-    }else{
-      checkRegister();
-      setCheckEmail(true);
-   }
-  }
 
-  const checkPasswordVal = () => {
-    if(subsInfo.password !== password){
-      checkRegister();
-      setCheckPassword(false);
-    }else{
-      checkRegister();
-      setCheckPassword(true);
-   }
-  }
-  
-  const formSubmit = (e) => {
-    e.preventDefault();
-    checkEmailVal();
-    checkPasswordVal();
+ const checkEmailVal = () => {
+  if(subsInfo.email !== email){
     checkRegister();
+    setCheckEmail(false);
+  }else{
+    checkRegister();
+    setCheckEmail(true);
+ }
+}
+
+const checkPasswordVal = () => {
+  if(subsInfo.password !== password){
+    checkRegister();
+    setCheckPassword(false);
+  }else{
+    checkRegister();
+    setCheckPassword(true);
+ }
+}
+
+const formSubmit = (e) => {
+  e.preventDefault();
+  checkEmailVal();
+  checkPasswordVal();
+  checkRegister();
+}
+
+const inputEmail = document.getElementById("userEmail");
+const inputPass  = document.getElementById("userPass");
+
+if(register === false){
+  if(subsInfo.password !== password){
+    inputPass.classList.add("borderAlert");
+  }else{
+    inputPass.classList.remove("borderAlert");
   }
+   if(subsInfo.email !== email){
+    inputEmail.classList.add("borderAlert");
+  }else{
+    inputEmail.classList.remove("borderAlert");
+  }
+}
+
+
 
 
 
@@ -62,9 +82,9 @@ function Login() {
         <div className="login">
           <h6>Login</h6>
           <form onSubmit={formSubmit}>
-          <input type="text" value={email} placeholder='email or phone number' onChange={(e) => setEmail(e.target.value)} />
-          <input value={password} type="password" placeholder='password' onChange={(e) => setPassword(e.target.value)} />
-          <button type= {register ? "submit" : "button"} onClick={checkRegister} >Login<Link to="/home"></Link></button>
+          <input id='userEmail' type="text" value={email} placeholder='email or phone number' onChange={(e) => setEmail(e.target.value)} />
+          <input id='userPass'  value={password} type="password" placeholder='password' onChange={(e) => setPassword(e.target.value)} />
+          <button type= {register ? "submit" : "button"} onClick={checkRegister} ><Link style={{textDecoration:"none",color:"#fff"}} to={register ? "/home" : "/" }>Login</Link></button>
           </form>
           <div className="info">
           <div className="rememberMe">
