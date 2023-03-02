@@ -23,6 +23,21 @@ function Login() {
    }
   }
 
+  const inputEmail = document.getElementById("userEmail");
+const inputPass  = document.getElementById("userPass");
+
+if(register === false){
+  if(subsInfo.password !== password){
+    inputPass.classList.add("borderAlert");
+  }else{
+    inputPass.classList.remove("borderAlert");
+  }
+   if(subsInfo.email !== email){
+    inputEmail.classList.add("borderAlert");
+  }else{
+    inputEmail.classList.remove("borderAlert");
+  }
+}
 
  const checkEmailVal = () => {
   if(subsInfo.email !== email){
