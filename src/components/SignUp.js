@@ -36,9 +36,7 @@ function Signup() {
   let {subsInfo,setSubsInfo} = useContext(MainContext);
 
 
-  subsInfo = setSubsInfo;
 
-  console.log(subsInfo);
 
   const hiddenPopup = () => {
     setPopup(!popup);
@@ -117,6 +115,7 @@ function Signup() {
       setPasswordAgainLengthErrorMessage(true);
     }
     isAvaible();
+    console.log(subsInfo)
   };
 
   // const sendInfo = () => {
@@ -143,23 +142,17 @@ function Signup() {
       checkbox === "click" &&
       isEmailValid()
     ) {
-      localStorage.setItem("namesurname", namesurname);
-      localStorage.setItem("username", username);
-      localStorage.setItem("email", email);
-      localStorage.setItem("password", password);
-      localStorage.setItem("passwordAgain", passwordAgain);
-      localStorage.setItem("birthday", birthday);
-      localStorage.setItem("gender", gender);
-        setSubsInfo = {
-      "namesurname" : namesurname,
-      "username" : username,
-      "email" : email,
-      "password" : password,
-      "passwordAgain" : passwordAgain,
-      "birthday" : birthday,
-      "gender" : gender,
-      "checkbox": checkbox,
-  }
+        setSubsInfo ({
+        "namesurname" : namesurname,
+        "email" : email,
+        "password" : password,
+        "passwordAgain" : passwordAgain,
+        "birthday" : birthday,
+        "gender" : gender,
+        "checkbox": checkbox,
+  })
+  console.log(subsInfo)
+
     setPopup(true);
 
     } else {
