@@ -23,8 +23,6 @@ function Login() {
    }
   }
 
-  const inputEmail = document.getElementById("userEmail");
-const inputPass  = document.getElementById("userPass");
 
 if(register === false){
   if(subsInfo.password !== password){
