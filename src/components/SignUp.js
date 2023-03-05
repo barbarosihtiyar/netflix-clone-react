@@ -26,11 +26,14 @@ function Signup() {
   const [statusPasswordAgain, setStatusPasswordAgain] = useState(true);
   const [statusBirthday, setStatusBirthday] = useState(true);
   const [statusGender, setStatusGender] = useState(true);
+  const [statusCardNumber,setStatusCardNumber] = useState(true);
+  const [statusCardCVC,setStatusCardCVC] = useState(true);
   const [statusCheckBox, setStatusCheckBox] = useState(true);
   const [passwordLengthErrorMessage, setPasswordLengthErrorMessage] =
     useState(true);
   const [passwordAgainLengthErrorMessage, setPasswordAgainLengthErrorMessage] =
     useState(true);
+    const [cardNumberLengthErrorMessage,setCardNumberLengthErrorMessage] = useState(false);
   const [checkPasswordAlert, setCheckPasswordAlert] = useState(true);
   const [showPassword, setShowPassword] = useState(true);
   const [showPasswordAgain, setShowPasswordAgain] = useState(true);
@@ -81,6 +84,21 @@ function Signup() {
     } else {
       setStatusBirthday(true);
     }
+    if (cardNumber === "" || cardNumber.length !== 12) {
+      setStatusCardNumber(false);
+    }else {
+      setStatusCardNumber(true);
+    }
+    if (cardNumber !== "" && cardNumber.length !== 12){
+      setCardNumberLengthErrorMessage(false);
+    }else{
+      setCardNumberLengthErrorMessage(true);
+    }
+    if (cvc === "") {
+      setStatusCardCVC(false);
+    } else {
+      setStatusCardCVC(true);
+    }
     if (gender === "") {
       setStatusGender(false);
     } else {
@@ -128,7 +146,6 @@ function Signup() {
   };
 
   const isAvaible = () => {
-    debugger;
     if (
       namesurname !== "" &&
       username !== "" &&
@@ -137,6 +154,8 @@ function Signup() {
       passwordAgain !== "" &&
       birthday !== "" &&
       gender !== "" &&
+      cardNumber !== "" &&
+      cvc !== "" &&
       checkbox === "click" &&
       isEmailValid()
     ) {
@@ -153,9 +172,9 @@ function Signup() {
   })
 
     setPopup(true);
-
     } else {
       console.log("Not send user information");
+      console.log(cardNumber,cvc);
     }
   };
 
@@ -287,20 +306,33 @@ function Signup() {
                   Passwords Do Not Match
                 </label>
 
-                <label htmlFor="birthday">Card Number</label>
+                <label htmlFor="cardNumber">Card Number</label>
                 <input
                   name="cardNumber"
                   id="cardNumber"
                   type="number"
                   placeholder="Please enter card number"
+                  value={cardNumber}
+                  onChange={(e) => setCardNumber(e.target.value)}
+                  className={statusCardNumber ? "" : "redAlert"}
                 />
+                                <label
+                  className={
+                    cardNumberLengthErrorMessage ? "none" : "passwordErrorMessage"
+                  }
+                >
+                  Card Number length must be 12 characters
+                </label>
 
-                <label htmlFor="birthday">CVC Number</label>
+                <label htmlFor="cardNumberCvc">CVC Number</label>
                 <input
                   name="cardNumberCVC"
                   id="cardNumberCVC"
                   type="number"
                   placeholder="Please enter CVC number"
+                  value={cvc}
+                  onChange={(e) => setCvc(e.target.value)}
+                  className={statusCardCVC ? "" : "redAlert"}
                 />
 
                 <label htmlFor="birthday">Birthday</label>
