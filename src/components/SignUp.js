@@ -16,6 +16,8 @@ function Signup() {
   const [passwordAgain, setPasswordAgain] = useState("");
   const [birthday, setBirthday] = useState("");
   const [gender, setGender] = useState("");
+  const [cardNumber, setCardNumber] = useState("");
+  const [cvc, setCvc] = useState("");
   const [checkbox, setCheckbox] = useState("");
   const [status, setStatus] = useState(true);
   const [statusUser, setStatusUser] = useState(true);
@@ -33,7 +35,7 @@ function Signup() {
   const [showPassword, setShowPassword] = useState(true);
   const [showPasswordAgain, setShowPasswordAgain] = useState(true);
   const [popup,setPopup] = useState(false);
-  let {subsInfo,setSubsInfo} = useContext(MainContext);
+  let {setSubsInfo} = useContext(MainContext);
 
 
 
@@ -115,13 +117,8 @@ function Signup() {
       setPasswordAgainLengthErrorMessage(true);
     }
     isAvaible();
-    console.log(subsInfo)
   };
 
-  // const sendInfo = () => {
-  //   if (handleClick){
-  //   }
-  // }
 
   const handleShowHiddenPassword = () => {
     setShowPassword(!showPassword);
@@ -131,6 +128,7 @@ function Signup() {
   };
 
   const isAvaible = () => {
+    debugger;
     if (
       namesurname !== "" &&
       username !== "" &&
@@ -150,8 +148,9 @@ function Signup() {
         "birthday" : birthday,
         "gender" : gender,
         "checkbox": checkbox,
+        "cardNumber" : cardNumber,
+        "cvc" : cvc
   })
-  console.log(subsInfo)
 
     setPopup(true);
 
@@ -287,6 +286,22 @@ function Signup() {
                 >
                   Passwords Do Not Match
                 </label>
+
+                <label htmlFor="birthday">Card Number</label>
+                <input
+                  name="cardNumber"
+                  id="cardNumber"
+                  type="number"
+                  placeholder="Please enter card number"
+                />
+
+                <label htmlFor="birthday">CVC Number</label>
+                <input
+                  name="cardNumberCVC"
+                  id="cardNumberCVC"
+                  type="number"
+                  placeholder="Please enter CVC number"
+                />
 
                 <label htmlFor="birthday">Birthday</label>
                 <input
