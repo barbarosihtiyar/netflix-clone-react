@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+
 .headerContainer {
     position: fixed;
     width: 100%;
@@ -71,6 +83,7 @@
                 display: flex;
                 align-items: center;
                 gap: 3px;
+                position: relative;
                 img {
                     width: 33px;
                     height: 33px;
@@ -82,11 +95,37 @@
                     font-size: 20px;
                     cursor: pointer;
                 }
-                &:hover {
-                    svg {
+                &:hover .updown{
+                   
                         transform: rotate(180deg);
+                   
+                }
+            .userOptions{
+                position: absolute;
+                top: 50px;
+                left: -170px;
+                background-color: rgba(0,0,0,.9);
+                border: 1px solid hsla(0,0%,100%,.15);
+                padding:10px 6px;
+                padding-right: 50px;
+                .flex{
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding-bottom: 8px;
+                    span{
+                        color: #fff;
+                        font-size: 10px;
+                        padding-top: 5px;
+                    }
+                    svg{
+                        color: #b3b3b3;
+                    }
+                    .pl{
+                        margin-left: 5px;
                     }
                 }
+            }
             }
             .buttonInput {
                 display: flex;
@@ -133,3 +172,5 @@
 .buttonSearch {
     font-size: 30px !important;
 }
+
+
