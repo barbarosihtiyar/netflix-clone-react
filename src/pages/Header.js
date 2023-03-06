@@ -6,11 +6,22 @@ import { useState } from "react";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { BiCaretDown } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { HiPencilSquare } from "react-icons/hi2";
+import { MdOutlineAccountCircle } from "react-icons/md";
+import { FiHelpCircle } from "react-icons/fi";
+import profileAvatar from "../images/profileAvatar.png"
+import { MainContext, useContext } from "../context";
+
+
 
 function Header({ change, setChange }) {
   const [bg, setBg] = useState(false);
   const [check, setCheck] = useState(false);
+  let {subsInfo} = useContext(MainContext);
 
+
+  let username = (subsInfo.username).toUpperCase();
+  
   const searchOnClick = () => {
     setCheck(!check);
   };
@@ -79,7 +90,25 @@ function Header({ change, setChange }) {
           </div>
           <div className="avatar-avatarOptions">
             <img src={userLogo} alt="" />
-            <BiCaretDown />
+            <BiCaretDown className="updown"/>
+            <div className="userOptions">
+            <div className="flex">
+              <img src={profileAvatar} alt=""  />
+              <span>{username}</span>
+            </div>
+              <div className="flex">
+                <HiPencilSquare className="pl"/>
+                <span>Profile Management</span>
+              </div>
+              <div className="flex">
+                <MdOutlineAccountCircle className="pl"/>
+                <span>Account</span>
+              </div>
+              <div className="flex">
+                <FiHelpCircle className="pl"/>
+                <span>Help Center</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
