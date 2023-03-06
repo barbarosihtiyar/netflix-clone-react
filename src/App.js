@@ -8,13 +8,24 @@ import Romance from "./components/Romance";
 import Documentary from "./components/Documentary";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import Signup from "./components/Signup";
+import Signup from "./components/SignUp";
 import { MainContext } from "./context";
 import { useState } from "react";
 
 
 function App() {
-  const [subsInfo,setSubsInfo] = useState();
+  const [subsInfo,setSubsInfo] = useState({
+     "namesurname" : "admin",
+      "username" : "barbaros",
+        "email" : "admin@hotmail.com",
+        "password" : "admin",
+        "passwordAgain" : "admin",
+        "birthday" : "1998-08-23",
+        "gender" : "male",
+        "checkbox": "",
+        "cardNumber" : "1111-1111-1111-1111",
+        "cvc" : "111"
+  });
 
   const data = {
     subsInfo,
@@ -38,3 +49,4 @@ function App() {
 }
 
 export default App;
+
