@@ -72,6 +72,7 @@
   display: flex;
   align-items: center;
   gap: 3px;
+  position: relative;
 }
 .headerContainer .headerWrapper .search-user .avatar-avatarOptions img {
   width: 33px;
@@ -84,8 +85,34 @@
   font-size: 20px;
   cursor: pointer;
 }
-.headerContainer .headerWrapper .search-user .avatar-avatarOptions:hover svg {
+.headerContainer .headerWrapper .search-user .avatar-avatarOptions:hover .updown {
   transform: rotate(180deg);
+}
+.headerContainer .headerWrapper .search-user .avatar-avatarOptions .userOptions {
+  position: absolute;
+  top: 50px;
+  left: -170px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid hsla(0, 0%, 100%, 0.15);
+  padding: 10px 6px;
+  padding-right: 50px;
+}
+.headerContainer .headerWrapper .search-user .avatar-avatarOptions .userOptions .flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 8px;
+}
+.headerContainer .headerWrapper .search-user .avatar-avatarOptions .userOptions .flex span {
+  color: #fff;
+  font-size: 10px;
+  padding-top: 5px;
+}
+.headerContainer .headerWrapper .search-user .avatar-avatarOptions .userOptions .flex svg {
+  color: #b3b3b3;
+}
+.headerContainer .headerWrapper .search-user .avatar-avatarOptions .userOptions .flex .pl {
+  margin-left: 5px;
 }
 .headerContainer .headerWrapper .search-user .buttonInput {
   display: flex;
