@@ -1,3 +1,7 @@
+
+
+
+
 import React from "react";
 import netflixLogo from "../images/netflix.png";
 import userLogo from "../images/userLogo.png";
@@ -17,11 +21,11 @@ import { MainContext, useContext } from "../context";
 function Header({ change, setChange }) {
   const [bg, setBg] = useState(false);
   const [check, setCheck] = useState(false);
-  let {subsInfo} = useContext(MainContext);
+  let { subsInfo } = useContext(MainContext);
 
 
   let username = (subsInfo.username).toUpperCase();
-  
+
   const searchOnClick = () => {
     setCheck(!check);
   };
@@ -49,25 +53,29 @@ function Header({ change, setChange }) {
                 <Link to="/home">Home</Link>
               </li>
               <li>
-                Movies
-                <ul>
-                  {" "}
-                  <Link to={"/action"}>
-                    <li>Action Movies</li>
-                  </Link>
-                  <Link to={"/comedy"}>
-                    <li>Comedy Movies</li>
-                  </Link>
-                  <Link to={"/horror"}>
-                    <li>Horror Movies</li>
-                  </Link>
-                  <Link to={"/romance"}>
-                    <li>Romance Movies</li>
-                  </Link>
-                  <Link to={"/documentary"}>
-                    <li>Documentaries</li>
-                  </Link>
-                </ul>
+                <Link to={"/action"}>
+                  <li>Action Movies</li>
+                </Link>
+              </li>
+              <li>
+                <Link to={"/comedy"}>
+                  <li>Comedy Movies</li>
+                </Link>
+              </li>
+              <li>
+                <Link to={"/horror"}>
+                  <li>Horror Movies</li>
+                </Link>
+              </li>
+              <li>
+                <Link to={"/romance"}>
+                  <li>Romance Movies</li>
+                </Link>
+              </li>
+              <li>
+                <Link to={"/documentary"}>
+                  <li>Documentaries</li>
+                </Link>
               </li>
             </ul>
           </div>
@@ -90,22 +98,22 @@ function Header({ change, setChange }) {
           </div>
           <div className="avatar-avatarOptions">
             <img src={userLogo} alt="" />
-            <BiCaretDown className="updown"/>
+            <BiCaretDown className="updown" />
             <div className="userOptions">
-            <div className="flex">
-              <img src={profileAvatar} alt=""  />
-              <span>{username}</span>
-            </div>
-              <div className="flex">
-                <HiPencilSquare className="pl"/>
-                <span>Profile Management</span>
+              <div className="flex" style={{ marginBottom: "8px" }}>
+                <img src={profileAvatar} alt="" />
+                <span>{username}</span>
               </div>
               <div className="flex">
-                <MdOutlineAccountCircle className="pl"/>
-                <span>Account</span>
+                <HiPencilSquare className="pl" />
+                <span><Link to={"/profilemanagement"}>Profile Managament</Link></span>
               </div>
               <div className="flex">
-                <FiHelpCircle className="pl"/>
+                <MdOutlineAccountCircle className="pl" />
+                <span><Link to={"/account"}>Account</Link></span>
+              </div>
+              <div className="flex">
+                <FiHelpCircle className="pl" />
                 <span>Help Center</span>
               </div>
             </div>
