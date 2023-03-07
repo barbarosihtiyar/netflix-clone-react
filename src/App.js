@@ -11,6 +11,8 @@ import Register from "./components/Register";
 import Signup from "./components/SignUp";
 import { MainContext } from "./context";
 import { useState } from "react";
+import Account from "./pages/Account";
+import ProfileManagament from "./pages/ProfileManagament";
 
 
 function App() {
@@ -43,10 +45,11 @@ function App() {
     <Route path="/horror" element={<Horror />} />
     <Route path="/romance" element={<Romance />} />
     <Route path="/documentary" element={<Documentary />} />
+    <Route path="/account" element={<Account />} />
+    <Route path="/profilemanagement" element={<ProfileManagament />} />
     </Routes>
     </MainContext.Provider>
   );
 }
 
 export default App;
-
