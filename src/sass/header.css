@@ -1,8 +1,8 @@
 .headerContainer {
   position: fixed;
   width: 100%;
-  background-color: transparent;
   z-index: 99;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10%, transparent);
 }
 .headerContainer .headerWrapper {
   display: flex;
@@ -36,27 +36,9 @@
   position: relative;
   cursor: pointer;
 }
-.headerContainer .headerWrapper .logo-links .links ul li:hover ul {
-  display: flex;
-}
-.headerContainer .headerWrapper .logo-links .links ul li ul {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  padding: 0;
-  padding-top: 10px;
-  display: none;
-  width: 140px;
-}
-.headerContainer .headerWrapper .logo-links .links ul li ul li {
-  padding-bottom: 10px;
-}
-.headerContainer .headerWrapper .logo-links .links ul li ul li:hover {
+.headerContainer .headerWrapper .logo-links .links ul li:hover {
+  color: #e5e5e5;
   opacity: 0.8;
-}
-.headerContainer .headerWrapper .logo-links .links ul li:nth-child(4) {
-  width: 170px;
 }
 .headerContainer .headerWrapper .logo-links .links ul li a {
   text-decoration: none;
@@ -82,26 +64,34 @@
 }
 .headerContainer .headerWrapper .search-user .avatar-avatarOptions svg {
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
 }
 .headerContainer .headerWrapper .search-user .avatar-avatarOptions:hover .updown {
   transform: rotate(180deg);
 }
+.headerContainer .headerWrapper .search-user .avatar-avatarOptions:hover .userOptions {
+  opacity: 1;
+  transition-duration: 300ms;
+}
 .headerContainer .headerWrapper .search-user .avatar-avatarOptions .userOptions {
   position: absolute;
   top: 50px;
-  left: -170px;
+  left: -140px;
   background-color: rgba(0, 0, 0, 0.9);
   border: 1px solid hsla(0, 0%, 100%, 0.15);
-  padding: 10px 6px;
-  padding-right: 50px;
+  padding: 10px 0;
+  padding-left: 6px;
+  padding-right: 40px;
+  transition-duration: 300ms;
+  opacity: 0;
 }
 .headerContainer .headerWrapper .search-user .avatar-avatarOptions .userOptions .flex {
   display: flex;
   align-items: center;
   gap: 8px;
   padding-bottom: 8px;
+  cursor: pointer;
 }
 .headerContainer .headerWrapper .search-user .avatar-avatarOptions .userOptions .flex span {
   color: #fff;
@@ -110,9 +100,11 @@
 }
 .headerContainer .headerWrapper .search-user .avatar-avatarOptions .userOptions .flex svg {
   color: #b3b3b3;
+  font-size: 20px;
 }
 .headerContainer .headerWrapper .search-user .avatar-avatarOptions .userOptions .flex .pl {
-  margin-left: 5px;
+  margin-left: 7px;
+  margin-right: 7px;
 }
 .headerContainer .headerWrapper .search-user .buttonInput {
   display: flex;
@@ -154,4 +146,9 @@
 
 .buttonSearch {
   font-size: 30px !important;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
 }/*# sourceMappingURL=header.css.map */
