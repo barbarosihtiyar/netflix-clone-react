@@ -98,6 +98,9 @@
   font-size: 10px;
   padding-top: 5px;
 }
+.headerContainer .headerWrapper .search-user .avatar-avatarOptions .userOptions .flex span:hover {
+  text-decoration: underline;
+}
 .headerContainer .headerWrapper .search-user .avatar-avatarOptions .userOptions .flex svg {
   color: #b3b3b3;
   font-size: 20px;
@@ -151,4 +154,8 @@
 a {
   color: #fff;
   text-decoration: none;
+}
+
+.headerComponent .links, .headerComponent .buttonInput {
+  display: none !important;
 }/*# sourceMappingURL=header.css.map */

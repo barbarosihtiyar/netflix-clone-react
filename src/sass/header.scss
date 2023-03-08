@@ -127,6 +127,10 @@
                             color: #fff;
                             font-size: 10px;
                             padding-top: 5px;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
                         }
 
                         svg {
@@ -194,3 +198,9 @@ a {
     color: #fff;
     text-decoration: none;
 }
+
+.headerComponent{
+    .links,.buttonInput{
+        display: none !important;
+    }
+    }
