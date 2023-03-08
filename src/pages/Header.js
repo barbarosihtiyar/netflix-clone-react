@@ -1,7 +1,3 @@
-
-
-
-
 import React from "react";
 import netflixLogo from "../images/netflix.png";
 import userLogo from "../images/userLogo.png";
@@ -15,8 +11,6 @@ import { MdOutlineAccountCircle } from "react-icons/md";
 import { FiHelpCircle } from "react-icons/fi";
 import profileAvatar from "../images/profileAvatar.png"
 import { MainContext, useContext } from "../context";
-
-
 
 function Header({ change, setChange }) {
   const [bg, setBg] = useState(false);
@@ -44,7 +38,7 @@ function Header({ change, setChange }) {
     <div className={bg ? "headerContainer black" : "headerContainer"}>
       <div className="headerWrapper">
         <div className="logo-links">
-          <Link to="/">
+          <Link to="/home">
             <img src={netflixLogo} alt="" />
           </Link>
           <div className="links">
