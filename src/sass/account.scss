@@ -1,0 +1,96 @@
+@import "variables";
+
+.accountContainer {
+    .accountWrapper {
+        max-width: 1000px;
+        margin: auto;
+        margin-top: 20px;
+        .account {
+            .accountTitle {
+                h3 {
+                    font-size: 30px;
+                    font-weight: 600;
+                    color: #000;
+                }
+                border-bottom: 1px solid #999999;
+                padding-bottom: 10px;
+            }
+            .accountInfo{
+                padding-top: 20px;
+                .membershipPayments{
+                    .membershipPaymentsFirst{
+                        display: flex;
+                        gap: 5%;
+                        .membershipPaymentsTitleButton{
+                            display: flex;
+                            flex-direction: column;
+                            h6{
+                                padding-bottom: 5px;
+                                @include font(18px,500,gray);
+                            }
+                            button{
+                                @include font(12px,500,#000);
+                                border: none;
+                                background-color:#e6e6e6;
+                                padding: 12px 25px;
+                                cursor: pointer;
+                                &:hover{
+                                    background-color: #F2F2F2;
+                                }
+                            }
+                        }
+                        .userInfo{
+                            display: flex;
+                            flex-direction: column;
+                            span{
+                                @include font(15px,500,#737373);
+                                padding-bottom: 5px;
+                                &:nth-child(1){
+                                    font-weight: 700;
+                                    color: #000;
+                                }
+                            }
+                        }
+                        .changeUserInfo{
+                            display: flex;
+                            flex-direction: column;
+                            width: 48%;
+                            text-align: right;
+                            span{
+                                @include font(15px,600,#0073E8);
+                                padding-bottom: 5px;
+                                cursor: pointer;
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.accountComponent {
+    background-color: #fff;
+    height: 100%;
+    min-height: 1000px;
+}
+
+.headerComponent {
+    .headerContainer {
+        background-color: #000;
+    }
+    .headerWrapper{
+        padding: 15px 55px;
+    }
+    .links,
+    .buttonInput {
+        display: none !important;
+    }
+}
+
+.emptyRow {
+    height: 90px;
+}
