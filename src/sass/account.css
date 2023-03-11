@@ -55,11 +55,20 @@
   font-weight: 700;
   color: #000;
 }
+.accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .userInfo .userCardInfo {
+  padding-top: 61px;
+}
 .accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .changeUserInfo {
   display: flex;
   flex-direction: column;
   width: 48%;
   text-align: right;
+}
+.accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .changeUserInfo .userCardInfoChange {
+  display: flex;
+  flex-direction: column;
+  padding-top: 61px;
+  padding-bottom: 1%;
 }
 .accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .changeUserInfo span {
   font-size: 15px;
@@ -70,6 +79,76 @@
 }
 .accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .changeUserInfo span:hover {
   text-decoration: underline;
+}
+.accountContainer .accountWrapper .account .accountInfo .planDetails {
+  display: flex;
+  gap: 5%;
+  padding-top: 1.5%;
+  padding-bottom: 0.8%;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+}
+.accountContainer .accountWrapper .account .accountInfo .planDetails .planDetailsTitle {
+  width: 26.8%;
+}
+.accountContainer .accountWrapper .account .accountInfo .planDetails .planDetailsTitle h6 {
+  padding-bottom: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  color: gray;
+}
+.accountContainer .accountWrapper .account .accountInfo .planDetails .planType span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+.accountContainer .accountWrapper .account .accountInfo .planDetails .changePlan {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0073E8;
+  width: 60%;
+  text-align: right;
+}
+.accountContainer .accountWrapper .account .accountInfo .planDetails .changePlan span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.accountContainer .accountWrapper .account .securityPrivacy {
+  display: flex;
+  gap: 5%;
+  padding-top: 1%;
+  border-bottom: 1px solid #999999;
+  padding-bottom: 1%;
+}
+.accountContainer .accountWrapper .account .securityPrivacy .securityPrivacyTitle {
+  width: 27%;
+}
+.accountContainer .accountWrapper .account .securityPrivacy .securityPrivacyTitle h6 {
+  font-size: 18px;
+  font-weight: 500;
+  color: gray;
+  padding-top: 1%;
+}
+.accountContainer .accountWrapper .account .securityPrivacy .securityPrivacyDesc {
+  width: 33%;
+}
+.accountContainer .accountWrapper .account .securityPrivacy .securityPrivacyDesc span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+}
+.accountContainer .accountWrapper .account .securityPrivacy .closeAccount {
+  width: 33%;
+  text-align: right;
+}
+.accountContainer .accountWrapper .account .securityPrivacy .closeAccount span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0073E8;
+}
+.accountContainer .accountWrapper .account .securityPrivacy .closeAccount span:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .accountComponent {
