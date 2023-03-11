@@ -156,6 +156,7 @@ a {
   text-decoration: none;
 }
 
-.headerComponent .links, .headerComponent .buttonInput {
+.headerComponent .links,
+.headerComponent .buttonInput {
   display: none !important;
 }/*# sourceMappingURL=header.css.map */

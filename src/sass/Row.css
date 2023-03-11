@@ -66,6 +66,7 @@
   display: none;
 }
 
-.alice-carousel__next-btn-wrapper, .alice-carousel__prev-btn-wrapper {
+.alice-carousel__next-btn-wrapper,
+.alice-carousel__prev-btn-wrapper {
   width: 61px;
 }/*# sourceMappingURL=Row.css.map */
