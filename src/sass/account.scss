@@ -141,6 +141,80 @@
                     }
                 }
             }
+            .profileParentalControls{
+                display: flex;
+                gap: 5%;
+                padding-top: 1%;
+                padding-bottom: 1%;
+                border-bottom: 1px solid #999999;
+                .profileParentalControlsTitle{
+                    width: 26.5%;
+                    h6{
+                        @include font(18px,500,gray);    
+                        width: 75%;    
+                    }
+                }
+            }
+            .settings{
+                display: flex;
+                gap: 5%;
+                padding-top: 1%;
+                .settingTitle{
+                    width: 26%;
+                    h6{
+                        @include font(18px,500,gray);        
+                    }
+                }
+                .settingsInfo{
+                    display: flex;
+                    flex-direction: column;
+                    span{
+                        @include font(15px,600,#0073E8);
+                    &:hover{
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    .footerContainer{
+        margin-top: 150px;
+        .footerWrapper{
+            margin-left: 80px;
+            .footerAskQuestion{
+                padding-bottom: 2%;
+                margin-left: 41px;
+                span{
+                    @include font(18px,500,gray);       
+                    &:hover{
+                        text-decoration: underline;
+                        cursor: pointer;
+                    } 
+                }
+            }
+        .footerPart{
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 1000px;
+                li{
+                    list-style-type: none;
+                    min-width: 161px;
+                    @include font(12px,500,gray);   
+                    margin-right: 70px;
+                    margin-bottom: 15px;
+                    &:hover{
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }     
+                }
+            }
+        }
         }
     }
 }

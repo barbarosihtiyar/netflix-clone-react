@@ -150,6 +150,86 @@
   text-decoration: underline;
   cursor: pointer;
 }
+.accountContainer .accountWrapper .account .profileParentalControls {
+  display: flex;
+  gap: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-bottom: 1px solid #999999;
+}
+.accountContainer .accountWrapper .account .profileParentalControls .profileParentalControlsTitle {
+  width: 26.5%;
+}
+.accountContainer .accountWrapper .account .profileParentalControls .profileParentalControlsTitle h6 {
+  font-size: 18px;
+  font-weight: 500;
+  color: gray;
+  width: 75%;
+}
+.accountContainer .accountWrapper .account .settings {
+  display: flex;
+  gap: 5%;
+  padding-top: 1%;
+}
+.accountContainer .accountWrapper .account .settings .settingTitle {
+  width: 26%;
+}
+.accountContainer .accountWrapper .account .settings .settingTitle h6 {
+  font-size: 18px;
+  font-weight: 500;
+  color: gray;
+}
+.accountContainer .accountWrapper .account .settings .settingsInfo {
+  display: flex;
+  flex-direction: column;
+}
+.accountContainer .accountWrapper .account .settings .settingsInfo span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0073E8;
+}
+.accountContainer .accountWrapper .account .settings .settingsInfo span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer .footerContainer {
+  margin-top: 150px;
+}
+footer .footerContainer .footerWrapper {
+  margin-left: 80px;
+}
+footer .footerContainer .footerWrapper .footerAskQuestion {
+  padding-bottom: 2%;
+  margin-left: 41px;
+}
+footer .footerContainer .footerWrapper .footerAskQuestion span {
+  font-size: 18px;
+  font-weight: 500;
+  color: gray;
+}
+footer .footerContainer .footerWrapper .footerAskQuestion span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer .footerContainer .footerWrapper .footerPart ul {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+footer .footerContainer .footerWrapper .footerPart ul li {
+  list-style-type: none;
+  min-width: 161px;
+  font-size: 12px;
+  font-weight: 500;
+  color: gray;
+  margin-right: 70px;
+  margin-bottom: 15px;
+}
+footer .footerContainer .footerWrapper .footerPart ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 .accountComponent {
   background-color: #fff;
