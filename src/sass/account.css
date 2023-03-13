@@ -44,6 +44,7 @@
 .accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .userInfo {
   display: flex;
   flex-direction: column;
+  width: 16%;
 }
 .accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .userInfo span {
   font-size: 15px;
