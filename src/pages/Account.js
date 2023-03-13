@@ -1,8 +1,14 @@
 import React from "react";
 import Header from "./Header";
 import "../sass/account.css";
+import { MainContext, useContext } from "../context";
+
+
 
 function Account() {
+  let {subsInfo} = useContext(MainContext);
+
+console.log(subsInfo);
   return (
     <div className="accountComponent">
       <div className="headerComponent">
@@ -23,11 +29,11 @@ function Account() {
                     <button type="button">Cancel Membership</button>
                   </div>
                   <div className="userInfo">
-                    <span>aaaa@hotmail.com</span>
-                    <span>Password : asdasdas</span>
-                    <span>Phone : 111111111</span>
+                    <span>{subsInfo.email}</span>
+                    <span>Password : {subsInfo.password}</span>
+                    <span>Phone : {subsInfo.phoneNumber}</span>
                     <div className="userCardInfo">
-                      <span>11111111111111111</span>
+                      <span>{subsInfo.cardNumber}</span>
                     </div>
                   </div>
                   <div className="changeUserInfo">
