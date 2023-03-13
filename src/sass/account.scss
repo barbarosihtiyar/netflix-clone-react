@@ -42,6 +42,7 @@
                         .userInfo{
                             display: flex;
                             flex-direction: column;
+                            width: 16%;
                             span{
                                 @include font(15px,500,#737373);
                                 padding-bottom: 5px;
