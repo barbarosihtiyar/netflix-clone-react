@@ -6,6 +6,7 @@
         margin: auto;
         margin-top: 20px;
         .account {
+            position: relative;
             .accountTitle {
                 h3 {
                     font-size: 30px;
@@ -175,6 +176,28 @@
                         text-decoration: underline;
                         cursor: pointer;
                     }
+                    }
+                }
+            }
+            .popupAlert{
+                .popupContainer{
+                    .popupWrapper{
+                        .popup{
+                            .popupExit{
+
+                            }
+                            .popupContent{
+
+                            }
+                            .popupAnswerButton{
+                                .popupYes{
+
+                                }
+                                .popupNo{
+                                    
+                                }
+                            }
+                        }
                     }
                 }
             }
