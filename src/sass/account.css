@@ -3,6 +3,9 @@
   margin: auto;
   margin-top: 20px;
 }
+.accountContainer .accountWrapper .account {
+  position: relative;
+}
 .accountContainer .accountWrapper .account .accountTitle {
   border-bottom: 1px solid #999999;
   padding-bottom: 10px;
@@ -193,7 +196,6 @@
   text-decoration: underline;
   cursor: pointer;
 }
-
 footer .footerContainer {
   margin-top: 150px;
 }
