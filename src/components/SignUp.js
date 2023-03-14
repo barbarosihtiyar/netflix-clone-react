@@ -33,7 +33,7 @@ function Signup() {
     useState(true);
   const [passwordAgainLengthErrorMessage, setPasswordAgainLengthErrorMessage] =
     useState(true);
-    const [cardNumberLengthErrorMessage,setCardNumberLengthErrorMessage] = useState(false);
+    const [cardNumberLengthErrorMessage,setCardNumberLengthErrorMessage] = useState(true);
   const [checkPasswordAlert, setCheckPasswordAlert] = useState(true);
   const [showPassword, setShowPassword] = useState(true);
   const [showPasswordAgain, setShowPasswordAgain] = useState(true);
