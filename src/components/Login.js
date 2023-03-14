@@ -70,6 +70,17 @@ if(register === false){
 }
 
 
+document.addEventListener("keypress", handleKeyPress);
+
+function handleKeyPress(e) {
+  if (e.keyCode === 13) {
+    formSubmit(e);
+    if(register === true){
+      window.location.href = '/landingpage';
+    }
+  }
+}
+
 
   return (
     <section className="sectionLogin">
@@ -83,7 +94,7 @@ if(register === false){
           <form onSubmit={formSubmit}>
           <input id='userEmail' type="text" value={email} placeholder='email or phone number' onChange={(e) => setEmail(e.target.value)} />
           <input id='userPass'  value={password} type="password" placeholder='password' onChange={(e) => setPassword(e.target.value)} />
-          <button type= {register ? "submit" : "button"} onClick={checkRegister} ><Link style={{textDecoration:"none",color:"#fff"}} to={register ? "/home" : "/" }>Login</Link></button>
+          <button type= {register ? "submit" : "button"} onClick={checkRegister} ><Link style={{textDecoration:"none",color:"#fff"}} to={register ? "/landingpage" : "/" }>Login</Link></button>
           </form>
           <div className="info">
           <div className="rememberMe">
