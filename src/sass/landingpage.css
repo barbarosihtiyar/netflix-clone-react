@@ -1,0 +1,48 @@
+.landingPage {
+  height: 800px;
+}
+.landingPage .landingPageContainer {
+  margin: auto;
+  height: 100%;
+}
+.landingPage .landingPageContainer .landingPageWrapper {
+  height: 100%;
+}
+.landingPage .landingPageContainer .landingPageWrapper .userLogo {
+  max-width: 800px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.landingPage .landingPageContainer .landingPageWrapper .userLogo .landingPageTitle {
+  font-size: 55px;
+  font-weight: 800;
+  color: #fff;
+  padding-bottom: 15px;
+  text-align: center;
+}
+.landingPage .landingPageContainer .landingPageWrapper .userLogo div.userLogos {
+  display: flex;
+}
+.landingPage .landingPageContainer .landingPageWrapper .userLogo div.userLogos .usersLogo {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.landingPage .landingPageContainer .landingPageWrapper .userLogo div.userLogos .usersLogo img {
+  width: 180px;
+  height: 180px;
+}
+.landingPage .landingPageContainer .landingPageWrapper .userLogo div.userLogos .usersLogo img:hover {
+  outline: 5px solid #fff;
+}
+.landingPage .landingPageContainer .landingPageWrapper .userLogo div.userLogos .usersLogo span {
+  text-align: center;
+  padding-top: 5%;
+  font-size: 20px;
+  font-weight: 500;
+  color: grey;
+}/*# sourceMappingURL=landingpage.css.map */

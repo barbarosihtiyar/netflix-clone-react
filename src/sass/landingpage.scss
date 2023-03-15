@@ -1,0 +1,46 @@
+@import "variables";
+
+.landingPage{
+    height: 800px;
+    .landingPageContainer{
+        margin: auto;
+        height: 100%;
+        .landingPageWrapper{
+            height: 100%;
+            .userLogo{
+                max-width: 800px;
+                margin: auto;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                .landingPageTitle{
+                    @include font(55px,800,#fff);
+                    padding-bottom: 15px;
+                    text-align: center;
+                }    
+                div.userLogos{
+                    display: flex;
+                .usersLogo{
+                    margin: auto;
+                    display: flex;
+                    flex-direction: column;
+                    cursor: pointer;
+                img{
+                    width:  180px;
+                    height: 180px;
+                    &:hover{
+                        outline: 5px solid #fff;
+                    }
+                }
+                span{
+                    text-align: center;
+                    padding-top: 5%;
+                    @include font(20px,500,grey);
+                }
+            }
+        }
+            }
+        }
+    }
+}
