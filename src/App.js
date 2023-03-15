@@ -13,6 +13,7 @@ import { MainContext } from "./context";
 import { useState } from "react";
 import Account from "./pages/Account";
 import ProfileManagament from "./pages/ProfileManagament";
+import LandingPage from "./pages/LandingPage";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         "email" : "admin@hotmail.com",
         "password" : "admin",
         "passwordAgain" : "admin",
+        "phoneNumber" : "05452034598",
         "birthday" : "1998-08-23",
         "gender" : "male",
         "checkbox": "",
@@ -37,9 +39,10 @@ function App() {
     <MainContext.Provider value={data}>
     <Routes>
     <Route exact path="/" element={<Login />} />
-    <Route exact path="/register" element={<Register />} />
-    <Route exact path="/signup" element={<Signup />} />
-    <Route exact path="/home" element={<Home />} />
+    <Route  path="/register" element={<Register />} />
+    <Route  path="/signup" element={<Signup />} />
+    <Route  path="/home" element={<Home />} />
+    <Route  path="/landingpage" element={<LandingPage />} />
     <Route path="/action" element={<Action />} />
     <Route path="/comedy" element={<Comedy />} />
     <Route path="/horror" element={<Horror />} />
