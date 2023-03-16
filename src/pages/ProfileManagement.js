@@ -1,11 +1,9 @@
 import React from 'react'
 
 function ProfileManagament() {
-    return (
-        <div>ProfileManagament</div>
-    )
+  return (
+    <div></div>
+  )
 }
 
 export default ProfileManagament
-
-
