@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header";
 import "../sass/account.css";
 import { MainContext, useContext } from "../context";
+import { Link } from "react-router-dom";
 
 
 
 function Account() {
-  let {subsInfo} = useContext(MainContext);
+  let { subsInfo } = useContext(MainContext);
+  const [popup, setPopup] = useState(false)
+  const [href, setHref] = useState(false)
 
-console.log(subsInfo);
+  const cancelMembership = () => {
+    setPopup(!popup);
+    console.log(subsInfo)
+  }
+
   return (
     <div className="accountComponent">
       <div className="headerComponent">
@@ -26,7 +33,7 @@ console.log(subsInfo);
                 <div className="membershipPaymentsFirst">
                   <div className="membershipPaymentsTitleButton">
                     <h6>MEMBERSHIP AND PAYMENTS</h6>
-                    <button type="button">Cancel Membership</button>
+                    <button type="button" onClick={cancelMembership}>Cancel Membership</button>
                   </div>
                   <div className="userInfo">
                     <span>{subsInfo.email}</span>
@@ -90,6 +97,20 @@ console.log(subsInfo);
                   <span>Turn off profile transfer feature</span>
                   <span>Test participation</span>
                   <span>Manage content download devices</span>
+                </div>
+              </div>
+            </div>
+            <div className="popupAlert">
+              <div className="popupContainer">
+                <div className="popupWrapper">
+                  <div className={popup ? "popups max" : "popups mins"}>
+                    <div className="headerPopup">X</div>
+                    <div className="bodyPopup">Are you sure?</div>
+                    <div className="footerPopup">
+                      <button className="popupYes" onClick={cancelMembership}><Link style={{ color: "#000", textDecoration: "none" }} to="/">YES</Link></button>
+                      <button className="popupNo" onClick={cancelMembership}>NO</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
