@@ -293,3 +293,15 @@ footer{
 .emptyRow {
     height: 90px;
 }
+
+
+.mins{
+    transform: translateY(-500px);
+    transition: all 1s;
+    top: -10% !important;
+    }
+    
+    .max{
+        transform: scale(1);
+        transition: all 1s;
+    }
