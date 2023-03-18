@@ -1,231 +1,119 @@
-@import "variables";
+.sectionLogin {
+    background-image: url(../images/loginImageBg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+    .loginContainer {
+        max-width: 1250px;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .loginWrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .loginHeader {
+                position: absolute;
+                top: 2%;
+                left: 2%;
 
-.accountContainer {
-    .accountWrapper {
-        max-width: 1000px;
-        margin: auto;
-        margin-top: 20px;
-        .account {
-            position: relative;
-            .accountTitle {
-                h3 {
-                    font-size: 30px;
-                    font-weight: 600;
-                    color: #000;
-                }
-                border-bottom: 1px solid #999999;
-                padding-bottom: 10px;
-            }
-            .accountInfo{
-                padding-top: 20px;
-                .membershipPayments{
-                    .membershipPaymentsFirst{
-                        display: flex;
-                        gap: 5%;
-                        .membershipPaymentsTitleButton{
-                            display: flex;
-                            flex-direction: column;
-                            h6{
-                                padding-bottom: 5px;
-                                @include font(18px,500,gray);
-                            }
-                            button{
-                                @include font(12px,500,#000);
-                                border: none;
-                                background-color:#e6e6e6;
-                                padding: 12px 25px;
-                                cursor: pointer;
-                                &:hover{
-                                    background-color: #F2F2F2;
-                                }
-                            }
-                        }
-                        .userInfo{
-                            display: flex;
-                            flex-direction: column;
-                            width: 16%;
-                            span{
-                                @include font(15px,500,#737373);
-                                padding-bottom: 5px;
-                                &:nth-child(1){
-                                    font-weight: 700;
-                                    color: #000;
-                                }
-                            }
-                            .userCardInfo{
-                                padding-top: 61px;
-                            }
-                        }
-                        .changeUserInfo{
-                            display: flex;
-                            flex-direction: column;
-                            width: 48%;
-                            text-align: right;
-                            .userCardInfoChange{
-                                display: flex;
-                                flex-direction: column;
-                                padding-top: 61px;
-                                padding-bottom: 1%;
-                            }
-                            span{
-                                @include font(15px,600,#0073E8);
-                                padding-bottom: 5px;
-                                cursor: pointer;
-                                &:hover{
-                                    text-decoration: underline;
-                                }
-                            }
-                           
-                        }
-                    }
-                 
-                }
-                .planDetails{
-                    display: flex;
-                    gap: 5%;
-                    padding-top: 1.5%;
-                    padding-bottom: 0.8%;
-                    border-top: 1px solid #999999;
-                    border-bottom: 1px solid #999999;
-                    .planDetailsTitle{
-                        width: 26.8%;
-                        h6{
-                            padding-bottom: 5px;
-                            @include font(18px,500,gray);
-                        }
-                    }
-                    .planType{
-                        span{
-                            @include font(20px,700,#000);
-                        }
-                    }
-                    .changePlan{
-                        @include font(15px,600,#0073E8);
-                        width: 60%;
-                        text-align: right;
-                        span{
-                            &:hover{
-                                text-decoration: underline;
-                                cursor: pointer;
-                            }
-                        }
-                    }
+                img {
+                    width: 167px;
                 }
             }
-            .securityPrivacy{
+            .login {
                 display: flex;
-                gap: 5%;
-                padding-top: 1%;
-                border-bottom: 1px solid #999999;
-                padding-bottom: 1%;
-                .securityPrivacyTitle{
-                    width: 27%;
-                    h6{
-                        @include font(18px,500,gray);        
-                    padding-top: 1%; 
-                    }       
+                flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.75);
+                justify-content: center;
+                width: 450px;
+                height: 450px;
+                margin: 0 auto;
+                margin-bottom: 30px;
+                h6 {
+                    color: #fff;
+                    font-size: 40px;
+                    font-weight: 600;
+                    width: 314px;
+                    padding-top: 10px;
+                    margin-bottom: 20px;
+                    margin: 0 auto;
+                    margin-top: 30px;
                 }
-                .securityPrivacyDesc{
-                    width: 33%;
-                    span{
-                        @include font(15px,500,#000);
+                form {
+                    text-align: center;
+                    input {
+                        width: 314px;
+                        height: 50px;
+                        border: none;
+                        outline: none;
+                        border-radius: 4px;
+                        margin-bottom: 20px;
+                        color: #fff;
+                    }
+                    input[type="text"],
+                    input[type="password"] {
+                        background-color: rgba(0, 0, 0, 0.75);
+                        padding: 0 10px;
+                    }
+                    input[type="password"] {
+                        margin-left: 25px;
+                    }
+                    input[type="text"] {
+                        margin-left: 25px;
+                    }
+                    button {
+                        width: 314px;
+                        height: 50px;
+                        background-color: #e50914;
+                        color: #fff;
+                        border-radius: 4px;
+                        margin-bottom: 20px;
+                        font-size: 20px;
+                        font-weight: 600;
+                        cursor: pointer;
                     }
                 }
-                .closeAccount{
-                    width: 33%;
-                    text-align: right;
-                    span{
-                        @include font(15px,600,#0073E8);
-                        &:hover{
-                            text-decoration: underline;
+                .info {
+                    margin: 0 auto;
+                    .rememberMe {
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        font-size: 12px;
+                        width: 314px;
+                        margin-bottom: 20px;
+                        input[type="checkbox"] {
+                            width: auto;
+                            margin: 0;
+                        }
+                        .checkRemember {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                            label {
+                                cursor: pointer;
+                                margin-bottom: -3px;
+                            }
+                        }
+                        .rememberSpan {
                             cursor: pointer;
                         }
                     }
                 }
-            }
-            .profileParentalControls{
-                display: flex;
-                gap: 5%;
-                padding-top: 1%;
-                padding-bottom: 1%;
-                border-bottom: 1px solid #999999;
-                .profileParentalControlsTitle{
-                    width: 26.5%;
-                    h6{
-                        @include font(18px,500,gray);    
-                        width: 75%;    
-                    }
-                }
-            }
-            .settings{
-                display: flex;
-                gap: 5%;
-                padding-top: 1%;
-                .settingTitle{
-                    width: 26%;
-                    h6{
-                        @include font(18px,500,gray);        
-                    }
-                }
-                .settingsInfo{
-                    display: flex;
-                    flex-direction: column;
-                    span{
-                        @include font(15px,600,#0073E8);
-                    &:hover{
+                .invite {
+                    margin: 0 auto;
+                    width: 314px;
+                    color: #737373;
+                    font-size: 20px;
+                    .special {
+                        margin-left: 10px;
+                        color: #fff;
                         text-decoration: underline;
                         cursor: pointer;
-                    }
-                    }
-                }
-            }
-            .popupAlert{
-                .popupContainer{
-                    .popupWrapper{
-                        .popups{
-                            width: 618px;
-                            height: 400px;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            background-color: #000;
-                            position: absolute;
-                            top: 20%;
-                            left: 15%;
-                            z-index: 99;
-                            .headerPopup{
-                                color: #fff;
-                                margin-left: auto;
-                                font-size: 2rem;
-                                margin-bottom: auto;
-                                cursor: pointer;
-                                padding: 5px 10px;
-                            }
-                            .bodyPopup{
-                                color: #fff;
-                                text-align: center;
-                                font-size: 1.5rem;
-                                padding-bottom: 30px;
-                                margin-bottom: auto;
-                            }
-                            .footerPopup{
-                                margin: 0 auto;
-                                text-align: center;
-                                padding-bottom: 30px;
-                                display: flex;
-                                gap: 30px;
-                                button{
-                                    border: none;
-                                    background-color: #fff;
-                                    color: #000;
-                                    font-size: 2rem;
-                                    padding: 5px;
-                                    width: 100px;
-                                    cursor: pointer;
-                                }
-                            }
-                        }
-                        
                     }
                 }
             }
@@ -233,75 +121,6 @@
     }
 }
 
-footer{
-    .footerContainer{
-        margin-top: 150px;
-        .footerWrapper{
-            margin-left: 80px;
-            .footerAskQuestion{
-                padding-bottom: 2%;
-                margin-left: 41px;
-                span{
-                    @include font(18px,500,gray);       
-                    &:hover{
-                        text-decoration: underline;
-                        cursor: pointer;
-                    } 
-                }
-            }
-        .footerPart{
-            ul{
-                display: flex;
-                flex-wrap: wrap;
-                max-width: 1000px;
-                li{
-                    list-style-type: none;
-                    min-width: 161px;
-                    @include font(12px,500,gray);   
-                    margin-right: 70px;
-                    margin-bottom: 15px;
-                    &:hover{
-                        text-decoration: underline;
-                        cursor: pointer;
-                    }     
-                }
-            }
-        }
-        }
-    }
+.borderAlert {
+    border: 1px solid red !important;
 }
-
-.accountComponent {
-    background-color: #fff;
-    height: 100%;
-    min-height: 1000px;
-}
-
-.headerComponent {
-    .headerContainer {
-        background-color: #000;
-    }
-    .headerWrapper{
-        padding: 15px 55px;
-    }
-    .links,
-    .buttonInput {
-        display: none !important;
-    }
-}
-
-.emptyRow {
-    height: 90px;
-}
-
-
-.mins{
-    transform: translateY(-500px);
-    transition: all 1s;
-    top: -10% !important;
-    }
-    
-    .max{
-        transform: scale(1);
-        transition: all 1s;
-    }
