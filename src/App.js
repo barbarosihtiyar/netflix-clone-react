@@ -18,8 +18,8 @@ import LandingPage from "./pages/LandingPage";
 
 function App() {
   const [subsInfo,setSubsInfo] = useState({
-     "namesurname" : "admin",
-      "username" : "barbaros",
+        "namesurname" : "admin",
+        "username" : "barbaros",
         "email" : "admin@hotmail.com",
         "password" : "admin",
         "passwordAgain" : "admin",
