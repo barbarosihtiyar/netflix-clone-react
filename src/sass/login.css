@@ -1,190 +1,129 @@
-.signup {
+.sectionLogin {
+  background-image: url(../images/loginImageBg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+}
+.sectionLogin .loginContainer {
+  max-width: 1250px;
+  margin: 0 auto;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
-.signup .signupContainer {
-  max-width: 800px;
-  margin: auto;
-  padding: 15px 30px;
-  margin-top: 150px;
+.sectionLogin .loginContainer .loginWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.signup .signupContainer .signupWrapper {
-  position: relative;
-}
-.signup .signupContainer .signupWrapper .registerHeader {
-  position: fixed;
+.sectionLogin .loginContainer .loginWrapper .loginHeader {
+  position: absolute;
   top: 2%;
   left: 2%;
 }
-.signup .signupContainer .signupWrapper .registerHeader img {
+.sectionLogin .loginContainer .loginWrapper .loginHeader img {
   width: 167px;
 }
-.signup .signupContainer .signupWrapper .signupTitle {
-  max-width: 600px;
-}
-.signup .signupContainer .signupWrapper .signupTitle h1 {
-  font-size: 40px;
-  font-weight: 700;
-  color: #fff;
-  padding-bottom: 30px;
-  text-align: center;
-}
-.signup .signupContainer .signupWrapper .signupForm form {
+.sectionLogin .loginContainer .loginWrapper .login {
   display: flex;
   flex-direction: column;
-  max-width: 700px;
+  background-color: rgba(0, 0, 0, 0.75);
+  justify-content: center;
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
-.signup .signupContainer .signupWrapper .signupForm form label {
+.sectionLogin .loginContainer .loginWrapper .login h6 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  width: 314px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.sectionLogin .loginContainer .loginWrapper .login form {
+  text-align: center;
+}
+.sectionLogin .loginContainer .loginWrapper .login form input {
+  width: 314px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.sectionLogin .loginContainer .loginWrapper .login form input[type=text],
+.sectionLogin .loginContainer .loginWrapper .login form input[type=password] {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 0 10px;
+}
+.sectionLogin .loginContainer .loginWrapper .login form input[type=password] {
+  margin-left: 25px;
+}
+.sectionLogin .loginContainer .loginWrapper .login form #userPass {
+  margin-left: 25px;
+}
+.sectionLogin .loginContainer .loginWrapper .login form button {
+  width: 314px;
+  height: 50px;
+  background-color: #e50914;
+  color: #fff;
+  border-radius: 4px;
+  margin-bottom: 20px;
   font-size: 20px;
   font-weight: 600;
-  color: #fff;
-}
-.signup .signupContainer .signupWrapper .signupForm form input {
-  margin-bottom: 10px;
-  padding: 12px;
-  border-radius: 5px;
-  outline: none;
-  border: none;
-  font-size: 15px;
-  font-weight: 800;
-  color: #000;
-  max-width: 600px;
-}
-.signup .signupContainer .signupWrapper .signupForm form button {
-  width: 50%;
-  padding: 15px;
-  margin: 0 auto;
-  border: none;
-  outline: none;
-  font-size: 25px;
-  font-weight: 700;
-  color: #000;
   cursor: pointer;
 }
-.signup .signupContainer .signupWrapper .signupForm form .malefemale {
+.sectionLogin .loginContainer .loginWrapper .login .info {
+  margin: 0 auto;
+}
+.sectionLogin .loginContainer .loginWrapper .login .info .rememberMe {
+  color: #fff;
   display: flex;
   align-items: center;
-  gap: 20px;
-  max-height: 30px;
-  font-size: 30px;
-  font-weight: 600;
-  color: #fff;
+  justify-content: space-between;
+  font-size: 12px;
+  width: 314px;
+  margin-bottom: 20px;
 }
-.signup .signupContainer .signupWrapper .signupForm form input[type=radio] {
-  margin-right: 5px;
-}
-.signup .signupContainer .signupWrapper .signupForm form .checkbox {
-  display: flex;
-  gap: 5px;
-  padding-top: 15px;
-  padding-bottom: 30px;
-  align-items: flex-start;
-}
-.signup .signupContainer .signupWrapper .signupForm form .checkbox input {
-  padding: 5px;
-  margin: 0;
+.sectionLogin .loginContainer .loginWrapper .login .info .rememberMe input[type=checkbox] {
   width: auto;
-  margin-top: 5px;
+  margin: 0;
 }
-.signup .signupContainer .signupWrapper .signupForm span {
-  font-size: 25px;
-  font-weight: 600;
-  color: #fff;
-  width: 100%;
-  text-align: center;
-  display: inline-block;
-  padding-top: 30px;
-}
-.signup .signupContainer .signupWrapper .signupForm span a {
-  font-size: 25px;
-  font-weight: 600;
-  color: #fff;
-}
-
-.redAlert {
-  border: 3px solid red !important;
-}
-
-.warningColor {
-  color: red !important;
-}
-
-.none {
-  display: none;
-}
-
-.passwordErrorMessage {
-  display: block;
-  color: red !important;
-}
-
-.flex {
+.sectionLogin .loginContainer .loginWrapper .login .info .rememberMe .checkRemember {
   display: flex;
   align-items: center;
+  gap: 5px;
 }
-.flex input {
-  width: 100%;
+.sectionLogin .loginContainer .loginWrapper .login .info .rememberMe .checkRemember label {
+  cursor: pointer;
+  margin-bottom: -3px;
 }
-.flex .showHidePassword {
-  margin-bottom: 8px;
-  margin-left: 5px;
-}
-
-.checkbox label {
-  max-width: 600px;
-}
-
-.popup {
-  width: 618px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #000;
-  position: absolute;
-  top: 20%;
-  z-index: 99;
-}
-.popup .headerPopup {
-  color: #fff;
-  margin-left: auto;
-  font-size: 2rem;
-  margin-bottom: auto;
+.sectionLogin .loginContainer .loginWrapper .login .info .rememberMe .rememberSpan {
   cursor: pointer;
 }
-.popup .bodyPopup {
-  color: #fff;
-  text-align: center;
-  font-size: 1.5rem;
-  padding-bottom: 30px;
-  margin-bottom: auto;
-}
-.popup .footerPopup {
+.sectionLogin .loginContainer .loginWrapper .login .invite {
   margin: 0 auto;
-  text-align: center;
-  padding-bottom: 30px;
+  width: 314px;
+  color: #737373;
+  font-size: 20px;
 }
-.popup .footerPopup button {
-  border: none;
-  background-color: #fff;
-  color: #000;
-  font-size: 2rem;
-  padding: 10px;
-  width: 200px;
+.sectionLogin .loginContainer .loginWrapper .login .invite .special {
+  margin-left: 10px;
+  color: #fff;
+  text-decoration: underline;
   cursor: pointer;
-}
-
-.min {
-  transform: translateY(-500px);
-  transition: all 1s;
-  top: -10%;
-}
-
-.max {
-  transform: scale(1);
-  transition: all 1s;
 }
 
 .borderAlert {
   border: 1px solid red !important;
+}
+
+.passIcon svg {
+  cursor: pointer;
 }/*# sourceMappingURL=login.css.map */

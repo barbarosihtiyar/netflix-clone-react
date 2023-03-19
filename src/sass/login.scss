@@ -1,20 +1,21 @@
-@import "variables";
-
-.signup {
-    display: flex;
-    justify-content: center;
-
-    .signupContainer {
-        max-width: 800px;
-        margin: auto;
-        padding: 15px 30px;
-        margin-top: 150px;
-
-        .signupWrapper {
-            position: relative;
-
-            .registerHeader {
-                position: fixed;
+.sectionLogin {
+    background-image: url(../images/loginImageBg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+    .loginContainer {
+        max-width: 1250px;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .loginWrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .loginHeader {
+                position: absolute;
                 top: 2%;
                 left: 2%;
 
@@ -22,186 +23,113 @@
                     width: 167px;
                 }
             }
-
-            .signupTitle {
-                max-width: 600px;
-
-                h1 {
-                    @include font(40px, 700, #fff);
-                    padding-bottom: 30px;
-                    text-align: center;
+            .login {
+                display: flex;
+                flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.75);
+                justify-content: center;
+                width: 450px;
+                height: 450px;
+                margin: 0 auto;
+                margin-bottom: 30px;
+                h6 {
+                    color: #fff;
+                    font-size: 40px;
+                    font-weight: 600;
+                    width: 314px;
+                    padding-top: 10px;
+                    margin-bottom: 20px;
+                    margin: 0 auto;
+                    margin-top: 30px;
                 }
-            }
-
-            .signupForm {
                 form {
-                    display: flex;
-                    flex-direction: column;
-                    max-width: 700px;
-
-                    label {
-                        @include font(20px, 600, #fff);
-                    }
-
+                    text-align: center;
                     input {
-                        margin-bottom: 10px;
-                        padding: 12px;
-                        border-radius: 5px;
-                        outline: none;
+                        width: 314px;
+                        height: 50px;
                         border: none;
-                        @include font(15px, 800, #000);
-                        max-width: 600px;
-
+                        outline: none;
+                        border-radius: 4px;
+                        margin-bottom: 20px;
+                        color: #fff;
                     }
-
+                    input[type="text"],
+                    input[type="password"] {
+                        background-color: rgba(0, 0, 0, 0.75);
+                        padding: 0 10px;
+                    }
+                    input[type="password"] {
+                        margin-left: 25px;
+                    }
+                    #userPass {
+                        margin-left: 25px;
+                    }
                     button {
-                        width: 50%;
-                        padding: 15px;
-                        margin: 0 auto;
-                        border: none;
-                        outline: none;
-                        @include font(25px, 700, #000);
+                        width: 314px;
+                        height: 50px;
+                        background-color: #e50914;
+                        color: #fff;
+                        border-radius: 4px;
+                        margin-bottom: 20px;
+                        font-size: 20px;
+                        font-weight: 600;
                         cursor: pointer;
                     }
-
-                    .malefemale {
+                }
+                .info {
+                    margin: 0 auto;
+                    .rememberMe {
+                        color: #fff;
                         display: flex;
                         align-items: center;
-                        gap: 20px;
-                        max-height: 30px;
-                        @include font(30px, 600, #fff);
-                    }
-
-                    input[type=radio] {
-                        margin-right: 5px;
-                    }
-
-                    .checkbox {
-                        display: flex;
-                        gap: 5px;
-                        padding-top: 15px;
-                        padding-bottom: 30px;
-                        align-items: flex-start;
-
-                        input {
-                            padding: 5px;
-                            margin: 0;
+                        justify-content: space-between;
+                        font-size: 12px;
+                        width: 314px;
+                        margin-bottom: 20px;
+                        input[type="checkbox"] {
                             width: auto;
-                            margin-top: 5px;
+                            margin: 0;
+                        }
+                        .checkRemember {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                            label {
+                                cursor: pointer;
+                                margin-bottom: -3px;
+                            }
+                        }
+                        .rememberSpan {
+                            cursor: pointer;
                         }
                     }
-
                 }
-
-                span {
-                    @include font(25px, 600, #fff);
-                    width: 100%;
-                    text-align: center;
-
-                    a {
-                        @include font(25px, 600, #fff);
+                .invite {
+                    margin: 0 auto;
+                    width: 314px;
+                    color: #737373;
+                    font-size: 20px;
+                    .special {
+                        margin-left: 10px;
+                        color: #fff;
+                        text-decoration: underline;
+                        cursor: pointer;
                     }
-
-                    display: inline-block;
-                    padding-top: 30px;
                 }
             }
         }
     }
 }
 
-.redAlert {
-    border: 3px solid red !important;
-}
 
-.warningColor {
-    color: red !important;
-}
 
-.none {
-    display: none;
-}
-
-.passwordErrorMessage {
-    display: block;
-    color: red !important;
-}
-
-.flex {
-    display: flex;
-    align-items: center;
-
-    input {
-        width: 100%;
-    }
-
-    .showHidePassword {
-        margin-bottom: 8px;
-        margin-left: 5px;
-    }
-}
-
-.checkbox {
-    label {
-        max-width: 600px;
-    }
-}
-
-.popup {
-    width: 618px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #000;
-    position: absolute;
-    top: 20%;
-    z-index: 99;
-
-    .headerPopup {
-        color: #fff;
-        margin-left: auto;
-        font-size: 2rem;
-        margin-bottom: auto;
-        cursor: pointer;
-    }
-
-    .bodyPopup {
-        color: #fff;
-        text-align: center;
-        font-size: 1.5rem;
-        padding-bottom: 30px;
-        margin-bottom: auto;
-    }
-
-    .footerPopup {
-        margin: 0 auto;
-        text-align: center;
-        padding-bottom: 30px;
-
-        button {
-            border: none;
-            background-color: #fff;
-            color: #000;
-            font-size: 2rem;
-            padding: 10px;
-            width: 200px;
-            cursor: pointer;
-        }
-    }
-}
-
-.min {
-    transform: translateY(-500px);
-    transition: all 1s;
-    top: -10%;
-}
-
-.max {
-    transform: scale(1);
-    transition: all 1s;
-}
 
 .borderAlert {
     border: 1px solid red !important;
+}
+
+.passIcon{
+    svg{
+        cursor: pointer;
+    }
 }
