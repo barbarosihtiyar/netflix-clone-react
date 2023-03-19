@@ -7,6 +7,7 @@ import { AiTwotoneLike } from "react-icons/ai";
 
 function ActionRow({ fetchURL, title }) {
   const [action, setAction] = useState([]);
+  const [showsInfo,setShowsInfo] = useState(false)
 
   useEffect(() => {
     async function fetchAct() {
@@ -15,6 +16,13 @@ function ActionRow({ fetchURL, title }) {
     }
     fetchAct();
   }, [fetchURL]);
+
+  const showInfo = (e) => {
+    const parent = e.currentTarget.parentNode;
+    parent.classList.toggle('showInfo');
+    debugger;
+    setShowsInfo(true);
+  }
 
   const base_URL = "https://image.tmdb.org/t/p/original";
 
@@ -25,10 +33,10 @@ function ActionRow({ fetchURL, title }) {
         <div className="movies">
           {action.map((movie, index) => (
             <div key={index} className="movie">
-            <div className="image">
+            <div className="image" >
             <img src={`${base_URL}${movie.poster_path}`} alt={movie.name} />
-            <div className="absolute">
-                <BsFillInfoCircleFill />
+            <div className="absolute" onClick={showInfo}>
+                <BsFillInfoCircleFill/>
               </div>
               <div className="play">
                 <AiFillPlayCircle  />
