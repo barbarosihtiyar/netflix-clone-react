@@ -1,1 +1,88 @@
-/*# sourceMappingURL=profileManagament.css.map */
+.profileManagament .profileManagamentContainer {
+  max-width: 900px;
+  margin: auto;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper h1 {
+  font-size: 61px;
+  font-weight: 600;
+  color: #fff;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo {
+  display: flex;
+  gap: 30px;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .image img {
+  width: 130px;
+  height: 102px;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info {
+  color: #fff;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info #nameManagament {
+  background: #666;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+  width: 68%;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .language {
+  display: flex;
+  flex-direction: column;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .language #selectManagament {
+  width: 10%;
+  outline: none;
+  margin-bottom: 25px;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .createUsername {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #fff;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .createUsername h3 {
+  padding-bottom: 10px;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .createUsername span {
+  padding-bottom: 10px;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .createUsername #usernameManagament {
+  padding: 5px 10px;
+  margin-bottom: 30px;
+  width: 68%;
+  background: #666;
+  outline: none;
+  border: none;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .settingsAdult {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #fff;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .settingsAdult h3 {
+  padding-bottom: 10px;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .settingsAdult span {
+  padding-bottom: 10px;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .settingsAdult button {
+  margin-bottom: 30px;
+  width: 10%;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .autoplayControls {
+  border-bottom: 1px solid #fff;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .submitProfileManagement {
+  padding-top: 30px;
+  color: #fff;
+}/*# sourceMappingURL=profileManagament.css.map */
