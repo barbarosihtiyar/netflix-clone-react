@@ -2,21 +2,25 @@
 
 .profileManagament{
     .profileManagamentContainer{
-        max-width: 900px;
+        max-width: 800px;
         margin: auto;
+        padding-top: 80px;
         .profileManagamentWrapper{
             display: flex;
             flex-direction: column;
             h1{
-                @include font(61px,600,#fff)
+                @include font(61px,600,#fff);
+                border-bottom:1px solid #fff;
             }
             .imageInfo{
                 display: flex;
                 gap: 30px;
+                border-bottom: 1px solid #fff;
+                padding-top: 30px;
                 .image{
                     img{
-                        width: 130px;
-                        height: 102px;
+                        width: 200px;
+                        height: 140px;
                     }
                 }
                 .info{
@@ -26,17 +30,27 @@
                         color: #fff;
                         outline: none;
                         border: none;
-                        padding: 5px 10px;
-                        margin-bottom: 15px;
+                        padding: 10px 10px;
+                        font-size: 20px;
+                        font-weight: 600;
+                        margin-bottom: 20px;
                         width: 68%;
                     }
                     .language{
                         display: flex;
                         flex-direction: column;
+                        span{
+                            font-size: 20px;
+                            padding-bottom: 5px;
+                        }
                         #selectManagament{
                             width: 10%;
                             outline: none;
                             margin-bottom: 25px;
+                            background-color: #000;
+                            color: #fff;
+                            text-align: center;
+                           
                         }
                     }
                     .createUsername{
@@ -48,9 +62,11 @@
                         }
                         span{
                             padding-bottom: 10px;
+                            font-size: 20px;
+                            width: 70%;
                         }
                         #usernameManagament{
-                            padding: 5px 10px;
+                            padding: 10px 10px;
                             margin-bottom: 30px;
                             width: 68%;
                             background: #666;
@@ -65,27 +81,54 @@
                         border-bottom: 1px solid #fff;
                         h3{
                             padding-bottom: 10px;
+                            font-size: 20px;
                         }
                         span{
                             padding-bottom: 10px;
+                            font-size: 20px;
                         }
                         button{
                             margin-bottom: 30px;
                             width: 10%;
+                            background-color: transparent;
+                            border: 1px solid gray;
+                            color: gray;
+                            outline: none;
+                            padding: 5px 20px;
                         }
                     }
                     .autoplayControls{
-                        border-bottom: 1px solid #fff;
                         padding-top: 30px;
                         display: flex;
                         flex-direction: column;
                         padding-bottom: 30px;
+                        h4{
+                            font-size: 20px;
+                        }
+                        .checkbox{
+                            label{
+                                padding-left: 8px;
+                                font-size: 20px;
+                            }
+                        }
                     }
                 }
             }
             .submitProfileManagement{
                 padding-top: 30px;
-                color: #fff;
+                color: gray;
+                font-size: 25px;
+                display: flex;
+                gap: 10px;
+                span{
+                    border: 1px solid gray;
+                    padding: 5px 20px;
+                &:first-child{
+                    background-color: #fff;
+                    color: #000;
+                }
+                }
+                
             }
         }
     }

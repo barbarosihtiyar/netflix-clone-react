@@ -1,6 +1,7 @@
 .profileManagament .profileManagamentContainer {
-  max-width: 900px;
+  max-width: 800px;
   margin: auto;
+  padding-top: 80px;
 }
 .profileManagament .profileManagamentContainer .profileManagamentWrapper {
   display: flex;
@@ -10,14 +11,17 @@
   font-size: 61px;
   font-weight: 600;
   color: #fff;
+  border-bottom: 1px solid #fff;
 }
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo {
   display: flex;
   gap: 30px;
+  border-bottom: 1px solid #fff;
+  padding-top: 30px;
 }
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .image img {
-  width: 130px;
-  height: 102px;
+  width: 200px;
+  height: 140px;
 }
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info {
   color: #fff;
@@ -27,18 +31,27 @@
   color: #fff;
   outline: none;
   border: none;
-  padding: 5px 10px;
-  margin-bottom: 15px;
+  padding: 10px 10px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
   width: 68%;
 }
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .language {
   display: flex;
   flex-direction: column;
 }
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .language span {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .language #selectManagament {
   width: 10%;
   outline: none;
   margin-bottom: 25px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
 }
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .createUsername {
   display: flex;
@@ -50,9 +63,11 @@
 }
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .createUsername span {
   padding-bottom: 10px;
+  font-size: 20px;
+  width: 70%;
 }
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .createUsername #usernameManagament {
-  padding: 5px 10px;
+  padding: 10px 10px;
   margin-bottom: 30px;
   width: 68%;
   background: #666;
@@ -67,22 +82,46 @@
 }
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .settingsAdult h3 {
   padding-bottom: 10px;
+  font-size: 20px;
 }
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .settingsAdult span {
   padding-bottom: 10px;
+  font-size: 20px;
 }
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .settingsAdult button {
   margin-bottom: 30px;
   width: 10%;
+  background-color: transparent;
+  border: 1px solid gray;
+  color: gray;
+  outline: none;
+  padding: 5px 20px;
 }
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .autoplayControls {
-  border-bottom: 1px solid #fff;
   padding-top: 30px;
   display: flex;
   flex-direction: column;
   padding-bottom: 30px;
 }
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .autoplayControls h4 {
+  font-size: 20px;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .autoplayControls .checkbox label {
+  padding-left: 8px;
+  font-size: 20px;
+}
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .submitProfileManagement {
   padding-top: 30px;
-  color: #fff;
+  color: gray;
+  font-size: 25px;
+  display: flex;
+  gap: 10px;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .submitProfileManagement span {
+  border: 1px solid gray;
+  padding: 5px 20px;
+}
+.profileManagament .profileManagamentContainer .profileManagamentWrapper .submitProfileManagement span:first-child {
+  background-color: #fff;
+  color: #000;
 }/*# sourceMappingURL=profileManagament.css.map */
