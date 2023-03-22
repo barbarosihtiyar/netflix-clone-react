@@ -1,3 +1,4 @@
+
 import React from "react";
 import profileAvatar from "../images/userFirstLogo.png";
 // import { MainContext, useContext } from "../context";
@@ -26,7 +27,7 @@ function ProfileManagament() {
                   </select>
                 </div>
                 <div className="createUsername">
-                <h3>Game Username</h3>
+                <h3>Game Username:</h3>
                   <span>
                     Your username is a unique name you'll use when playing games
                     with other Netflix members on Netflix Games.
@@ -43,7 +44,7 @@ function ProfileManagament() {
                 <div className="autoplayControls">
                   <h4>Autoplay Controls</h4>
                   <div className="checkbox">
-                    <input type="checkbox" name="" id="" />
+                    <input type="checkbox" name="" id="" placeholder="Create in-game username"/>
                     <label>
                       Automatically play the next episode on all devices while
                       watching a series.
@@ -62,6 +63,7 @@ function ProfileManagament() {
             <div className="submitProfileManagement">
                     <span>Save</span>
                     <span>Cancel</span>
+                    <span>Delete Profile</span>
                   </div>
           </div>
         </div>
