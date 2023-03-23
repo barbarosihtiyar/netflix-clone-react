@@ -6,6 +6,7 @@
   height: 100%;
 }
 .landingPage .landingPageContainer .landingPageWrapper {
+  margin-top: 30px;
   height: 100%;
 }
 .landingPage .landingPageContainer .landingPageWrapper .userLogo {
@@ -62,4 +63,11 @@
   z-index: 99;
   width: 100px;
   height: 100px;
+}
+
+#titleProfileManagement {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  margin-top: 60px;
 }/*# sourceMappingURL=landingpage.css.map */
