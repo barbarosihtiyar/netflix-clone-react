@@ -1,5 +1,5 @@
-
 import React from "react";
+import { Link } from "react-router-dom";
 import profileAvatar from "../images/userFirstLogo.png";
 // import { MainContext, useContext } from "../context";
 import "../sass/profileManagement.css"
@@ -32,12 +32,12 @@ function ProfileManagament() {
                     Your username is a unique name you'll use when playing games
                     with other Netflix members on Netflix Games.
                   </span>
-                  <input type="text" name="" id="usernameManagament" />
+                  <input type="text" name="" id="usernameManagament" placeholder="Create in-game username"/>
                   <span className="valError" style={{ display: "none" }}></span>
                 </div>
                 <div className="settingsAdult">
                   <h3>Adult Settings</h3>
-                  <span>All Adult Levels</span>
+                  <span id="extraSpan">All Adult Levels</span>
                   <span>Show all maturity levels in this profile</span>
                   <button>Edit</button>
                 </div>
@@ -61,9 +61,9 @@ function ProfileManagament() {
               </div>
             </div>
             <div className="submitProfileManagement">
-                    <span>Save</span>
-                    <span>Cancel</span>
-                    <span>Delete Profile</span>
+                    <Link to="/landingpage"><span>Save</span></Link>
+                    <Link to="/landingpage"><span>Cancel</span></Link>
+                    <Link to="/landingpage"><span>Delete Profile</span></Link>
                   </div>
           </div>
         </div>
