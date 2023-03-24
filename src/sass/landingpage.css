@@ -17,6 +17,9 @@
   justify-content: center;
   flex-direction: column;
 }
+.landingPage .landingPageContainer .landingPageWrapper .userLogo a {
+  margin: auto;
+}
 .landingPage .landingPageContainer .landingPageWrapper .userLogo .landingPageTitle {
   font-size: 55px;
   font-weight: 800;
@@ -58,14 +61,21 @@
   font-size: 40px;
   color: #fff;
   opacity: 1;
-  top: 30%;
+  top: 23%;
   left: 40%;
   z-index: 99;
   width: 100px;
   height: 100px;
 }
 
-#titleProfileManagement {
+#titleProfileManagement1 {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  margin-top: 60px;
+}
+
+#titleProfileManagement2 {
   color: #fff;
   border: 1px solid #fff;
   padding: 10px 20px;
