@@ -7,13 +7,18 @@ import { Link } from "react-router-dom";
 
 
 function Account() {
-  let {subsInfo} = useContext(MainContext);
+  let {subsInfo,setSubsInfo} = useContext(MainContext);
   const [popup,setPopup] = useState(false)
   const [href,setHref] = useState(false)
 
   const cancelMembership = () => {
     setPopup(!popup);
     console.log(subsInfo)
+  }
+
+   const deletedProfil = () => {
+    setPopup(!popup);
+    setSubsInfo({    })
   }
 
  
@@ -108,7 +113,7 @@ function Account() {
                     <div className="headerPopup">X</div>
                     <div className="bodyPopup">Are you sure?</div>
                     <div className="footerPopup">
-                      <button className="popupYes" onClick={cancelMembership}><Link style={{color:"#000",textDecoration:"none"}} to="/">YES</Link></button>
+                      <button className="popupYes" onClick={deletedProfil}><Link style={{color:"#000",textDecoration:"none"}} to="/">YES</Link></button>
                       <button className="popupNo" onClick={cancelMembership}>NO</button>
                     </div>
                   </div>

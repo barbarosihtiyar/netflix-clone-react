@@ -31,9 +31,13 @@ function App() {
         "cvc" : "111"
   });
 
+  const [edit,setEdit] = useState(false)
+
   const data = {
     subsInfo,
-    setSubsInfo
+    setSubsInfo,
+    edit,
+    setEdit
   }
   return (
     <MainContext.Provider value={data}>

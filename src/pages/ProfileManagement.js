@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import profileAvatar from "../images/userFirstLogo.png";
-// import { MainContext, useContext } from "../context";
+import { MainContext, useContext } from "../context";
 import "../sass/profileManagement.css"
 
 function ProfileManagament() {
+  let {setEdit} = useContext(MainContext);
+  let {subsInfo,setSubsInfo} = useContext(MainContext);
+  const [gameUser,setGameUser] = useState();
+  const [popup,setPopup] = useState(false)
 
+  console.log(subsInfo)
+  const changeEditVal = () => {
+    setEdit(false);
+  }
+
+  const deletedProfil = () => {
+    setPopup(!popup);
+    setSubsInfo({ })
+  }
+
+  // console.log(gameUser)
+
+  const changeVis = () => {
+    setPopup(!popup);
+    console.log(subsInfo)
+  }
+
+
+  const capitalizedWord = subsInfo.username.charAt(0).toUpperCase() + subsInfo.username.slice(1);
 
   return (
     <>
@@ -18,7 +41,7 @@ function ProfileManagament() {
                 <img src={profileAvatar} alt="" />
               </div>
               <div className="info">
-                <input type="text" name="" id="nameManagament" placeholder="Name" />
+                <input type="text" name="" id="nameManagament" placeholder="Name" value={capitalizedWord} />
                 <div className="language">
                   <span>Language</span>
                   <select name="" id="selectManagament">
@@ -32,7 +55,7 @@ function ProfileManagament() {
                     Your username is a unique name you'll use when playing games
                     with other Netflix members on Netflix Games.
                   </span>
-                  <input type="text" name="" id="usernameManagament" placeholder="Create in-game username"/>
+                  <input value={gameUser} type="text" name="" id="usernameManagament" placeholder="Create in-game username" onChange={(e) => setGameUser(e.target.value)}/>
                   <span className="valError" style={{ display: "none" }}></span>
                 </div>
                 <div className="settingsAdult">
@@ -61,10 +84,24 @@ function ProfileManagament() {
               </div>
             </div>
             <div className="submitProfileManagement">
-                    <Link to="/landingpage"><span>Save</span></Link>
+                    <Link to="/landingpage" onClick={changeEditVal()}><span>Save</span></Link>
                     <Link to="/landingpage"><span>Cancel</span></Link>
-                    <Link to="/landingpage"><span>Delete Profile</span></Link>
+                    <a ><button onClick={changeVis} style={{background:"transparent",border:"none",color:"#fff"}}>Delete Profile</button></a>
+            </div>
+            <div className="popupAlerts">
+              <div className="popupContainer">
+                <div className="popupWrapper">
+                  <div className={popup ? "popups max" : "popups mins"}>
+                    <div className="headerPopup">X</div>
+                    <div className="bodyPopup">Are you sure?</div>
+                    <div className="footerPopup">
+                      <button className="popupYes" onClick={deletedProfil}><Link style={{color:"#000",textDecoration:"none"}} to="/">YES</Link></button>
+                      <button className="popupNo" onClick={changeVis}>NO</button>
+                    </div>
                   </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
