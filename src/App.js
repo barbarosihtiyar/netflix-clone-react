@@ -32,12 +32,15 @@ function App() {
   });
 
   const [edit,setEdit] = useState(false)
+  const [gameusername,setGameusername] = useState("")
 
   const data = {
     subsInfo,
     setSubsInfo,
     edit,
-    setEdit
+    setEdit,
+    gameusername,
+    setGameusername
   }
   return (
     <MainContext.Provider value={data}>
