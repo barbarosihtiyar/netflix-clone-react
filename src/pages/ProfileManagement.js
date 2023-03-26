@@ -7,12 +7,16 @@ import "../sass/profileManagement.css"
 function ProfileManagament() {
   let {setEdit} = useContext(MainContext);
   let {subsInfo,setSubsInfo} = useContext(MainContext);
+  let {gameusername,setGameusername} = useContext(MainContext);
+
   const [gameUser,setGameUser] = useState();
   const [popup,setPopup] = useState(false)
+  console.log(gameusername,"asd")
 
-  console.log(subsInfo)
+  // console.log(subsInfo)
   const changeEditVal = () => {
     setEdit(false);
+    setGameusername(gameUser)
   }
 
   const deletedProfil = () => {
@@ -24,8 +28,10 @@ function ProfileManagament() {
 
   const changeVis = () => {
     setPopup(!popup);
-    console.log(subsInfo)
+    // console.log(subsInfo)
   }
+
+ 
 
 
   const capitalizedWord = subsInfo.username.charAt(0).toUpperCase() + subsInfo.username.slice(1);
