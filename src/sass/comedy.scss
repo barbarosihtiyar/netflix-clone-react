@@ -4,33 +4,48 @@
         display: flex;
         flex-direction: column;
         padding-bottom: 10px;
-
         h1 {
             color: #e5e5e5;
             padding-top: 40px;
             padding-bottom: 5px;
             padding-left: 3px;
         }
-
         .comedy {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-
-            .movie {
+            .movie{
                 padding-bottom: 5px;
-
+                margin-right: auto;
                 img {
                     max-height: 300px;
-                    max-width: 250px;
+                    width: 12.774vw;
                     border-radius: 5px;
-
                     &:hover {
                         transform: scale(1.08);
                         cursor: pointer;
                     }
                 }
+                &:nth-child(15){
+                    margin-right:8px;
+                }
+                &:nth-child(16){
+                    margin-right:8px;
+                }
+                &:nth-child(17){
+                    margin-right:8px;
+                }
+                &:nth-child(18){
+                    margin-right:8px;
+                }
+                &:nth-child(19){
+                    margin-right:8px;
+                }
+                &:nth-child(20){
+                    margin-right:8px;
+                }
             }
+           
         }
     }
 }

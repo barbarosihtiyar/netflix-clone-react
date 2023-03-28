@@ -17,13 +17,32 @@
 }
 .comedyRowContainer .comedyRowWrapper .comedy .movie {
   padding-bottom: 5px;
+  margin-right: auto;
 }
 .comedyRowContainer .comedyRowWrapper .comedy .movie img {
   max-height: 300px;
-  max-width: 250px;
+  width: 12.774vw;
   border-radius: 5px;
 }
 .comedyRowContainer .comedyRowWrapper .comedy .movie img:hover {
   transform: scale(1.08);
   cursor: pointer;
+}
+.comedyRowContainer .comedyRowWrapper .comedy .movie:nth-child(15) {
+  margin-right: 8px;
+}
+.comedyRowContainer .comedyRowWrapper .comedy .movie:nth-child(16) {
+  margin-right: 8px;
+}
+.comedyRowContainer .comedyRowWrapper .comedy .movie:nth-child(17) {
+  margin-right: 8px;
+}
+.comedyRowContainer .comedyRowWrapper .comedy .movie:nth-child(18) {
+  margin-right: 8px;
+}
+.comedyRowContainer .comedyRowWrapper .comedy .movie:nth-child(19) {
+  margin-right: 8px;
+}
+.comedyRowContainer .comedyRowWrapper .comedy .movie:nth-child(20) {
+  margin-right: 8px;
 }/*# sourceMappingURL=comedy.css.map */
