@@ -1,125 +1,311 @@
-.sectionLogin {
-  background-image: url(../images/loginImageBg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 1000px;
+.accountContainer .accountWrapper {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 20px;
 }
-.sectionLogin .loginContainer {
-  max-width: 1250px;
-  margin: 0 auto;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.accountContainer .accountWrapper .account {
+  position: relative;
 }
-.sectionLogin .loginContainer .loginWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.accountContainer .accountWrapper .account .accountTitle {
+  border-bottom: 1px solid #999999;
+  padding-bottom: 10px;
 }
-.sectionLogin .loginContainer .loginWrapper .loginHeader {
-  position: absolute;
-  top: 2%;
-  left: 2%;
-}
-.sectionLogin .loginContainer .loginWrapper .loginHeader img {
-  width: 167px;
-}
-.sectionLogin .loginContainer .loginWrapper .login {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.75);
-  justify-content: center;
-  width: 450px;
-  height: 450px;
-  margin: 0 auto;
-  margin-bottom: 30px;
-}
-.sectionLogin .loginContainer .loginWrapper .login h6 {
-  color: #fff;
-  font-size: 40px;
+.accountContainer .accountWrapper .account .accountTitle h3 {
+  font-size: 30px;
   font-weight: 600;
-  width: 314px;
-  padding-top: 10px;
-  margin-bottom: 20px;
-  margin: 0 auto;
-  margin-top: 30px;
+  color: #000;
 }
-.sectionLogin .loginContainer .loginWrapper .login form {
-  text-align: center;
+.accountContainer .accountWrapper .account .accountInfo {
+  padding-top: 20px;
 }
-.sectionLogin .loginContainer .loginWrapper .login form input {
-  width: 314px;
-  height: 50px;
-  border: none;
-  outline: none;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  color: #fff;
-}
-.sectionLogin .loginContainer .loginWrapper .login form input[type=text],
-.sectionLogin .loginContainer .loginWrapper .login form input[type=password] {
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 0 10px;
-}
-.sectionLogin .loginContainer .loginWrapper .login form input[type=password] {
-  margin-left: 25px;
-}
-.sectionLogin .loginContainer .loginWrapper .login form input[type=text] {
-  margin-left: 25px;
-}
-.sectionLogin .loginContainer .loginWrapper .login form button {
-  width: 314px;
-  height: 50px;
-  background-color: #e50914;
-  color: #fff;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  font-size: 20px;
-  font-weight: 600;
-  cursor: pointer;
-}
-.sectionLogin .loginContainer .loginWrapper .login .info {
-  margin: 0 auto;
-}
-.sectionLogin .loginContainer .loginWrapper .login .info .rememberMe {
-  color: #fff;
+.accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  gap: 5%;
+}
+.accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .membershipPaymentsTitleButton {
+  display: flex;
+  flex-direction: column;
+}
+.accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .membershipPaymentsTitleButton h6 {
+  padding-bottom: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  color: gray;
+}
+.accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .membershipPaymentsTitleButton button {
   font-size: 12px;
-  width: 314px;
-  margin-bottom: 20px;
+  font-weight: 500;
+  color: #000;
+  border: none;
+  background-color: #e6e6e6;
+  padding: 12px 25px;
+  cursor: pointer;
 }
-.sectionLogin .loginContainer .loginWrapper .login .info .rememberMe input[type=checkbox] {
-  width: auto;
-  margin: 0;
+.accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .membershipPaymentsTitleButton button:hover {
+  background-color: #F2F2F2;
 }
-.sectionLogin .loginContainer .loginWrapper .login .info .rememberMe .checkRemember {
+.accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .userInfo {
   display: flex;
-  align-items: center;
-  gap: 5px;
+  flex-direction: column;
+  width: 16%;
 }
-.sectionLogin .loginContainer .loginWrapper .login .info .rememberMe .checkRemember label {
-  cursor: pointer;
-  margin-bottom: -3px;
-}
-.sectionLogin .loginContainer .loginWrapper .login .info .rememberMe .rememberSpan {
-  cursor: pointer;
-}
-.sectionLogin .loginContainer .loginWrapper .login .invite {
-  margin: 0 auto;
-  width: 314px;
+.accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .userInfo span {
+  font-size: 15px;
+  font-weight: 500;
   color: #737373;
-  font-size: 20px;
+  padding-bottom: 5px;
 }
-.sectionLogin .loginContainer .loginWrapper .login .invite .special {
-  margin-left: 10px;
+.accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .userInfo span:nth-child(1) {
+  font-weight: 700;
+  color: #000;
+}
+.accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .userInfo .userCardInfo {
+  padding-top: 61px;
+}
+.accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .changeUserInfo {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  text-align: right;
+}
+.accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .changeUserInfo .userCardInfoChange {
+  display: flex;
+  flex-direction: column;
+  padding-top: 61px;
+  padding-bottom: 1%;
+}
+.accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .changeUserInfo span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0073E8;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+.accountContainer .accountWrapper .account .accountInfo .membershipPayments .membershipPaymentsFirst .changeUserInfo span:hover {
+  text-decoration: underline;
+}
+.accountContainer .accountWrapper .account .accountInfo .planDetails {
+  display: flex;
+  gap: 5%;
+  padding-top: 1.5%;
+  padding-bottom: 0.8%;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+}
+.accountContainer .accountWrapper .account .accountInfo .planDetails .planDetailsTitle {
+  width: 26.8%;
+}
+.accountContainer .accountWrapper .account .accountInfo .planDetails .planDetailsTitle h6 {
+  padding-bottom: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  color: gray;
+}
+.accountContainer .accountWrapper .account .accountInfo .planDetails .planType span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+.accountContainer .accountWrapper .account .accountInfo .planDetails .changePlan {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0073E8;
+  width: 60%;
+  text-align: right;
+}
+.accountContainer .accountWrapper .account .accountInfo .planDetails .changePlan span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.accountContainer .accountWrapper .account .securityPrivacy {
+  display: flex;
+  gap: 5%;
+  padding-top: 1%;
+  border-bottom: 1px solid #999999;
+  padding-bottom: 1%;
+}
+.accountContainer .accountWrapper .account .securityPrivacy .securityPrivacyTitle {
+  width: 27%;
+}
+.accountContainer .accountWrapper .account .securityPrivacy .securityPrivacyTitle h6 {
+  font-size: 18px;
+  font-weight: 500;
+  color: gray;
+  padding-top: 1%;
+}
+.accountContainer .accountWrapper .account .securityPrivacy .securityPrivacyDesc {
+  width: 33%;
+}
+.accountContainer .accountWrapper .account .securityPrivacy .securityPrivacyDesc span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+}
+.accountContainer .accountWrapper .account .securityPrivacy .closeAccount {
+  width: 33%;
+  text-align: right;
+}
+.accountContainer .accountWrapper .account .securityPrivacy .closeAccount span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0073E8;
+}
+.accountContainer .accountWrapper .account .securityPrivacy .closeAccount span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.accountContainer .accountWrapper .account .profileParentalControls {
+  display: flex;
+  gap: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-bottom: 1px solid #999999;
+}
+.accountContainer .accountWrapper .account .profileParentalControls .profileParentalControlsTitle {
+  width: 26.5%;
+}
+.accountContainer .accountWrapper .account .profileParentalControls .profileParentalControlsTitle h6 {
+  font-size: 18px;
+  font-weight: 500;
+  color: gray;
+  width: 75%;
+}
+.accountContainer .accountWrapper .account .settings {
+  display: flex;
+  gap: 5%;
+  padding-top: 1%;
+}
+.accountContainer .accountWrapper .account .settings .settingTitle {
+  width: 26%;
+}
+.accountContainer .accountWrapper .account .settings .settingTitle h6 {
+  font-size: 18px;
+  font-weight: 500;
+  color: gray;
+}
+.accountContainer .accountWrapper .account .settings .settingsInfo {
+  display: flex;
+  flex-direction: column;
+}
+.accountContainer .accountWrapper .account .settings .settingsInfo span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0073E8;
+}
+.accountContainer .accountWrapper .account .settings .settingsInfo span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.accountContainer .accountWrapper .account .popupAlert .popupContainer .popupWrapper .popups {
+  width: 618px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  z-index: 99;
+}
+.accountContainer .accountWrapper .account .popupAlert .popupContainer .popupWrapper .popups .headerPopup {
   color: #fff;
+  margin-left: auto;
+  font-size: 2rem;
+  margin-bottom: auto;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.accountContainer .accountWrapper .account .popupAlert .popupContainer .popupWrapper .popups .bodyPopup {
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 30px;
+  margin-bottom: auto;
+}
+.accountContainer .accountWrapper .account .popupAlert .popupContainer .popupWrapper .popups .footerPopup {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 30px;
+  display: flex;
+  gap: 30px;
+}
+.accountContainer .accountWrapper .account .popupAlert .popupContainer .popupWrapper .popups .footerPopup button {
+  border: none;
+  background-color: #fff;
+  color: #000;
+  font-size: 2rem;
+  padding: 5px;
+  width: 100px;
+  cursor: pointer;
+}
+
+footer .footerContainer {
+  margin-top: 150px;
+}
+footer .footerContainer .footerWrapper {
+  margin-left: 80px;
+}
+footer .footerContainer .footerWrapper .footerAskQuestion {
+  padding-bottom: 2%;
+  margin-left: 41px;
+}
+footer .footerContainer .footerWrapper .footerAskQuestion span {
+  font-size: 18px;
+  font-weight: 500;
+  color: gray;
+}
+footer .footerContainer .footerWrapper .footerAskQuestion span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer .footerContainer .footerWrapper .footerPart ul {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+footer .footerContainer .footerWrapper .footerPart ul li {
+  list-style-type: none;
+  min-width: 161px;
+  font-size: 12px;
+  font-weight: 500;
+  color: gray;
+  margin-right: 70px;
+  margin-bottom: 15px;
+}
+footer .footerContainer .footerWrapper .footerPart ul li:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
-.borderAlert {
-  border: 1px solid red !important;
+.accountComponent {
+  background-color: #fff;
+  height: 100%;
+  min-height: 1000px;
+}
+
+.headerComponent .headerContainer {
+  background-color: #000;
+}
+.headerComponent .headerWrapper {
+  padding: 15px 55px;
+}
+.headerComponent .links,
+.headerComponent .buttonInput {
+  display: none !important;
+}
+
+.emptyRow {
+  height: 90px;
+}
+
+.mins {
+  transform: translateY(-500px);
+  transition: all 1s;
+  top: -10% !important;
+}
+
+.max {
+  transform: scale(1);
+  transition: all 1s;
 }/*# sourceMappingURL=account.css.map */
