@@ -12,14 +12,17 @@ import { FiHelpCircle } from "react-icons/fi";
 import profileAvatar from "../images/profileAvatar.png"
 import { MainContext, useContext } from "../context";
 
-function Header({ change, setChange }) {
+
+
+function Header() {
   const [bg, setBg] = useState(false);
   const [check, setCheck] = useState(false);
-  let { subsInfo } = useContext(MainContext);
-
+  let {subsInfo} = useContext(MainContext);
+  let {setEdit} = useContext(MainContext);
+  let {change,setChange} = useContext(MainContext);
 
   let username = (subsInfo.username).toUpperCase();
-
+  
   const searchOnClick = () => {
     setCheck(!check);
   };
@@ -32,6 +35,12 @@ function Header({ change, setChange }) {
       setBg(false);
     }
   };
+
+  const changeEditVal = () => {
+    setEdit(true)
+  }
+
+  console.log(change)
 
   window.addEventListener("scroll", changevalueonScrool);
   return (
@@ -47,30 +56,30 @@ function Header({ change, setChange }) {
                 <Link to="/home">Home</Link>
               </li>
               <li>
-                <Link to={"/action"}>
-                  <li>Action Movies</li>
-                </Link>
-              </li>
-              <li>
-                <Link to={"/comedy"}>
-                  <li>Comedy Movies</li>
-                </Link>
-              </li>
-              <li>
-                <Link to={"/horror"}>
-                  <li>Horror Movies</li>
-                </Link>
-              </li>
-              <li>
-                <Link to={"/romance"}>
-                  <li>Romance Movies</li>
-                </Link>
-              </li>
-              <li>
-                <Link to={"/documentary"}>
-                  <li>Documentaries</li>
-                </Link>
-              </li>
+              <Link to={"/action"}>
+                    <li>Action Movies</li>
+                  </Link>
+                  </li>
+                  <li>
+                  <Link to={"/comedy"}>
+                    <li>Comedy Movies</li>
+                  </Link>
+                  </li>
+                  <li>
+                  <Link to={"/horror"}>
+                    <li>Horror Movies</li>
+                  </Link>
+                  </li>
+                  <li>
+                  <Link to={"/romance"}>
+                    <li>Romance Movies</li>
+                  </Link>
+                  </li>
+                  <li>
+                  <Link to={"/documentary"}>
+                    <li>Documentaries</li>
+                  </Link>
+                  </li>
             </ul>
           </div>
         </div>
@@ -84,7 +93,8 @@ function Header({ change, setChange }) {
               <BiSearchAlt2 className={check ? "buttonSearch" : ""} />
             </button>
             <input
-              onChange={(e) => setChange(e.target.value)}
+              onChange={(e) => setChange(e.target.value.toLowerCase())}
+              value={change}
               type="search"
               className={check ? "inputSearch inputSearchOpen" : "inputSearch"}
               placeholder="content, person, genre"
@@ -92,22 +102,22 @@ function Header({ change, setChange }) {
           </div>
           <div className="avatar-avatarOptions">
             <img src={userLogo} alt="" />
-            <BiCaretDown className="updown" />
+            <BiCaretDown className="updown"/>
             <div className="userOptions">
-              <div className="flex" style={{ marginBottom: "8px" }}>
-                <img src={profileAvatar} alt="" />
-                <span>{username}</span>
+            <div className="flex" style={{marginBottom:"8px"}}>
+              <img src={profileAvatar} alt=""  />
+              <span>{username}</span>
+            </div>
+              <div className="flex">
+                <HiPencilSquare className="pl"/>
+                <span onClick={changeEditVal}><Link to={"/landingpage"}>Profile Managament</Link></span>
               </div>
               <div className="flex">
-                <HiPencilSquare className="pl" />
-                <span><Link to={"/profilemanagement"}>Profile Managament</Link></span>
-              </div>
-              <div className="flex">
-                <MdOutlineAccountCircle className="pl" />
+                <MdOutlineAccountCircle className="pl"/>
                 <span><Link to={"/account"}>Account</Link></span>
               </div>
               <div className="flex">
-                <FiHelpCircle className="pl" />
+                <FiHelpCircle className="pl"/>
                 <span>Help Center</span>
               </div>
             </div>
