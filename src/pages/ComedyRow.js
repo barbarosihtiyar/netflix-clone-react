@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import "../sass/comedy.css"
 import axios from "../axios"
+import { MainContext, useContext } from "../context";
 
 function ComedyRow({title,fetchURL}) {
   const [comedy,setComedy] = useState([]);
+  let {change,setChange} = useContext(MainContext);
+
+  const filteredWordsComedy = comedy.filter(word => word.original_title.toLowerCase().includes(change))
+
 
   useEffect(() => {
     async function fetchCom(){
@@ -20,7 +25,7 @@ function ComedyRow({title,fetchURL}) {
         <div className="comedyRowWrapper">
           <h1>{title}</h1>
           <div className="comedy">
-            {comedy.map((movie,index) => (
+            {filteredWordsComedy.map((movie,index) => (
               <div key={index} className="movie">
               <img src={`${base_URL}${movie.poster_path}`} alt={movie.name} />
               </div>
