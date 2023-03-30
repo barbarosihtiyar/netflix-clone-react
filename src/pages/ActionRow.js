@@ -4,10 +4,13 @@ import { BsFillInfoCircleFill } from "react-icons/bs";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { GrAddCircle } from "react-icons/gr";
 import { AiTwotoneLike } from "react-icons/ai";
+import { MainContext, useContext } from "../context";
+
 
 function ActionRow({ fetchURL, title }) {
   const [action, setAction] = useState([]);
   const [showsInfo,setShowsInfo] = useState(false)
+  let {change,setChange} = useContext(MainContext);
 
   useEffect(() => {
     async function fetchAct() {
@@ -24,6 +27,9 @@ function ActionRow({ fetchURL, title }) {
     setShowsInfo(true);
   }
 
+  const filteredWordsAction = action.filter(word => word.original_title.toLowerCase().includes(change))
+
+
   const base_URL = "https://image.tmdb.org/t/p/original";
 
   return (
@@ -31,7 +37,7 @@ function ActionRow({ fetchURL, title }) {
       <div className="moviesRowWrapper">
         <h1>{title}</h1>
         <div className="movies">
-          {action.map((movie, index) => (
+          {filteredWordsAction.map((movie, index) => (
             <div key={index} className="movie">
             <div className="image" >
             <img src={`${base_URL}${movie.poster_path}`} alt={movie.name} />
