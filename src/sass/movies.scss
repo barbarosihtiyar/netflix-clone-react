@@ -46,31 +46,3 @@
         }
     }
 }
-
-
-
-
-
-.showInfo {
-    transform: rotateY(180deg);
-    cursor: pointer;
-    z-index: 99;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transition: transform .8s;
-}
-
-.showInfoSvg {
-    transform: rotateY(180deg);
-    cursor: pointer;
-    z-index: 1000;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transition: transform .8s;
-}
-
-.play,.like,.addShortList{
-    display: none;
-}
