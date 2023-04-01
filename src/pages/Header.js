@@ -20,11 +20,13 @@ function Header() {
   let {subsInfo} = useContext(MainContext);
   let {setEdit} = useContext(MainContext);
   let {change,setChange} = useContext(MainContext);
+  const [isFocused,setIsFocused] = useState(false)
 
   let username = (subsInfo.username).toUpperCase();
   
   const searchOnClick = () => {
     setCheck(!check);
+    setIsFocused(!isFocused)
   };
 
   const changevalueonScrool = () => {
@@ -90,11 +92,12 @@ function Header() {
             }
           >
             <button onClick={searchOnClick} type="search">
-              <BiSearchAlt2 className={check ? "buttonSearch" : ""} />
+              <BiSearchAlt2 className={check ? "buttonSearch button" : "button"} />
             </button>
             <input
               onChange={(e) => setChange(e.target.value.toLowerCase())}
               value={change}
+              onFocus={isFocused}
               type="search"
               className={check ? "inputSearch inputSearchOpen" : "inputSearch"}
               placeholder="content, person, genre"
