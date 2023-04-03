@@ -17,13 +17,28 @@
 }
 .documentaryRowContainer .documentaryRowWrapper .documentary .movie {
   padding-bottom: 5px;
+  margin-right: auto;
 }
-.documentaryRowContainer .documentaryRowWrapper .documentary .movie img {
+.documentaryRowContainer .documentaryRowWrapper .documentary .movie .image {
+  position: relative;
+  max-width: 200px;
+}
+.documentaryRowContainer .documentaryRowWrapper .documentary .movie .image img {
   max-height: 300px;
   max-width: 250px;
   border-radius: 5px;
+  flex-basis: auto;
 }
-.documentaryRowContainer .documentaryRowWrapper .documentary .movie img:hover {
+.documentaryRowContainer .documentaryRowWrapper .documentary .movie .image img:hover {
   transform: scale(1.08);
   cursor: pointer;
+}
+.documentaryRowContainer .documentaryRowWrapper .documentary .movie .image .absoluteDocumentary {
+  position: absolute;
+  cursor: pointer;
+  top: 2%;
+  font-size: 20px;
+  z-index: 98;
+  right: 5%;
+  color: #fff;
 }/*# sourceMappingURL=documentaries.css.map */

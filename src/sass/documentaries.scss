@@ -4,32 +4,43 @@
         display: flex;
         flex-direction: column;
         padding-bottom: 10px;
-
         h1 {
             color: #e5e5e5;
             padding-top: 40px;
             padding-bottom: 5px;
             padding-left: 3px;
         }
-
-        .documentary {
+        .documentary{
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-
             .movie {
                 padding-bottom: 5px;
-
+                margin-right: auto;
+                .image{
+                    position: relative;
+                    max-width: 200px;
                 img {
                     max-height: 300px;
                     max-width: 250px;
                     border-radius: 5px;
-
+                    flex-basis: auto;
                     &:hover {
                         transform: scale(1.08);
                         cursor: pointer;
                     }
                 }
+                .absoluteDocumentary {
+                    position: absolute;
+                    cursor: pointer;
+                    top: 2%;
+                    font-size: 20px;
+                    z-index: 98;
+                    right: 5%;
+                    color: #fff;
+                }
+            }
+
             }
         }
     }
