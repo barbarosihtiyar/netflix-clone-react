@@ -17,13 +17,27 @@
 }
 .romanceRowContainer .romanceRowWrapper .romance .movie {
   padding-bottom: 5px;
+  margin-right: auto;
 }
-.romanceRowContainer .romanceRowWrapper .romance .movie img {
+.romanceRowContainer .romanceRowWrapper .romance .movie .image {
+  position: relative;
+  max-width: 200px;
+}
+.romanceRowContainer .romanceRowWrapper .romance .movie .image img {
   height: 300px;
   max-width: 200px;
   border-radius: 5px;
 }
-.romanceRowContainer .romanceRowWrapper .romance .movie img:hover {
+.romanceRowContainer .romanceRowWrapper .romance .movie .image img:hover {
   transform: scale(1.08);
   cursor: pointer;
+}
+.romanceRowContainer .romanceRowWrapper .romance .movie .image .absoluteRomance {
+  position: absolute;
+  cursor: pointer;
+  top: 2%;
+  font-size: 20px;
+  z-index: 98;
+  right: 5%;
+  color: #fff;
 }/*# sourceMappingURL=romance.css.map */
