@@ -1,3 +1,6 @@
+@import "variables";
+
+
 .moviesRowContainer {
     .moviesRowWrapper {
         padding-left: 50px;
@@ -17,13 +20,14 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
+            // position: relative;
 
             .movie {
                 padding-bottom: 5px;
                 max-width: 200px;
                 margin-right: auto;
                 &:hover{
-                    transform: scale(1.08);
+                    // transform: scale(1.08);
                     cursor: pointer;
                 }
                 .image {
@@ -48,5 +52,63 @@
 
             }
         }
+    }
+}
+
+
+
+
+
+
+
+.clickPopup{
+    .clickPopupContainer{
+        position: fixed;
+        max-width: 900px;
+        z-index: 999;
+        top: 15%;
+        left: 24%;
+        .clickPopupWrapper{
+            margin: auto;
+            .clickPopupImage{
+                position: relative;
+                img{
+                }
+                svg{
+                    position: absolute;
+                    @include font(30px,600,#fff);
+                    top:3%;
+                    right:3%;
+                }
+            }
+            .clickPopupTitleContent{
+                .clickPopupTitle{
+                    h1{
+                        @include font(40px,600,#fff);
+                    }
+                }
+                .clickPopupContent{
+                    span{
+                        @include font(15px,600,#fff);
+                    }
+                }
+                .clickPopupSum{
+                    p{
+                        @include font(15px,600,#fff);
+                    }
+                }
+            }
+        }
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: var(--width,100%);
+        height: var(--heigth,100%);
+        background-color: rgba(50, 48, 48, 0.5);
+        opacity: 0.1;
     }
 }

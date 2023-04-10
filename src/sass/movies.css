@@ -21,6 +21,9 @@
   max-width: 200px;
   margin-right: auto;
 }
+.moviesRowContainer .moviesRowWrapper .movies .movie:hover {
+  cursor: pointer;
+}
 .moviesRowContainer .moviesRowWrapper .movies .movie .image {
   position: relative;
   max-width: 200px;
@@ -31,7 +34,7 @@
   max-width: 200px;
   border-radius: 5px;
 }
-.moviesRowContainer .moviesRowWrapper .movies .movie .image .absolute {
+.moviesRowContainer .moviesRowWrapper .movies .movie .image .absoluteAction {
   position: absolute;
   cursor: pointer;
   top: 2%;
@@ -39,4 +42,51 @@
   z-index: 98;
   right: 5%;
   color: #fff;
+}
+
+.clickPopup .clickPopupContainer {
+  position: fixed;
+  max-width: 900px;
+  z-index: 999;
+  top: 15%;
+  left: 24%;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper {
+  margin: auto;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupImage {
+  position: relative;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupImage svg {
+  position: absolute;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  top: 3%;
+  right: 3%;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupTitleContent .clickPopupTitle h1 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupTitleContent .clickPopupContent span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupTitleContent .clickPopupSum p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+.clickPopup::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--width, 100%);
+  height: var(--heigth, 100%);
+  background-color: rgba(50, 48, 48, 0.5);
+  opacity: 0.1;
 }/*# sourceMappingURL=movies.css.map */
