@@ -3,15 +3,18 @@ import axios from "../axios";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { GrAddCircle } from "react-icons/gr";
-import { AiTwotoneLike } from "react-icons/ai";
+import { AiTwotoneLike } from "react-icons/ai";  
+import { FaTimes } from "react-icons/fa";
 import { MainContext, useContext } from "../context";
 
 
 function ActionRow({ fetchURL, title }) {
   const [action, setAction] = useState([]);
-  const [showsInfo,setShowsInfo] = useState(false)
+  const [showsInfo,setShowsInfo] = useState(false);
   let {change,setChange} = useContext(MainContext);
-  const [selectedPhoto,setSelectedPhoto] = useState(null)
+  const [selectedPhoto,setSelectedPhoto] = useState(null);
+  const [screenWidth,setScreenWidth] = useState();
+  const [screenHeight,setScreenHeight] = useState();
 
   useEffect(() => {
     async function fetchAct() {
@@ -23,10 +26,18 @@ function ActionRow({ fetchURL, title }) {
   }, [fetchURL]);
 
   const showInfo = (key) => {
-    setShowsInfo(!showsInfo);
-    setSelectedPhoto(key)
-    console.log(key)
+    setShowsInfo(true);
+    setSelectedPhoto(key);
+    setScreenWidth(window.innerWidth);
+    setScreenHeight(window.innerHeight);
+    // console.log(key)
   }
+
+
+  const closeMovieInfo = () => {
+    setSelectedPhoto(null)
+  }
+ 
 
   const filteredWordsAction = action.filter(word => word.original_title.toLowerCase().includes(change))
 
@@ -42,8 +53,8 @@ function ActionRow({ fetchURL, title }) {
             <div key={index} className="movie">
             <div className="image" >
             <img className={index} src={`${base_URL}${movie.poster_path}`} alt={movie.name} />
-            <div key={index+1}  className="absoluteAction" onClick={() => showInfo(index+1)}>
-                <BsFillInfoCircleFill/>
+            <div key={index+1}  className="absoluteAction" style={{display:"absolute"}} onClick={() => showInfo(index+1)}>
+                {selectedPhoto === null ? <BsFillInfoCircleFill/> : ""}
               </div>
             </div>
             {selectedPhoto &&(
@@ -52,8 +63,9 @@ function ActionRow({ fetchURL, title }) {
                 <div className="clickPopupWrapper">
                   <div className="clickPopupImage">
                   {selectedPhoto === index+1 ?                   
-                  <img className={index+1} src={`${base_URL}${movie.poster_path}`} alt={movie.name} />
+                  <img className={index+1} src={`${base_URL}${movie.backdrop_path}`} alt={movie.name} />
                     : ""}
+                    <FaTimes onClick={closeMovieInfo}/>
                   </div>
                   <div className="clickPopupTitleContent">
                     <div className="clickPopupTitle">
