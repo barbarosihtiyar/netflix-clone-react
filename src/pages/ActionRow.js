@@ -7,14 +7,10 @@ import { AiTwotoneLike } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
 import { MainContext, useContext } from "../context";
 
-
-function ActionRow({ fetchURL, title }) {
+function ActionRow({ fetchURL, title,selectedPhoto,setSelectedPhoto  }) {
   const [action, setAction] = useState([]);
   const [showsInfo,setShowsInfo] = useState(false);
   let {change,setChange} = useContext(MainContext);
-  const [selectedPhoto,setSelectedPhoto] = useState(null);
-  const [screenWidth,setScreenWidth] = useState();
-  const [screenHeight,setScreenHeight] = useState();
 
   useEffect(() => {
     async function fetchAct() {
@@ -28,8 +24,6 @@ function ActionRow({ fetchURL, title }) {
   const showInfo = (key) => {
     setShowsInfo(true);
     setSelectedPhoto(key);
-    setScreenWidth(window.innerWidth);
-    setScreenHeight(window.innerHeight);
     // console.log(key)
   }
 
@@ -74,7 +68,7 @@ function ActionRow({ fetchURL, title }) {
                     : ""}
                     </div>
                     <div className="clickPopupContent">
-                      {selectedPhoto === index+1 ?  <span>Language : {movie.original_language}</span> : ""}
+                      {selectedPhoto === index+1 ?  <span>Language : {movie.original_language.toUpperCase()}</span> : ""}
                       {selectedPhoto === index+1 ?  <span>Release Date : {movie.release_date}</span> : ""}
                       {selectedPhoto === index+1 ?  <span>Vote Average : {movie.vote_average}</span> : ""}
                       {selectedPhoto === index+1 ?  <span>Number of people voting : {movie.vote_count}</span> : ""}
