@@ -1,6 +1,5 @@
 @import "variables";
 
-
 .moviesRowContainer {
     .moviesRowWrapper {
         padding-left: 50px;
@@ -26,7 +25,7 @@
                 padding-bottom: 5px;
                 max-width: 200px;
                 margin-right: auto;
-                &:hover{
+                &:hover {
                     // transform: scale(1.08);
                     cursor: pointer;
                 }
@@ -49,59 +48,52 @@
                         color: #fff;
                     }
                 }
-
             }
         }
     }
 }
 
-
-
-
-
-
-
-.clickPopup{
-    .clickPopupContainer{
+.clickPopup {
+    .clickPopupContainer {
         position: fixed;
         max-width: 900px;
         z-index: 999;
         top: 18%;
         left: 24%;
-        .clickPopupWrapper{
+        .clickPopupWrapper {
             margin: auto;
-            .clickPopupImage{
+            .clickPopupImage {
                 position: relative;
-                img{
+                img {
                 }
-                svg{
+                svg {
                     position: absolute;
-                    @include font(30px,600,#fff);
-                    top:3%;
-                    right:3%;
+                    @include font(30px, 600, #fff);
+                    top: 3%;
+                    right: 3%;
                 }
             }
-            .clickPopupTitleContent{
-                .clickPopupTitle{
-                    h1{
-                        @include font(40px,600,#fff);
+            .clickPopupTitleContent {
+                .clickPopupTitle {
+                    h1 {
+                        @include font(40px, 600, #fff);
                         padding-top: 10px;
                         text-align: center;
                     }
                 }
-                .clickPopupContent{
+                .clickPopupContent {
                     display: flex;
-                    gap:30px;
+                    gap: 30px;
                     padding-bottom: 10px;
                     margin: auto;
                     justify-content: center;
-                    span{
-                        @include font(17px,600,#fff);
+                    span {
+                        @include font(17px, 600, #fff);
                     }
                 }
-                .clickPopupSum{
-                    p{
-                        @include font(18px,600,#fff);
+                .clickPopupSum {
+                    p {
+                        @include font(18px, 600, #fff);
                     }
                 }
             }
