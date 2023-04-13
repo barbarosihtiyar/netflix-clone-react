@@ -40,4 +40,50 @@
   z-index: 98;
   right: 5%;
   color: #fff;
+}
+
+.clickPopup .clickPopupContainer {
+  position: fixed;
+  max-width: 900px;
+  z-index: 999;
+  top: 18%;
+  left: 24%;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper {
+  margin: auto;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupImage {
+  position: relative;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupImage svg {
+  position: absolute;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  top: 3%;
+  right: 3%;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupTitleContent .clickPopupTitle h1 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  padding-top: 10px;
+  text-align: center;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupTitleContent .clickPopupContent {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 10px;
+  margin: auto;
+  justify-content: center;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupTitleContent .clickPopupContent span {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupTitleContent .clickPopupSum p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
 }/*# sourceMappingURL=comedy.css.map */
