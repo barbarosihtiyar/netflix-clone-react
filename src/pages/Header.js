@@ -7,6 +7,8 @@ import { BiSearchAlt2 } from "react-icons/bi";
 import { BiCaretDown } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { HiPencilSquare } from "react-icons/hi2";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FaTimes } from "react-icons/fa";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { FiHelpCircle } from "react-icons/fi";
 import profileAvatar from "../images/profileAvatar.png"
@@ -20,7 +22,10 @@ function Header() {
   let {subsInfo} = useContext(MainContext);
   let {setEdit} = useContext(MainContext);
   let {change,setChange} = useContext(MainContext);
-  const [isFocused,setIsFocused] = useState(false)
+  const [isFocused,setIsFocused] = useState(false);
+  const [hamburgerMenu,setHamburgerMenu] = useState(false);
+
+
 
   let username = (subsInfo.username).toUpperCase();
   
@@ -42,7 +47,15 @@ function Header() {
     setEdit(true)
   }
 
-  console.log(change)
+  const openHamburger = () => {
+    setHamburgerMenu(!hamburgerMenu)
+  }
+
+  const closeHamburger = () => {
+    setHamburgerMenu(!hamburgerMenu)
+  }
+
+  // console.log(change)
 
   window.addEventListener("scroll", changevalueonScrool);
   return (
@@ -125,6 +138,84 @@ function Header() {
               </div>
             </div>
           </div>
+          <div className="hamburgerMenu">
+          <GiHamburgerMenu className="hamburgerMenuIcon" onClick={openHamburger}/>
+          {hamburgerMenu ? 
+            <div className="fixedHamburgerMenu" style={{transform:"translateX(0px)"}}>
+          <FaTimes  className="times" style={{float:"right"}} onClick={closeHamburger}/>
+          <div className="links">
+            <ul>
+              <li>
+                <Link to="/home">Home</Link>
+              </li>
+              <li>
+              <Link to={"/action"}>
+                    <li>Action Movies</li>
+                  </Link>
+                  </li>
+                  <li>
+                  <Link to={"/comedy"}>
+                    <li>Comedy Movies</li>
+                  </Link>
+                  </li>
+                  <li>
+                  <Link to={"/horror"}>
+                    <li>Horror Movies</li>
+                  </Link>
+                  </li>
+                  <li>
+                  <Link to={"/romance"}>
+                    <li>Romance Movies</li>
+                  </Link>
+                  </li>
+                  <li>
+                  <Link to={"/documentary"}>
+                    <li>Documentaries</li>
+                  </Link>
+                  </li>
+            </ul>
+          </div>
+
+          </div>
+  : 
+  <div className="fixedHamburgerMenu" style={{transform:"translateX(999px)"}}>
+          <FaTimes  className="times" style={{float:"right"}} onClick={closeHamburger}/>
+          <div className="links">
+            <ul>
+              <li>
+                <Link to="/home">Home</Link>
+              </li>
+              <li>
+              <Link to={"/action"}>
+                    <li>Action Movies</li>
+                  </Link>
+                  </li>
+                  <li>
+                  <Link to={"/comedy"}>
+                    <li>Comedy Movies</li>
+                  </Link>
+                  </li>
+                  <li>
+                  <Link to={"/horror"}>
+                    <li>Horror Movies</li>
+                  </Link>
+                  </li>
+                  <li>
+                  <Link to={"/romance"}>
+                    <li>Romance Movies</li>
+                  </Link>
+                  </li>
+                  <li>
+                  <Link to={"/documentary"}>
+                    <li>Documentaries</li>
+                  </Link>
+                  </li>
+            </ul>
+          </div>
+
+          </div>
+}
+        </div>
         </div>
       </div>
     </div>
