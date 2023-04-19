@@ -58,3 +58,37 @@
         }
     }
 }
+
+
+$small: 300px;
+$medium: 1300px;
+
+@media screen and (max-width: $medium) {
+    .bannerContainer {
+        .bannerWrapper {
+            .bannerImage {
+                img {
+                    height: 61.5vw;
+                    width: 100%;
+                }
+                .bannerDesc {
+                    h1 {
+                        font-size: 50px;
+                    }
+                    p {
+                        width: 70%;
+                        display: none;
+                    }
+                    .bannerIcons {
+                        &:hover {
+                        }
+                        span {
+                        }
+                        svg {
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }

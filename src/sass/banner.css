@@ -45,4 +45,18 @@
 }
 .bannerContainer .bannerWrapper .bannerImage .bannerDesc .bannerIcons svg {
   color: #111;
+}
+
+@media screen and (max-width: 1300px) {
+  .bannerContainer .bannerWrapper .bannerImage img {
+    height: 61.5vw;
+    width: 100%;
+  }
+  .bannerContainer .bannerWrapper .bannerImage .bannerDesc h1 {
+    font-size: 50px;
+  }
+  .bannerContainer .bannerWrapper .bannerImage .bannerDesc p {
+    width: 70%;
+    display: none;
+  }
 }/*# sourceMappingURL=banner.css.map */
