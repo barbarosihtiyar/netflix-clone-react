@@ -34,14 +34,12 @@
 .headerContainer .headerWrapper .logo-links .links ul li {
   font-weight: 700;
   position: relative;
-  cursor: pointer;
 }
 .headerContainer .headerWrapper .logo-links .links ul li:hover {
   color: #e5e5e5;
   opacity: 0.8;
 }
 .headerContainer .headerWrapper .logo-links .links ul li a {
-  text-decoration: none;
   color: #fff;
 }
 .headerContainer .headerWrapper .search-user {
@@ -133,6 +131,36 @@
   transition: width 0.61s;
   color: #fff;
 }
+.headerContainer .headerWrapper .search-user .hamburgerMenu {
+  color: #fff;
+  font-size: 30px;
+}
+.headerContainer .headerWrapper .search-user .hamburgerMenu .hamburgerMenuIcon {
+  display: none;
+}
+.headerContainer .headerWrapper .search-user .hamburgerMenu .fixedHamburgerMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 38%;
+  height: 100%;
+  background-color: #111;
+  z-index: 9999;
+  transition: all 2s;
+  transform: translateX(999px);
+}
+.headerContainer .headerWrapper .search-user .hamburgerMenu .fixedHamburgerMenu .times {
+  margin: 20px;
+}
+.headerContainer .headerWrapper .search-user .hamburgerMenu .fixedHamburgerMenu .links {
+  padding-top: 30%;
+}
+.headerContainer .headerWrapper .search-user .hamburgerMenu .fixedHamburgerMenu .links ul {
+  list-style-type: none;
+}
+.headerContainer .headerWrapper .search-user .hamburgerMenu .fixedHamburgerMenu .links ul li {
+  padding-bottom: 3%;
+}
 
 .black {
   background-color: #111;
@@ -156,31 +184,7 @@ a {
   text-decoration: none;
 }
 
-.headerComponent .links,
-.headerComponent .buttonInput {
-  display: none !important;
-}
-
-@media screen and (min-width: 1250px) {
-  .headerContainer {
-    position: fixed;
-    width: 100%;
-    z-index: 99;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10%, transparent);
-  }
-  .headerContainer .headerWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 55px;
-    padding-left: 55px;
-  }
-  .headerContainer .headerWrapper .logo-links {
-    display: flex;
-    align-items: center;
-  }
+@media screen and (max-width: 1300px) {
   .headerContainer .headerWrapper .logo-links img {
     width: 100px;
     height: 35px;
@@ -188,31 +192,18 @@ a {
     cursor: pointer;
   }
   .headerContainer .headerWrapper .logo-links .links {
-    color: #fff;
-  }
-  .headerContainer .headerWrapper .logo-links .links ul {
-    list-style-type: none;
-    display: flex;
-    gap: 50px;
-  }
-  .headerContainer .headerWrapper .logo-links .links ul li {
-    font-weight: 700;
-    position: relative;
-    cursor: pointer;
-  }
-  .headerContainer .headerWrapper .logo-links .links ul li:hover {
-    color: #e5e5e5;
-    opacity: 0.8;
-  }
-  .headerContainer .headerWrapper .logo-links .links ul li a {
-    text-decoration: none;
-    color: #fff;
+    display: none;
   }
   .headerContainer .headerWrapper .search-user {
-    display: flex;
     gap: 10px;
-    align-items: center;
     height: 40px;
+  }
+  .headerContainer .headerWrapper .search-user .hamburgerMenu .hamburgerMenuIcon {
+    display: block;
+  }
+  .headerContainer .headerWrapper .search-user .hamburgerMenu .fixedHamburgerMenu {
+    transform: translateX(0);
+    transition: all 2s;
   }
   .headerContainer .headerWrapper .search-user .avatar-avatarOptions {
     display: flex;
