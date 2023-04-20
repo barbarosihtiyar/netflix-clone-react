@@ -25,7 +25,6 @@
 }
 .comedyRowContainer .comedyRowWrapper .comedy .movie .image img {
   max-height: 300px;
-  width: 12.774vw;
   border-radius: 5px;
 }
 .comedyRowContainer .comedyRowWrapper .comedy .movie .image img:hover {

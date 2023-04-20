@@ -1,4 +1,4 @@
-@import "_variables";
+@import "variables";
 
 .comedyRowContainer {
     .comedyRowWrapper {
@@ -24,7 +24,6 @@
                     max-width: 200px;
                 img {
                     max-height: 300px;
-                    width: 12.774vw;
                     border-radius: 5px;
                     &:hover {
                         transform: scale(1.08);
