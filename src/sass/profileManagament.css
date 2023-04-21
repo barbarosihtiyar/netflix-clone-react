@@ -163,4 +163,10 @@
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .submitProfileManagement a:hover {
   cursor: pointer;
   border: 1px solid #fff;
+}
+
+@media screen and (max-width: 1300px) {
+  .profileManagament .profileManagamentContainer {
+    max-width: 700px;
+  }
 }/*# sourceMappingURL=profileManagament.css.map */

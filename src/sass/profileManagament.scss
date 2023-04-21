@@ -166,3 +166,17 @@
         }
     }
 }
+
+
+
+$small: 300px;
+$medium: 1300px;
+
+@media screen and (max-width: $medium) {
+    .profileManagament{
+    .profileManagamentContainer{
+        max-width: 700px;
+    }
+    }
+
+}
