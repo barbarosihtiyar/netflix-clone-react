@@ -161,6 +161,7 @@
                 display: flex;
                 gap: 5%;
                 padding-top: 1%;
+                justify-content: space-between;
                 .settingTitle{
                     width: 26%;
                     h6{
@@ -304,4 +305,40 @@ footer{
     .max{
         transform: scale(1);
         transition: all 1s;
+    }
+
+
+$small: 300px;
+$medium: 1300px;
+
+@media screen and (max-width: $medium) {
+    .accountContainer{
+        .accountWrapper{
+            max-width: 700px;
+        }       
+        .planDetails{
+            gap: 0;
+            .planType{
+                margin-left: 70px;
+            }
+        }
+        .securityPrivacy{
+            gap: 0 !important;
+            .securityPrivacyTitle{
+                min-width: 250px;
+            }
+            .securityPrivacyDesc{
+                margin-left: 10px;
+            }
+        }
+        .profileParentalControlsTitle{
+            width: 32.5% !important;
+            h6{
+                width: 100% !important;
+            }
+        }
+        .settings{
+            justify-content: space-between;
+        }
+    }
     }

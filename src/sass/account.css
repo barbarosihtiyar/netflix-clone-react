@@ -174,6 +174,7 @@
   display: flex;
   gap: 5%;
   padding-top: 1%;
+  justify-content: space-between;
 }
 .accountContainer .accountWrapper .account .settings .settingTitle {
   width: 26%;
@@ -308,4 +309,34 @@ footer .footerContainer .footerWrapper .footerPart ul li:hover {
 .max {
   transform: scale(1);
   transition: all 1s;
+}
+
+@media screen and (max-width: 1300px) {
+  .accountContainer .accountWrapper {
+    max-width: 700px;
+  }
+  .accountContainer .planDetails {
+    gap: 0;
+  }
+  .accountContainer .planDetails .planType {
+    margin-left: 70px;
+  }
+  .accountContainer .securityPrivacy {
+    gap: 0 !important;
+  }
+  .accountContainer .securityPrivacy .securityPrivacyTitle {
+    min-width: 250px;
+  }
+  .accountContainer .securityPrivacy .securityPrivacyDesc {
+    margin-left: 10px;
+  }
+  .accountContainer .profileParentalControlsTitle {
+    width: 32.5% !important;
+  }
+  .accountContainer .profileParentalControlsTitle h6 {
+    width: 100% !important;
+  }
+  .accountContainer .settings {
+    justify-content: space-between;
+  }
 }/*# sourceMappingURL=account.css.map */
