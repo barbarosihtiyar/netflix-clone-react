@@ -14,9 +14,10 @@ import { useState } from "react";
 import Account from "./pages/Account";
 import ProfileManagament from "./pages/ProfileManagament";
 import LandingPage from "./pages/LandingPage";
-
+import LoadingButton from "./pages/LoadingButtons";
 
 function App() {
+  
   const [subsInfo,setSubsInfo] = useState({
         "namesurname" : "admin",
         "username" : "barbaros",
@@ -60,6 +61,7 @@ function App() {
     <Route path="/documentary" element={<Documentary />} />
     <Route path="/account" element={<Account />} />
     <Route path="/profilemanagement" element={<ProfileManagament />} />
+    <Route path="/loading" element={<LoadingButton />} />
     </Routes>
     </MainContext.Provider>
   );
