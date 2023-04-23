@@ -7,8 +7,8 @@ import { AiTwotoneLike } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
 import { MainContext, useContext } from "../context";
 
-function ActionRow({ fetchURL, title, selectedPhoto, setSelectedPhoto }) {
-  const [action, setAction] = useState([]);
+function ActionRow({ fetchURL, title, selectedPhoto, setSelectedPhoto,setIsLoading,isLoading }) {
+
   const [showsInfo, setShowsInfo] = useState(false);
   let { change, setChange } = useContext(MainContext);
 
@@ -16,10 +16,17 @@ function ActionRow({ fetchURL, title, selectedPhoto, setSelectedPhoto }) {
     async function fetchAct() {
       const actReq = await axios.get(fetchURL);
       setAction(actReq.data.results);
-      console.log(actReq.data.results);
+      // console.log(actReq.data.results);
     }
     fetchAct();
+    setIsLoading(false)
   }, [fetchURL]);
+
+useEffect(() => {
+  window.addEventListener('beforeunload', function(){
+    setIsLoading(true)
+  });
+})
 
   const showInfo = (key) => {
     setShowsInfo(true);
