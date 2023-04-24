@@ -4,9 +4,15 @@ import { useState,useEffect } from 'react';
 import "../sass/Row.css";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
+import { MainContext, useContext } from "../context";
 
-function Row({title,fetchURL}) {
+
+function Row({title,fetchURL,setIsLoading,isLoading}) {
   const [movies,setMovies] = useState([]);
+  let {change,setChange} = useContext(MainContext);
+
+
+
   useEffect(() => {
 
     async function fetchData(){
@@ -16,8 +22,15 @@ function Row({title,fetchURL}) {
     fetchData(); 
 
   },[fetchURL])
+
+  useEffect(() => {
+    window.addEventListener('beforeunload', function(){
+      setIsLoading(true)
+    });
+  })
   const base_URL = "https://image.tmdb.org/t/p/original";
   
+
 
   
   return (
