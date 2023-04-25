@@ -5,7 +5,7 @@ import { MainContext, useContext } from "../context";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaTimes } from "react-icons/fa";
 
-function ComedyRow({ title, fetchURL, selectedPhoto, setSelectedPhoto }) {
+function ComedyRow({ title, fetchURL, selectedPhoto, setSelectedPhoto,setIsLoading,isLoading }) {
   const [comedy, setComedy] = useState([]);
   const [showsInfo, setShowsInfo] = useState(false);
   let { change, setChange } = useContext(MainContext);
@@ -21,6 +21,12 @@ function ComedyRow({ title, fetchURL, selectedPhoto, setSelectedPhoto }) {
     }
     fetchCom();
   }, [fetchURL]);
+
+  useEffect(() => {
+    window.addEventListener('beforeunload', function(){
+      setIsLoading(true)
+    });
+  })
 
   const showInfo = (key) => {
     setShowsInfo(true);
@@ -67,7 +73,10 @@ function ComedyRow({ title, fetchURL, selectedPhoto, setSelectedPhoto }) {
                         ) : (
                           ""
                         )}
-                        <FaTimes onClick={closeMovieInfo} />
+                        <FaTimes
+                          onClick={closeMovieInfo}
+                          style={{ cursor: "pointer" }}
+                        />
                       </div>
                       <div className="clickPopupTitleContent">
                         <div className="clickPopupTitle">
