@@ -5,7 +5,7 @@ import { MainContext, useContext } from "../context";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaTimes } from "react-icons/fa";
 
-function HorrorRow({ title, fetchURL, selectedPhoto, setSelectedPhoto }) {
+function HorrorRow({ title, fetchURL, selectedPhoto, setSelectedPhoto,setIsLoading,isLoading }) {
   const [horror, setHorror] = useState([]);
   let { change, setChange } = useContext(MainContext);
   const [showsInfo, setShowsInfo] = useState(false);
@@ -18,6 +18,13 @@ function HorrorRow({ title, fetchURL, selectedPhoto, setSelectedPhoto }) {
     fetchHor();
     console.log(horror);
   }, []);
+
+  useEffect(() => {
+    window.addEventListener('beforeunload', function(){
+      setIsLoading(true)
+    });
+  })
+
   const base_URL = "https://image.tmdb.org/t/p/original";
 
   const filteredWordsHorror = horror.filter((word) =>
