@@ -5,7 +5,14 @@ import { MainContext, useContext } from "../context";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaTimes } from "react-icons/fa";
 
-function RomanceRow({ title, fetchURL, selectedPhoto, setSelectedPhoto }) {
+function RomanceRow({
+  title,
+  fetchURL,
+  selectedPhoto,
+  setSelectedPhoto,
+  setIsLoading,
+  isLoading,
+}) {
   const [romanceMovie, setRomanceMovie] = useState([]);
   const base_URL = "https://image.tmdb.org/t/p/original";
   let { change, setChange } = useContext(MainContext);
@@ -17,6 +24,12 @@ function RomanceRow({ title, fetchURL, selectedPhoto, setSelectedPhoto }) {
       setRomanceMovie(movies.data.results);
     };
     fetchRom();
+  });
+
+  useEffect(() => {
+    window.addEventListener("beforeunload", function () {
+      setIsLoading(true);
+    });
   });
 
   const filteredWordsRomance = romanceMovie.filter((word) =>
