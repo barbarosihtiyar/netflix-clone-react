@@ -1,54 +1,69 @@
-import axios from '../axios'
-import React, { useEffect, useState } from 'react'
-import "../sass/documentaries.css"
+import axios from "../axios";
+import React, { useEffect, useState } from "react";
+import "../sass/documentaries.css";
 import { MainContext, useContext } from "../context";
-import { BsFillInfoCircleFill } from 'react-icons/bs';
+import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaTimes } from "react-icons/fa";
 
+function DocumentaryRow({
+  title,
+  fetchURL,
+  selectedPhoto,
+  setSelectedPhoto,
+  setIsLoading,
+  isLoading,
+}) {
+  const [docMovie, setDocMovie] = useState([]);
+  const [showsInfo, setShowsInfo] = useState(false);
+  let { change, setChange } = useContext(MainContext);
 
-function DocumentaryRow({title,fetchURL,selectedPhoto, setSelectedPhoto}) {
-    const [docMovie,setDocMovie] = useState([])
-    const [showsInfo,setShowsInfo] = useState(false)
-    let {change,setChange} = useContext(MainContext);
+  useEffect(() => {
+    const fetchDoc = async () => {
+      const docMovies = await axios.get(fetchURL);
+      setDocMovie(docMovies.data.results);
+    };
+    fetchDoc();
+  });
 
+  useEffect(() => {
+    window.addEventListener("beforeunload", function () {
+      setIsLoading(true);
+    });
+  });
 
-    useEffect(() => {
-        const fetchDoc = async () => {
-            const docMovies = await axios.get(fetchURL)
-            setDocMovie(docMovies.data.results)
-        }
-        fetchDoc();
-        })
+  const base_URL = "https://image.tmdb.org/t/p/original";
 
+  const filteredWordsDocumentary = docMovie.filter((word) =>
+    word.original_title.toLowerCase().includes(change)
+  );
 
-        const base_URL = "https://image.tmdb.org/t/p/original";
+  const showInfo = (key) => {
+    setShowsInfo(true);
+    setSelectedPhoto(key);
+    // console.log(key)
+  };
 
-        const filteredWordsDocumentary = docMovie.filter(word => word.original_title.toLowerCase().includes(change))
-
-        const showInfo = (key) => {
-            setShowsInfo(true);
-            setSelectedPhoto(key);
-            // console.log(key)
-          };
-        
-          const closeMovieInfo = () => {
-            setSelectedPhoto(null);
-          };        
+  const closeMovieInfo = () => {
+    setSelectedPhoto(null);
+  };
 
   return (
-    <div className='documentaryRowContainer'>
-        <div className="documentaryRowWrapper">
+    <div className="documentaryRowContainer">
+      <div className="documentaryRowWrapper">
         <h1>{title}</h1>
-            <div className="documentary">
-            {filteredWordsDocumentary.map((movie,index) => (
-                <div className="movie" key={index}>
-                <div className="image">
-                    <img src={`${base_URL}${movie.poster_path}`}  alt={movie.name} />
-                    <div className="absoluteDocumentary" onClick={() => showInfo(index+1)}>
-                    {selectedPhoto === null ? <BsFillInfoCircleFill /> : ""}
-              </div>
+        <div className="documentary">
+          {filteredWordsDocumentary.map((movie, index) => (
+            <div className="movie" key={index}>
+              <div className="image">
+                <img src={`${base_URL}${movie.poster_path}`} alt={movie.name} />
+                <div
+                  className="absoluteDocumentary"
+                  onClick={() => showInfo(index + 1)}
+                >
+                  {selectedPhoto === null ? <BsFillInfoCircleFill /> : ""}
                 </div>
-                {selectedPhoto && (
+              </div>
+              {selectedPhoto && (
                 <div
                   className="clickPopup"
                   style={showsInfo ? { display: "block" } : { display: "none" }}
@@ -65,7 +80,10 @@ function DocumentaryRow({title,fetchURL,selectedPhoto, setSelectedPhoto}) {
                         ) : (
                           ""
                         )}
-                        <FaTimes onClick={closeMovieInfo} style={{cursor:"pointer"}} />
+                        <FaTimes
+                          onClick={closeMovieInfo}
+                          style={{ cursor: "pointer" }}
+                        />
                       </div>
                       <div className="clickPopupTitleContent">
                         <div className="clickPopupTitle">
@@ -113,12 +131,12 @@ function DocumentaryRow({title,fetchURL,selectedPhoto, setSelectedPhoto}) {
                   </div>
                 </div>
               )}
-                </div>
-            ))}
             </div>
+          ))}
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default DocumentaryRowP
+export default DocumentaryRow;
