@@ -62,6 +62,7 @@ function App() {
     <Route path="/account" element={<Account />} />
     <Route path="/profilemanagement" element={<ProfileManagament />} />
     <Route path="/loading" element={<LoadingButton />} />
+    <Route path="*" element={<NotFound />} />
     </Routes>
     </MainContext.Provider>
   );
