@@ -4,11 +4,12 @@ import { BsFillInfoCircleFill } from "react-icons/bs";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { GrAddCircle } from "react-icons/gr";
 import { AiTwotoneLike } from "react-icons/ai";
+import { AiOutlineHeart } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
 import { MainContext, useContext } from "../context";
 
 function ActionRow({ fetchURL, title, selectedPhoto, setSelectedPhoto,setIsLoading,isLoading }) {
-
+  const [action, setAction] = useState([]);
   const [showsInfo, setShowsInfo] = useState(false);
   let { change, setChange } = useContext(MainContext);
 
@@ -64,6 +65,9 @@ useEffect(() => {
                   onClick={() => showInfo(index + 1)}
                 >
                   {selectedPhoto === null ? <BsFillInfoCircleFill /> : ""}
+                </div>
+                <div className="favMovie">
+                  <AiOutlineHeart />
                 </div>
               </div>
               {selectedPhoto && (
