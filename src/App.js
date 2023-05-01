@@ -14,10 +14,10 @@ import { useState } from "react";
 import Account from "./pages/Account";
 import ProfileManagament from "./pages/ProfileManagament";
 import LandingPage from "./pages/LandingPage";
-import LoadingButton from "./pages/LoadingButtons";
+import NotFound from "./pages/NotFound";
+
 
 function App() {
-  
   const [subsInfo,setSubsInfo] = useState({
         "namesurname" : "admin",
         "username" : "barbaros",
@@ -32,9 +32,10 @@ function App() {
         "cvc" : "111"
   });
 
-  const [edit,setEdit] = useState(false)
-  const [gameusername,setGameusername] = useState("")
-  const [change,setChange] = useState("")
+  const [edit,setEdit] = useState(false);
+  const [gameusername,setGameusername] = useState("");
+  const [change,setChange] = useState("");
+  const [favList,setFavList] = useState([]);
 
   const data = {
     subsInfo,
@@ -44,7 +45,9 @@ function App() {
     gameusername,
     setGameusername,
     change,
-    setChange
+    setChange,
+    favList,
+    setFavList
   }
   return (
     <MainContext.Provider value={data}>
@@ -61,7 +64,6 @@ function App() {
     <Route path="/documentary" element={<Documentary />} />
     <Route path="/account" element={<Account />} />
     <Route path="/profilemanagement" element={<ProfileManagament />} />
-    <Route path="/loading" element={<LoadingButton />} />
     <Route path="*" element={<NotFound />} />
     </Routes>
     </MainContext.Provider>
