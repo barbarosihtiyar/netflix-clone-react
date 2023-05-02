@@ -7,12 +7,14 @@ import { AiTwotoneLike } from "react-icons/ai";
 import { AiOutlineHeart } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
 import { MainContext, useContext } from "../context";
+import { AiFillHeart } from "react-icons/ai";
 
 function ActionRow({ fetchURL, title, selectedPhoto, setSelectedPhoto,setIsLoading,isLoading }) {
   const [action, setAction] = useState([]);
   const [showsInfo, setShowsInfo] = useState(false);
-  let { change, setChange } = useContext(MainContext);
-
+  const [isClickedFavIcon,setIsClickedFavIcon] = useState(false);
+  let { change, setChange ,favList, setFavList } = useContext(MainContext);
+  let newFavArray = []
   useEffect(() => {
     async function fetchAct() {
       const actReq = await axios.get(fetchURL);
@@ -38,6 +40,16 @@ useEffect(() => {
   const closeMovieInfo = () => {
     setSelectedPhoto(null);
   };
+
+  const changeFavIcon = (val) => {
+    setIsClickedFavIcon(!isClickedFavIcon)
+     newFavArray.push(
+      action.filter((movie,index) => index === val )     
+      ) 
+    setFavList(newFavArray)
+    console.log(favList)
+  }
+  
 
   const filteredWordsAction = action.filter((word) =>
     word.original_title.toLowerCase().includes(change)
@@ -66,8 +78,12 @@ useEffect(() => {
                 >
                   {selectedPhoto === null ? <BsFillInfoCircleFill /> : ""}
                 </div>
-                <div className="favMovie">
-                  <AiOutlineHeart />
+                <div className="absoluteFavorite">
+                {isClickedFavIcon ? 
+                <AiFillHeart  onClick={() => changeFavIcon(index)} className={`heart${index+1}`}/> 
+                :
+                  <AiOutlineHeart onClick={() => changeFavIcon(index)} className={`heart ${index}`}  />
+                }
                 </div>
               </div>
               {selectedPhoto && (
@@ -87,7 +103,7 @@ useEffect(() => {
                         ) : (
                           ""
                         )}
-                        <FaTimes onClick={closeMovieInfo} />
+                        <FaTimes onClick={closeMovieInfo}/>
                       </div>
                       <div className="clickPopupTitleContent">
                         <div className="clickPopupTitle">
