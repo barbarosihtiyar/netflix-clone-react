@@ -4,10 +4,12 @@ import axios from "../axios";
 import { MainContext, useContext } from "../context";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaTimes } from "react-icons/fa";
+import { AiFillHeart } from "react-icons/ai";
 
 function HorrorRow({ title, fetchURL, selectedPhoto, setSelectedPhoto,setIsLoading,isLoading }) {
   const [horror, setHorror] = useState([]);
-  let { change, setChange } = useContext(MainContext);
+  let { change, setChange , favList , setFavList} = useContext(MainContext);
+  const [indexFav,setIndexFav] = useState([]);
   const [showsInfo, setShowsInfo] = useState(false);
 
   useEffect(() => {
@@ -18,6 +20,36 @@ function HorrorRow({ title, fetchURL, selectedPhoto, setSelectedPhoto,setIsLoadi
     fetchHor();
     console.log(horror);
   }, []);
+
+  const changeFavIcon = (val) => {
+    const newFav = horror[val];
+    console.log(horror[val])
+
+    const index = favList.findIndex((fav) => fav.id === newFav.id);
+    // console.log(index)
+    if (index !== -1) {
+      favList.splice(index, 1);
+      // indexFav.push({
+      //   index:val,
+      //   val:true
+      // })
+      console.log(indexFav)
+    } else {
+      favList.push(newFav);
+      // indexFav.splice(val,index)
+      console.log(indexFav)
+    }
+}
+
+    const changeColor = (e) => {
+      if(e.target.style.fill === "white"){
+        e.target.style.fill = "red"
+      }else if(e.target.style.fill === "red"){
+        e.target.style.fill = "white"
+      }else if(e.target.style.fill === ""){
+        e.target.style.fill = "red";
+      }
+    }
 
   useEffect(() => {
     window.addEventListener('beforeunload', function(){
@@ -55,6 +87,9 @@ function HorrorRow({ title, fetchURL, selectedPhoto, setSelectedPhoto,setIsLoadi
                   onClick={() => showInfo(index + 1)}
                 >
                   {selectedPhoto === null ? <BsFillInfoCircleFill /> : ""}
+                </div>
+                <div className="absoluteFavorite" onClick={() => changeFavIcon(index)}>
+                <AiFillHeart style={{fill:"#fff"}}   className={`heartFill  heart${index}`} onClick={(e) => changeColor(e)}/>
                 </div>
               </div>
               {selectedPhoto && (
