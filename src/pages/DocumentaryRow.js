@@ -4,6 +4,7 @@ import "../sass/documentaries.css";
 import { MainContext, useContext } from "../context";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaTimes } from "react-icons/fa";
+import { AiFillHeart } from "react-icons/ai";
 
 function DocumentaryRow({
   title,
@@ -15,7 +16,8 @@ function DocumentaryRow({
 }) {
   const [docMovie, setDocMovie] = useState([]);
   const [showsInfo, setShowsInfo] = useState(false);
-  let { change, setChange } = useContext(MainContext);
+  let { change, setChange , favList , setFavList} = useContext(MainContext);
+  const [indexFav,setIndexFav] = useState([]);
 
   useEffect(() => {
     const fetchDoc = async () => {
@@ -24,6 +26,36 @@ function DocumentaryRow({
     };
     fetchDoc();
   });
+
+  const changeFavIcon = (val) => {
+    const newFav = docMovie[val];
+    console.log(docMovie[val])
+
+    const index = favList.findIndex((fav) => fav.id === newFav.id);
+    // console.log(index)
+    if (index !== -1) {
+      favList.splice(index, 1);
+      // indexFav.push({
+      //   index:val,
+      //   val:true
+      // })
+      console.log(indexFav)
+    } else {
+      favList.push(newFav);
+      // indexFav.splice(val,index)
+      console.log(indexFav)
+    }
+}
+
+    const changeColor = (e) => {
+      if(e.target.style.fill === "white"){
+        e.target.style.fill = "red"
+      }else if(e.target.style.fill === "red"){
+        e.target.style.fill = "white"
+      }else if(e.target.style.fill === ""){
+        e.target.style.fill = "red";
+      }
+    }
 
   useEffect(() => {
     window.addEventListener("beforeunload", function () {
@@ -61,6 +93,9 @@ function DocumentaryRow({
                   onClick={() => showInfo(index + 1)}
                 >
                   {selectedPhoto === null ? <BsFillInfoCircleFill /> : ""}
+                </div>
+                <div className="absoluteFavorite" onClick={() => changeFavIcon(index)}>
+                <AiFillHeart style={{fill:"#fff"}}   className={`heartFill  heart${index}`} onClick={(e) => changeColor(e)}/>
                 </div>
               </div>
               {selectedPhoto && (
