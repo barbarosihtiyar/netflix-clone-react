@@ -14,7 +14,9 @@ function ActionRow({ fetchURL, title, selectedPhoto, setSelectedPhoto,setIsLoadi
   const [showsInfo, setShowsInfo] = useState(false);
   const [isClickedFavIcon,setIsClickedFavIcon] = useState(false);
   let { change, setChange ,favList, setFavList } = useContext(MainContext);
-  let newFavArray = []
+  const [content,setContent] = useState("")
+  const [indexFav,setIndexFav] = useState([]);
+  
   useEffect(() => {
     async function fetchAct() {
       const actReq = await axios.get(fetchURL);
@@ -41,15 +43,43 @@ useEffect(() => {
     setSelectedPhoto(null);
   };
 
+  // const removeFavList = (favList,newList) => {
+  //   const removeFilterList = favList.filter ((fav) => fav.id !== newList.id)
+  //   setFavList(removeFilterList)
+  // }
+
   const changeFavIcon = (val) => {
-    setIsClickedFavIcon(!isClickedFavIcon)
-     newFavArray.push(
-      action.filter((movie,index) => index === val )     
-      ) 
-    setFavList(newFavArray)
-    console.log(favList)
+      const newFav = action[val];
+      console.log(action[val])
+
+      const index = favList.findIndex((fav) => fav.id === newFav.id);
+      // console.log(index)
+      if (index !== -1) {
+        favList.splice(index, 1);
+        // indexFav.push({
+        //   index:val,
+        //   val:true
+        // })
+        console.log(indexFav)
+      } else {
+        favList.push(newFav);
+        // indexFav.splice(val,index)
+        console.log(indexFav)
+      }
+      setIsClickedFavIcon(!isClickedFavIcon)
   }
-  
+
+  const changeColor = (e) => {
+    if(e.target.style.fill === "white"){
+      e.target.style.fill = "red"
+    }else if(e.target.style.fill === "red"){
+      e.target.style.fill = "white"
+    }else if(e.target.style.fill === ""){
+      e.target.style.fill = "red";
+    }
+  }
+
+  console.log(favList)
 
   const filteredWordsAction = action.filter((word) =>
     word.original_title.toLowerCase().includes(change)
@@ -78,12 +108,9 @@ useEffect(() => {
                 >
                   {selectedPhoto === null ? <BsFillInfoCircleFill /> : ""}
                 </div>
-                <div className="absoluteFavorite">
-                {isClickedFavIcon ? 
-                <AiFillHeart  onClick={() => changeFavIcon(index)} className={`heart${index+1}`}/> 
-                :
-                  <AiOutlineHeart onClick={() => changeFavIcon(index)} className={`heart ${index}`}  />
-                }
+                <div className="absoluteFavorite" onClick={() => changeFavIcon(index)}>
+                <AiFillHeart style={{fill:"#fff"}}   className={`heartFill  heart${index}`} onClick={(e) => changeColor(e)}/>
+
                 </div>
               </div>
               {selectedPhoto && (
