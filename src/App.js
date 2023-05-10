@@ -14,6 +14,7 @@ import { useState } from "react";
 import Account from "./pages/Account";
 import ProfileManagament from "./pages/ProfileManagament";
 import LandingPage from "./pages/LandingPage";
+import Favorite from "./pages/Favorite";
 import NotFound from "./pages/NotFound";
 
 
@@ -64,6 +65,7 @@ function App() {
     <Route path="/documentary" element={<Documentary />} />
     <Route path="/account" element={<Account />} />
     <Route path="/profilemanagement" element={<ProfileManagament />} />
+    <Route path="/favorite" element={<Favorite />} />
     <Route path="*" element={<NotFound />} />
     </Routes>
     </MainContext.Provider>
