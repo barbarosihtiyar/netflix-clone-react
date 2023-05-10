@@ -9,7 +9,8 @@ import { Link } from "react-router-dom";
 import { HiPencilSquare } from "react-icons/hi2";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
-import { MdOutlineAccountCircle } from "react-icons/md";
+import { MdOutlineAccountCircle } from "react-icons/md";   
+import { AiFillHeart } from "react-icons/ai";
 import { FiHelpCircle } from "react-icons/fi";
 import profileAvatar from "../images/profileAvatar.png"
 import { MainContext, useContext } from "../context";
@@ -124,6 +125,10 @@ function Header() {
               <img src={profileAvatar} alt=""  />
               <span>{username}</span>
             </div>
+            <div className="flex">
+                <AiFillHeart className="pl"/>
+                <span onClick={changeEditVal}><Link to={"/favorite"}>Favorite Movie</Link></span>
+              </div>
               <div className="flex">
                 <HiPencilSquare className="pl"/>
                 <span onClick={changeEditVal}><Link to={"/landingpage"}>Profile Managament</Link></span>
