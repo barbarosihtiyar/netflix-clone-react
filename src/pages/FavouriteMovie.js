@@ -5,31 +5,31 @@ import { AiFillHeart } from 'react-icons/ai';
 import { BsFillInfoCircleFill } from 'react-icons/bs';
 import { FaTimes } from 'react-icons/fa';
 import "../sass/favorite.css"
+import bg from "../sass/fixedBg.module.css";
 
 
 function FavoriteMovie() {
-  let {favList , setFavList} = useContext(MainContext);
+  let {change,favList , setFavList} = useContext(MainContext);
   const [showsInfo, setShowsInfo] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   const base_URL = "https://image.tmdb.org/t/p/original";
 
   const changeFavIcon = (val) => {
     const newFav = favList[val];
-    console.log(favList[val])
-
+    console.log(favList.length)
     const index = favList.findIndex((fav) => fav.id === newFav.id);
     // console.log(index)
     if (index !== -1) {
-      favList.splice(index, 1);
-      // indexFav.push({
-      //   index:val,
-      //   val:true
-      // })
-    } else {
-      favList.push(newFav);
-      // indexFav.splice(val,index)
-    }
+      const newFavList = [...favList]
+      newFavList.splice(index, 1);
+      setFavList(newFavList)
+    } 
 }
+
+const filteredWordsFavList = favList.filter((word) =>
+word.original_title.toLowerCase().includes(change)
+);
+
 
 const showInfo = (key) => {
   setShowsInfo(true);
@@ -41,24 +41,25 @@ const closeMovieInfo = () => {
   setSelectedPhoto(null);
 };
 
-const changeColor = (e) => {
-  if(e.target.style.fill === "white"){
-    e.target.style.fill = "red"
-  }else if(e.target.style.fill === "red"){
-    e.target.style.fill = "white"
-  }else if(e.target.style.fill === ""){
-    e.target.style.fill = "red";
-  }
-}
+// const changeColor = (e) => {
+//   if(e.target.style.fill === "red"){
+//     e.target.style.fill = "white"
+//   }else if(e.target.style.fill === "white"){
+//     e.target.style.fill = "red"
+//   }else if(e.target.style.fill === ""){
+//     e.target.style.fill = "white";
+//   }
+// }
 
   return (
     <>
       <Header />
-      <div className="horrorRowContainer">
-      <div className="horrorRowWrapper">
+      <div className={selectedPhoto === null ? "" : bg.fixedBg}>
+      <div className="favoriteContainer">
+      <div className="favoriteWrapper">
         <h1>Favorite Movie</h1>
-        <div className="horror">
-          {favList.map((movie, index) => (
+        <div className="favorite">
+          {filteredWordsFavList.map((movie, index) => (
             <div className="movie" key={index}>
               <div className="image">
                 <img src={`${base_URL}${movie.poster_path}`} alt={movie.name} />
@@ -69,7 +70,7 @@ const changeColor = (e) => {
                   {selectedPhoto === null ? <BsFillInfoCircleFill /> : ""}
                 </div>
                 <div className="absoluteFavorite" onClick={() => changeFavIcon(index)}>
-                <AiFillHeart style={{fill:"#fff"}}   className={`heartFill  heart${index}`} onClick={(e) => changeColor(e)}/>
+                <AiFillHeart style={{fill:"red"}}   className={`heartFill  heart${index}`} />
                 </div>
               </div>
               {selectedPhoto && (
@@ -144,6 +145,7 @@ const changeColor = (e) => {
           ))}
         </div>
       </div>
+    </div>
     </div>
     </>
   )

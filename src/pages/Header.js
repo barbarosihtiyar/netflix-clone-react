@@ -21,7 +21,7 @@ function Header() {
   const [bg, setBg] = useState(false);
   const [check, setCheck] = useState(false);
   let {subsInfo} = useContext(MainContext);
-  let {setEdit} = useContext(MainContext);
+  let {setEdit,setIsLoading} = useContext(MainContext);
   let {change,setChange} = useContext(MainContext);
   const [isFocused,setIsFocused] = useState(false);
   const [hamburgerMenu,setHamburgerMenu] = useState(false);
@@ -29,6 +29,10 @@ function Header() {
 
 
   let username = (subsInfo.username).toUpperCase();
+
+  const changeLoaderVal = () => {
+    setIsLoading(true)
+  }
   
   const searchOnClick = () => {
     setCheck(!check);
@@ -63,36 +67,36 @@ function Header() {
     <div className={bg ? "headerContainer black" : "headerContainer"}>
       <div className="headerWrapper">
         <div className="logo-links">
-          <Link to="/home">
+          <Link onClick={changeLoaderVal} to="/home">
             <img src={netflixLogo} alt="" />
           </Link>
           <div className="links">
             <ul>
               <li>
-                <Link to="/home">Home</Link>
+                <Link onClick={changeLoaderVal} to="/home">Home</Link>
               </li>
               <li>
-              <Link to={"/action"}>
+              <Link onClick={changeLoaderVal} to={"/action"}>
                     <li>Action Movies</li>
                   </Link>
                   </li>
                   <li>
-                  <Link to={"/comedy"}>
+                  <Link onClick={changeLoaderVal} to={"/comedy"}>
                     <li>Comedy Movies</li>
                   </Link>
                   </li>
                   <li>
-                  <Link to={"/horror"}>
+                  <Link onClick={changeLoaderVal} to={"/horror"}>
                     <li>Horror Movies</li>
                   </Link>
                   </li>
                   <li>
-                  <Link to={"/romance"}>
+                  <Link onClick={changeLoaderVal} to={"/romance"}>
                     <li>Romance Movies</li>
                   </Link>
                   </li>
                   <li>
-                  <Link to={"/documentary"}>
+                  <Link onClick={changeLoaderVal} to={"/documentary"}>
                     <li>Documentaries</li>
                   </Link>
                   </li>
@@ -139,7 +143,7 @@ function Header() {
               </div>
               <div className="flex">
                 <FiHelpCircle className="pl"/>
-                <span>Help Center</span>
+                <span><Link to={"/register"}>Help Center</Link></span>
               </div>
             </div>
           </div>

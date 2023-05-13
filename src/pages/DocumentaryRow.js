@@ -11,18 +11,17 @@ function DocumentaryRow({
   fetchURL,
   selectedPhoto,
   setSelectedPhoto,
-  setIsLoading,
-  isLoading,
 }) {
   const [docMovie, setDocMovie] = useState([]);
   const [showsInfo, setShowsInfo] = useState(false);
-  let { change, setChange , favList , setFavList} = useContext(MainContext);
-  const [indexFav,setIndexFav] = useState([]);
+  let { change, favList,setIsLoading} = useContext(MainContext);
+  const [indexFav] = useState([]);
 
   useEffect(() => {
     const fetchDoc = async () => {
       const docMovies = await axios.get(fetchURL);
-      setDocMovie(docMovies.data.results);
+      setDocMovie(docMovies.data.results)
+      setIsLoading(false);
     };
     fetchDoc();
   });
@@ -57,11 +56,6 @@ function DocumentaryRow({
       }
     }
 
-  useEffect(() => {
-    window.addEventListener("beforeunload", function () {
-      setIsLoading(true);
-    });
-  });
 
   const base_URL = "https://image.tmdb.org/t/p/original";
 

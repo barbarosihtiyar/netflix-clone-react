@@ -9,10 +9,12 @@ import { Link } from 'react-router-dom'
 
 
 function LandingPage() {
-  let {edit,setEdit} = useContext(MainContext);
+  let {edit,setEdit,setIsLoading} = useContext(MainContext);
   const [which,setWhich] = useState(true);
   
     console.log(edit)
+
+    setIsLoading(false)
  
     let {subsInfo} = useContext(MainContext);
 

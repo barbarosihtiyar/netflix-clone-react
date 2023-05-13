@@ -6,20 +6,21 @@ import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaTimes } from "react-icons/fa";
 import { AiFillHeart } from "react-icons/ai";
 
-function HorrorRow({ title, fetchURL, selectedPhoto, setSelectedPhoto,setIsLoading,isLoading }) {
+function HorrorRow({ title, fetchURL, selectedPhoto, setSelectedPhoto}) {
   const [horror, setHorror] = useState([]);
-  let { change, setChange , favList , setFavList} = useContext(MainContext);
-  const [indexFav,setIndexFav] = useState([]);
+  let { change, favList,setIsLoading} = useContext(MainContext);
+  const [indexFav] = useState([]);
   const [showsInfo, setShowsInfo] = useState(false);
 
   useEffect(() => {
     const fetchHor = async () => {
       const horrorMovies = await axios.get(fetchURL);
       setHorror(horrorMovies.data.results);
+      console.log(horrorMovies)
+      setIsLoading(false)
     };
     fetchHor();
-    console.log(horror);
-  }, []);
+  },[fetchURL]);
 
   const changeFavIcon = (val) => {
     const newFav = horror[val];
@@ -29,10 +30,6 @@ function HorrorRow({ title, fetchURL, selectedPhoto, setSelectedPhoto,setIsLoadi
     // console.log(index)
     if (index !== -1) {
       favList.splice(index, 1);
-      // indexFav.push({
-      //   index:val,
-      //   val:true
-      // })
       console.log(indexFav)
     } else {
       favList.push(newFav);
@@ -51,11 +48,11 @@ function HorrorRow({ title, fetchURL, selectedPhoto, setSelectedPhoto,setIsLoadi
       }
     }
 
-  useEffect(() => {
-    window.addEventListener('beforeunload', function(){
-      setIsLoading(true)
-    });
-  })
+  // useEffect(() => {
+  //   window.addEventListener('beforeunload', function(){
+  //     setIsLoading(true)
+  //   });
+  // })
 
   const base_URL = "https://image.tmdb.org/t/p/original";
 

@@ -91,7 +91,7 @@ function Account() {
                   <h6>PROFILE AND PARENTAL CONTROLS</h6>
                 </div>
                 <div className="profileParentalControlsInfo">
-                  <span>asd</span>
+                  <span>No</span>
                 </div>
               </div>
               <div className="settings">

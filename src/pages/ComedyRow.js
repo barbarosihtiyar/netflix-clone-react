@@ -6,11 +6,11 @@ import { BsFillInfoCircleFill } from "react-icons/bs";
 import { FaTimes } from "react-icons/fa";
 import { AiFillHeart } from "react-icons/ai";
 
-function ComedyRow({ title, fetchURL, selectedPhoto, setSelectedPhoto,setIsLoading,isLoading }) {
+function ComedyRow({ title, fetchURL, selectedPhoto, setSelectedPhoto}) {
   const [comedy, setComedy] = useState([]);
   const [showsInfo, setShowsInfo] = useState(false);
-  let { change, setChange , favList , setFavList} = useContext(MainContext);
-  const [indexFav,setIndexFav] = useState([]);
+  let { change, favList,setIsLoading} = useContext(MainContext);
+  const [indexFav] = useState([]);
 
 
   const filteredWordsComedy = comedy.filter((word) =>
@@ -21,15 +21,11 @@ function ComedyRow({ title, fetchURL, selectedPhoto, setSelectedPhoto,setIsLoadi
     async function fetchCom() {
       const comedyReq = await axios.get(fetchURL);
       setComedy(comedyReq.data.results);
+      setIsLoading(false);
     }
     fetchCom();
   }, [fetchURL]);
 
-  useEffect(() => {
-    window.addEventListener('beforeunload', function(){
-      setIsLoading(true)
-    });
-  })
 
   const changeFavIcon = (val) => {
     const newFav = comedy[val];

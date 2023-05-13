@@ -11,23 +11,22 @@ function RomanceRow({
   fetchURL,
   selectedPhoto,
   setSelectedPhoto,
-  setIsLoading,
-  isLoading,
 }) {
   const [romanceMovie, setRomanceMovie] = useState([]);
   const base_URL = "https://image.tmdb.org/t/p/original";
   const [showsInfo, setShowsInfo] = useState(false);
-  let { change, setChange , favList , setFavList} = useContext(MainContext);
-  const [indexFav,setIndexFav] = useState([]);
+  let { change,favList,setIsLoading} = useContext(MainContext);
+  const [indexFav] = useState([]);
 
 
   useEffect(() => {
     const fetchRom = async () => {
       const movies = await axios.get(fetchURL);
       setRomanceMovie(movies.data.results);
+      setIsLoading(false)
     };
     fetchRom();
-  });
+  },[fetchURL]);
 
   const changeFavIcon = (val) => {
     const newFav = romanceMovie[val];
@@ -37,10 +36,6 @@ function RomanceRow({
     // console.log(index)
     if (index !== -1) {
       favList.splice(index, 1);
-      // indexFav.push({
-      //   index:val,
-      //   val:true
-      // })
       console.log(indexFav)
     } else {
       favList.push(newFav);
@@ -58,12 +53,6 @@ function RomanceRow({
         e.target.style.fill = "red";
       }
     }
-
-  useEffect(() => {
-    window.addEventListener("beforeunload", function () {
-      setIsLoading(true);
-    });
-  });
 
   const filteredWordsRomance = romanceMovie.filter((word) =>
     word.original_title.toLowerCase().includes(change)

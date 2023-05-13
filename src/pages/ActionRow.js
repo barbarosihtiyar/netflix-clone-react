@@ -1,37 +1,26 @@
 import React, { useEffect, useState } from "react";
 import axios from "../axios";
 import { BsFillInfoCircleFill } from "react-icons/bs";
-import { AiFillPlayCircle } from "react-icons/ai";
-import { GrAddCircle } from "react-icons/gr";
-import { AiTwotoneLike } from "react-icons/ai";
-import { AiOutlineHeart } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
 import { MainContext, useContext } from "../context";
 import { AiFillHeart } from "react-icons/ai";
 
-function ActionRow({ fetchURL, title, selectedPhoto, setSelectedPhoto,setIsLoading,isLoading }) {
+function ActionRow({ fetchURL, title, selectedPhoto, setSelectedPhoto}) {
   const [action, setAction] = useState([]);
   const [showsInfo, setShowsInfo] = useState(false);
   const [isClickedFavIcon,setIsClickedFavIcon] = useState(false);
-  let { change, setChange ,favList, setFavList } = useContext(MainContext);
-  const [content,setContent] = useState("")
-  const [indexFav,setIndexFav] = useState([]);
+  let { change,favList,setIsLoading} = useContext(MainContext);
+  const [indexFav] = useState([]);
   
   useEffect(() => {
     async function fetchAct() {
       const actReq = await axios.get(fetchURL);
       setAction(actReq.data.results);
       // console.log(actReq.data.results);
+      setIsLoading(false)
     }
     fetchAct();
-    setIsLoading(false)
   }, [fetchURL]);
-
-useEffect(() => {
-  window.addEventListener('beforeunload', function(){
-    setIsLoading(true)
-  });
-})
 
   const showInfo = (key) => {
     setShowsInfo(true);
@@ -42,11 +31,6 @@ useEffect(() => {
   const closeMovieInfo = () => {
     setSelectedPhoto(null);
   };
-
-  // const removeFavList = (favList,newList) => {
-  //   const removeFilterList = favList.filter ((fav) => fav.id !== newList.id)
-  //   setFavList(removeFilterList)
-  // }
 
   const changeFavIcon = (val) => {
       const newFav = action[val];

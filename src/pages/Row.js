@@ -7,27 +7,25 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import { MainContext, useContext } from "../context";
 
 
-function Row({title,fetchURL,setIsLoading,isLoading}) {
+function Row({title,fetchURL}) {
   const [movies,setMovies] = useState([]);
-  let {change,setChange} = useContext(MainContext);
-
-
+  let {change,setChange,setIsLoading} = useContext(MainContext);
 
   useEffect(() => {
 
     async function fetchData(){
       const request = await axios.get(fetchURL);
       setMovies(request.data.results);
+      setIsLoading(false)
     }
     fetchData(); 
-
   },[fetchURL])
 
-  useEffect(() => {
-    window.addEventListener('beforeunload', function(){
-      setIsLoading(true)
-    });
-  })
+  // useEffect(() => {
+  //   window.addEventListener('beforeunload', function(){
+  //     setIsLoading(true)
+  //   });
+  // })
   const base_URL = "https://image.tmdb.org/t/p/original";
   
 
