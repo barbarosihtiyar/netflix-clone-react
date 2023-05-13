@@ -65,6 +65,7 @@ function Register() {
     setFivethVis(true);
     setFirstVis(true);
    }     
+   
 
   return (
     <main>
@@ -85,7 +86,7 @@ function Register() {
                 <div className="registerInput">
                   <form>
                     <input id="inputInfo" type="text" placeholder="Email adress" />
-                    <button type="submit" style={{cursor:"pointer"}}>Get Started</button>
+                    <button type="submit" style={{cursor:"pointer"}}><Link to="/signup" style={{textDecoration:"none",color:"#fff"}}>Get Started</Link></button>
                   </form>
                 </div>
               </div>

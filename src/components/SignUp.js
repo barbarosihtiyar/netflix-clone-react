@@ -38,13 +38,22 @@ function Signup() {
   const [showPassword, setShowPassword] = useState(true);
   const [showPasswordAgain, setShowPasswordAgain] = useState(true);
   const [popup,setPopup] = useState(false);
-  let {setSubsInfo} = useContext(MainContext);
+  let {setSubsInfo,setIsLoading} = useContext(MainContext);
 
-
+  setIsLoading(false)
 
 
   const hiddenPopup = () => {
     setPopup(!popup);
+    setUsername("")
+    setEmail("")
+    setPassword("")
+    setPasswordAgain("")
+    setBirthday("")
+    setGender("")
+    setCardNumber("")
+    setCvc("")
+    setCheckbox("")
   }
 
   const handleSubmit = (e) => {
@@ -157,6 +166,8 @@ function Signup() {
       cardNumber !== "" &&
       cvc !== "" &&
       checkbox === "click" &&
+      password === passwordAgain &&
+      cardNumber.length === 12 &&
       isEmailValid()
     ) {
         setSubsInfo ({
@@ -422,7 +433,7 @@ function Signup() {
             <span>You have successfully registered</span>
             </div>
             <div className="footerPopup">
-              <button type="button" onClick={hiddenPopup}>OKEY</button>
+              <button type="button" onClick={hiddenPopup}><Link style={{color:"#000"}} to="/">OKEY</Link></button>
             </div>
             </div>
           </div>
