@@ -16,6 +16,8 @@ import ProfileManagament from "./pages/ProfileManagament";
 import LandingPage from "./pages/LandingPage";
 import Favorite from "./pages/Favorite";
 import NotFound from "./pages/NotFound";
+import LoadingButtons from "./pages/LoadingButtons";
+import bg from "./sass/fixedBg.module.css";
 
 
 function App() {
@@ -37,6 +39,7 @@ function App() {
   const [gameusername,setGameusername] = useState("");
   const [change,setChange] = useState("");
   const [favList,setFavList] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const data = {
     subsInfo,
@@ -48,17 +51,23 @@ function App() {
     change,
     setChange,
     favList,
-    setFavList
+    setFavList,
+    isLoading, 
+    setIsLoading
   }
   return (
     <MainContext.Provider value={data}>
+    <div  className={isLoading === true ?  bg.fixedLoadingBg : ""}>
+    {isLoading &&
+        <LoadingButtons/>
+    }
     <Routes>
-    <Route exact path="/" element={<Login />} />
+    <Route exact path="/"  element={<Login />} />
     <Route  path="/register" element={<Register />} />
     <Route  path="/signup" element={<Signup />} />
-    <Route  path="/home" element={<Home />} />
+    <Route  path="/home"  element={<Home />} />
     <Route  path="/landingpage" element={<LandingPage />} />
-    <Route path="/action" element={<Action />} />
+    <Route path="/action"  element={<Action />} />
     <Route path="/comedy" element={<Comedy />} />
     <Route path="/horror" element={<Horror />} />
     <Route path="/romance" element={<Romance />} />
@@ -68,6 +77,7 @@ function App() {
     <Route path="/favorite" element={<Favorite />} />
     <Route path="*" element={<NotFound />} />
     </Routes>
+    </div>
     </MainContext.Provider>
   );
 }
