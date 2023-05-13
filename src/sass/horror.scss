@@ -1,5 +1,3 @@
-@import "variables";
-
 .horrorRowContainer {
     .horrorRowWrapper {
         padding-left: 50px;
@@ -50,7 +48,7 @@
     .clickPopupContainer {
         position: fixed;
         max-width: 900px;
-        z-index: 999;
+        z-index: 10;
         top: 18%;
         left: 24%;
         .clickPopupWrapper {

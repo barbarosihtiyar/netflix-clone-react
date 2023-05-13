@@ -1,81 +1,104 @@
-.moviesContainer {
-    display: flex;
-    flex-direction: column;
-    padding-left: 50px;
+@import "variables";
 
-    h3 {
-        color: #e5e5e5;
-        padding-top: 40px;
-        padding-bottom: 5px;
-        padding-left: 3px;
-
-    }
-
-    .moviesWrapper {
+.romanceRowContainer {
+    .romanceRowWrapper {
+        padding-left: 50px;
         display: flex;
-        overflow-y: hidden;
-        overflow-x: hidden;
-        position: relative;
-
-        .movie {
-            cursor: pointer;
-            width: 100%;
-            padding: 4px;
-
-            img {
-                max-height: 300px;
-                max-width: 250px;
-                border-radius: 5px;
-            }
-
-            :hover {
-                scale: 1.08;
-                padding: 5px;
-            }
+        flex-direction: column;
+        padding-bottom: 10px;
+        h1 {
+            color: #e5e5e5;
+            padding-top: 40px;
+            padding-bottom: 5px;
+            padding-left: 3px;
         }
-
-        &::-webkit-scrollbar {
-            display: none;
+        .romance {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            .movie {
+                padding-bottom: 5px;
+                margin-right: auto;
+                .image {
+                    position: relative;
+                    max-width: 200px;
+                    img {
+                        height: 300px;
+                        max-width: 200px;
+                        border-radius: 5px;
+                        &:hover {
+                            transform: scale(1.08);
+                            cursor: pointer;
+                        }
+                    }
+                    .absoluteRomance {
+                        position: absolute;
+                        cursor: pointer;
+                        top: 2%;
+                        font-size: 20px;
+                        z-index: 98;
+                        right: 5%;
+                        color: #fff;
+                    }
+                }
+            }
         }
     }
 }
 
+.clickPopup {
+    .clickPopupContainer {
+        position: fixed;
+        max-width: 900px;
+        z-index: 999;
+        top: 18%;
+        left: 24%;
+        .clickPopupWrapper {
+            margin: auto;
+            .clickPopupImage {
+                position: relative;
+                svg {
+                    position: absolute;
+                    @include font(30px, 600, #fff);
+                    top: 3%;
+                    right: 3%;
+                }
+            }
+            .clickPopupTitleContent {
+                .clickPopupTitle {
+                    h1 {
+                        @include font(40px, 600, #fff);
+                        padding-top: 10px;
+                        text-align: center;
+                    }
+                }
+                .clickPopupContent {
+                    display: flex;
+                    gap: 30px;
+                    padding-bottom: 10px;
+                    margin: auto;
+                    justify-content: center;
+                    span {
+                        @include font(17px, 600, #fff);
+                    }
+                }
+                .clickPopupSum {
+                    p {
+                        @include font(18px, 600, #fff);
+                    }
+                }
+            }
+        }
+    }
 
-
-.alice-carousel__stage-item {
-    width: 210px !important;
-}
-
-.alice-carousel__dots-item {
-    display: none !important;
-}
-
-.alice-carousel__prev-btn {
-    position: absolute;
-    font-size: 80px;
-    color: #fff;
-    height: 50px;
-    left: 3%;
-    top: 22%;
-    z-index: 1000;
-    text-align: inherit;
-}
-
-.alice-carousel__next-btn {
-    position: absolute;
-    font-size: 80px;
-    color: #fff;
-    height: 50px;
-    top: 22%;
-    left: 92%;
-    z-index: 1000;
-}
-
-.alice-carousel__dots {
-    display: none;
-}
-
-.alice-carousel__next-btn-wrapper,
-.alice-carousel__prev-btn-wrapper {
-    width: 61px;
+    // &::after{
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: rgba(50, 48, 48, 0.5);
+    //     opacity: 0.1;
+    // }
 }

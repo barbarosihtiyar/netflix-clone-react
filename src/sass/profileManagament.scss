@@ -77,8 +77,11 @@
                             background: #666;
                             outline: none;
                             border: none;
+                            font-size: 20px;
+                            color: #fff;
                             &::placeholder{
                                 color: #FFFFFF;
+                                font-size: 20px;
                             }    
                         }
                     }
@@ -167,6 +170,57 @@
     }
 }
 
+
+.popupAlerts{
+    .popupContainer{
+        .popupWrapper{
+            .popups{
+                width: 618px;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-color: #000;
+                position: absolute;
+                top: 25%;
+                left: 35%;
+                z-index: 99;
+                .headerPopup{
+                    color: #fff;
+                    margin-left: auto;
+                    font-size: 2rem;
+                    margin-bottom: auto;
+                    cursor: pointer;
+                    padding: 5px 10px;
+                }
+                .bodyPopup{
+                    color: #fff;
+                    text-align: center;
+                    font-size: 1.5rem;
+                    padding-bottom: 30px;
+                    margin-bottom: auto;
+                }
+                .footerPopup{
+                    margin: 0 auto;
+                    text-align: center;
+                    padding-bottom: 30px;
+                    display: flex;
+                    gap: 30px;
+                    button{
+                        border: none;
+                        background-color: #fff;
+                        color: #000;
+                        font-size: 2rem;
+                        padding: 5px;
+                        width: 100px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+        }
+    }
+}
 
 
 $small: 300px;

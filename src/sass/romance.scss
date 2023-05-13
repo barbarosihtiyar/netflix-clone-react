@@ -1,106 +1,213 @@
 @import "variables";
 
-.romanceRowContainer {
-    .romanceRowWrapper {
-        padding-left: 50px;
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 10px;
-        h1 {
-            color: #e5e5e5;
-            padding-top: 40px;
-            padding-bottom: 5px;
-            padding-left: 3px;
+main {
+    background-color: #000;
+    .sectionRegister {
+        background: url(../images/loginImageBg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 720px;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            opacity: 0.3;
         }
-        .romance {
+        .registerContainer {
+            max-width: 1250px;
+            margin: 0 auto;
+            height: 100%;
             display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            .movie {
-                padding-bottom: 5px;
-                margin-right: auto;
-                .image {
-                    position: relative;
-                    max-width: 200px;
+            flex-direction: column;
+            justify-content: center;
+            .registerWrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .registerHeader {
+                    position: absolute;
+                    top: 2%;
+                    left: 2%;
+
                     img {
-                        height: 300px;
-                        max-width: 200px;
-                        border-radius: 5px;
-                        &:hover {
-                            transform: scale(1.08);
-                            cursor: pointer;
+                        width: 167px;
+                    }
+                }
+                .register {
+                    margin: 0 auto;
+                    .registerTitle {
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        z-index: 100;
+                        h1 {
+                            @include font(50px, 800, #fff);
+                            width: 600px;
+                            line-height: 58px;
+                            text-align: center;
+                            padding-bottom: 5px;
+                        }
+                        h6 {
+                            @include font(25px, 600, #fff);
+                            text-align: center;
+                            padding-bottom: 12px;
+                        }
+                        span {
+                            @include font(18px, 600, #fff);
+                            text-align: center;
+                            padding-bottom: 8px;
+                        }
+                        .registerInput {
+                            form {
+                                display: flex;
+                                input {
+                                    width: 460px;
+                                    height: 60px;
+                                    outline: none;
+                                    border: none;
+                                    padding: 0 10px;
+                                }
+                                button {
+                                    width: 212px;
+                                    border: none;
+                                    outline: none;
+                                    background-color: #ff0000;
+                                    color: #fff;
+                                    @include font(22px, 600, #fff);
+                                }
+                            }
                         }
                     }
-                    .absoluteRomance {
-                        position: absolute;
-                        cursor: pointer;
-                        top: 2%;
-                        font-size: 20px;
-                        z-index: 98;
-                        right: 5%;
-                        color: #fff;
-                    }
                 }
             }
         }
     }
-}
-
-.clickPopup {
-    .clickPopupContainer {
-        position: fixed;
-        max-width: 900px;
-        z-index: 999;
-        top: 18%;
-        left: 24%;
-        .clickPopupWrapper {
-            margin: auto;
-            .clickPopupImage {
-                position: relative;
-                img {
-                }
-                svg {
-                    position: absolute;
-                    @include font(30px, 600, #fff);
-                    top: 3%;
-                    right: 3%;
-                }
-            }
-            .clickPopupTitleContent {
-                .clickPopupTitle {
-                    h1 {
-                        @include font(40px, 600, #fff);
-                        padding-top: 10px;
-                        text-align: center;
-                    }
-                }
-                .clickPopupContent {
+    .info {
+        .infoContainer {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            border-bottom: 5px solid #222;
+            .infoWrapper {
+                max-width: 1000px;
+                margin: 0 auto;    
+                .part {
                     display: flex;
-                    gap: 30px;
-                    padding-bottom: 10px;
-                    margin: auto;
-                    justify-content: center;
-                    span {
-                        @include font(17px, 600, #fff);
+                    align-items: center;    
+                    .text {
+                        h1 {
+                            @include font(3.125rem, 600, #fff);
+                            width: 84%;
+                        }
+                        h6 {
+                            @include font(1.625rem, 400, #fff);
+                            width:84%;
+                        }
+                    }
+                    .image{
+                        position: relative;
+                        z-index: 2;
+                        img{
+
+                        }
+                        .video{
+                            position: absolute;
+                            bottom: 52%;
+                            transform: translate(-50%,50%);
+                            left: 50%;
+                            z-index: -1;
+                            video{
+                                max-width: 265px;
+                                
+                            }
+                        }
                     }
                 }
-                .clickPopupSum {
-                    p {
-                        @include font(18px, 600, #fff);
+                .askedQuestions{
+                    max-width: 1000px;
+                    h1{
+                        @include font(3.125rem,600,#fff);
+                        text-align: center;
+                        padding-bottom: 30px;
+                    }
+                    .asked{
+                        max-width: 815px;
+                        margin: 0 auto;
+                        background-color: #303030;
+                        margin-bottom: 10px;
+                        .askedButton{
+                            background-color: transparent;
+                            padding: 20px;
+                            @include font(25px,500,#fff);
+                            width: 100%;
+                            display: flex;
+                            border: none;
+                            outline: none;
+                            cursor: pointer;
+                            .rotate{
+                                transform: rotate(45deg);
+                            }
+                            span{
+                                width: 98%;
+                                text-align: left;
+                            }
+                            .plusIcon{
+                                @include font(30px,500,#fff);
+                            }
+                        }
+                        .plusIcon{
+                            transition: transform .3s;
+                        }
+                        .answer{
+                            @include font(20px,500,#fff);
+                            max-height: 0px;
+                            transition: max-height 1s ;
+                            visibility:collapse;
+                            p{
+                                max-height: 0px;
+                                overflow: hidden;
+                            }
+                        }
+                        .block{
+                            max-height: 1200px;
+                            transition: max-height 1s;
+                            .collapse{
+                                padding-bottom: 10px;
+                                @include font(18px,500,#fff);
+                                max-width: 761px;
+                                margin: 0 auto;
+                                overflow: visible;
+                            }
+                        }
                     }
                 }
+               
             }
         }
     }
-
-    // &::after{
-    //     content: "";
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     background-color: rgba(50, 48, 48, 0.5);
-    //     opacity: 0.1;
-    // }
 }
+
+.partInfoThird{
+    .video{
+        bottom: 66% !important;
+        video{
+            max-width: 210px !important;
+        }
+    }
+}
+
+.partInfoSecond{
+    flex-flow: row-reverse;
+    h1{
+        margin-left: auto;
+        width: 78%;
+    }
+    h6{
+        margin-left: auto;
+    }
+}
+
+

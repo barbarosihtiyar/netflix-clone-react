@@ -12,3 +12,21 @@
         z-index: 12;
     }
     }
+    
+    
+    
+    .fixedLoadingBg{
+        &::after{
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width:100%;
+            height:100%;
+            background-color:#000;
+            opacity: 1;
+            backdrop-filter: blur(100px);
+            z-index: 12;
+        }
+        }
+    

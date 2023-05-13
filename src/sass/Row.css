@@ -1,72 +1,89 @@
-.moviesContainer {
+.romanceRowContainer .romanceRowWrapper {
+  padding-left: 50px;
   display: flex;
   flex-direction: column;
-  padding-left: 50px;
+  padding-bottom: 10px;
 }
-.moviesContainer h3 {
+.romanceRowContainer .romanceRowWrapper h1 {
   color: #e5e5e5;
   padding-top: 40px;
   padding-bottom: 5px;
   padding-left: 3px;
 }
-.moviesContainer .moviesWrapper {
+.romanceRowContainer .romanceRowWrapper .romance {
   display: flex;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.romanceRowContainer .romanceRowWrapper .romance .movie {
+  padding-bottom: 5px;
+  margin-right: auto;
+}
+.romanceRowContainer .romanceRowWrapper .romance .movie .image {
   position: relative;
+  max-width: 200px;
 }
-.moviesContainer .moviesWrapper .movie {
-  cursor: pointer;
-  width: 100%;
-  padding: 4px;
-}
-.moviesContainer .moviesWrapper .movie img {
-  max-height: 300px;
-  max-width: 250px;
+.romanceRowContainer .romanceRowWrapper .romance .movie .image img {
+  height: 300px;
+  max-width: 200px;
   border-radius: 5px;
 }
-.moviesContainer .moviesWrapper .movie :hover {
-  scale: 1.08;
-  padding: 5px;
+.romanceRowContainer .romanceRowWrapper .romance .movie .image img:hover {
+  transform: scale(1.08);
+  cursor: pointer;
 }
-.moviesContainer .moviesWrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.alice-carousel__stage-item {
-  width: 210px !important;
-}
-
-.alice-carousel__dots-item {
-  display: none !important;
-}
-
-.alice-carousel__prev-btn {
+.romanceRowContainer .romanceRowWrapper .romance .movie .image .absoluteRomance {
   position: absolute;
-  font-size: 80px;
+  cursor: pointer;
+  top: 2%;
+  font-size: 20px;
+  z-index: 98;
+  right: 5%;
   color: #fff;
-  height: 50px;
-  left: 3%;
-  top: 22%;
-  z-index: 1000;
-  text-align: inherit;
 }
 
-.alice-carousel__next-btn {
+.clickPopup .clickPopupContainer {
+  position: fixed;
+  max-width: 900px;
+  z-index: 999;
+  top: 18%;
+  left: 24%;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper {
+  margin: auto;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupImage {
+  position: relative;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupImage svg {
   position: absolute;
-  font-size: 80px;
+  font-size: 30px;
+  font-weight: 600;
   color: #fff;
-  height: 50px;
-  top: 22%;
-  left: 92%;
-  z-index: 1000;
+  top: 3%;
+  right: 3%;
 }
-
-.alice-carousel__dots {
-  display: none;
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupTitleContent .clickPopupTitle h1 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  padding-top: 10px;
+  text-align: center;
 }
-
-.alice-carousel__next-btn-wrapper,
-.alice-carousel__prev-btn-wrapper {
-  width: 61px;
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupTitleContent .clickPopupContent {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 10px;
+  margin: auto;
+  justify-content: center;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupTitleContent .clickPopupContent span {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+}
+.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupTitleContent .clickPopupSum p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
 }/*# sourceMappingURL=Row.css.map */

@@ -82,12 +82,16 @@
   background: #666;
   outline: none;
   border: none;
+  font-size: 20px;
+  color: #fff;
 }
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .createUsername #usernameManagament::-moz-placeholder {
   color: #FFFFFF;
+  font-size: 20px;
 }
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .createUsername #usernameManagament::placeholder {
   color: #FFFFFF;
+  font-size: 20px;
 }
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .imageInfo .info .settingsAdult {
   padding-top: 30px;
@@ -163,6 +167,50 @@
 .profileManagament .profileManagamentContainer .profileManagamentWrapper .submitProfileManagement a:hover {
   cursor: pointer;
   border: 1px solid #fff;
+}
+
+.popupAlerts .popupContainer .popupWrapper .popups {
+  width: 618px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  z-index: 99;
+}
+.popupAlerts .popupContainer .popupWrapper .popups .headerPopup {
+  color: #fff;
+  margin-left: auto;
+  font-size: 2rem;
+  margin-bottom: auto;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.popupAlerts .popupContainer .popupWrapper .popups .bodyPopup {
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 30px;
+  margin-bottom: auto;
+}
+.popupAlerts .popupContainer .popupWrapper .popups .footerPopup {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 30px;
+  display: flex;
+  gap: 30px;
+}
+.popupAlerts .popupContainer .popupWrapper .popups .footerPopup button {
+  border: none;
+  background-color: #fff;
+  color: #000;
+  font-size: 2rem;
+  padding: 5px;
+  width: 100px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1300px) {

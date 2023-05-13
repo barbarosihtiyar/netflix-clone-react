@@ -1,89 +1,217 @@
-.romanceRowContainer .romanceRowWrapper {
-  padding-left: 50px;
+main {
+  background-color: #000;
+}
+main .sectionRegister {
+  background: url(../images/loginImageBg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 720px;
+}
+main .sectionRegister::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0.3;
+}
+main .sectionRegister .registerContainer {
+  max-width: 1250px;
+  margin: 0 auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  padding-bottom: 10px;
-}
-.romanceRowContainer .romanceRowWrapper h1 {
-  color: #e5e5e5;
-  padding-top: 40px;
-  padding-bottom: 5px;
-  padding-left: 3px;
-}
-.romanceRowContainer .romanceRowWrapper .romance {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-.romanceRowContainer .romanceRowWrapper .romance .movie {
-  padding-bottom: 5px;
-  margin-right: auto;
-}
-.romanceRowContainer .romanceRowWrapper .romance .movie .image {
-  position: relative;
-  max-width: 200px;
-}
-.romanceRowContainer .romanceRowWrapper .romance .movie .image img {
-  height: 300px;
-  max-width: 200px;
-  border-radius: 5px;
-}
-.romanceRowContainer .romanceRowWrapper .romance .movie .image img:hover {
-  transform: scale(1.08);
-  cursor: pointer;
-}
-.romanceRowContainer .romanceRowWrapper .romance .movie .image .absoluteRomance {
-  position: absolute;
-  cursor: pointer;
-  top: 2%;
-  font-size: 20px;
-  z-index: 98;
-  right: 5%;
-  color: #fff;
-}
-
-.clickPopup .clickPopupContainer {
-  position: fixed;
-  max-width: 900px;
-  z-index: 999;
-  top: 18%;
-  left: 24%;
-}
-.clickPopup .clickPopupContainer .clickPopupWrapper {
-  margin: auto;
-}
-.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupImage {
-  position: relative;
-}
-.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupImage svg {
-  position: absolute;
-  font-size: 30px;
-  font-weight: 600;
-  color: #fff;
-  top: 3%;
-  right: 3%;
-}
-.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupTitleContent .clickPopupTitle h1 {
-  font-size: 40px;
-  font-weight: 600;
-  color: #fff;
-  padding-top: 10px;
-  text-align: center;
-}
-.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupTitleContent .clickPopupContent {
-  display: flex;
-  gap: 30px;
-  padding-bottom: 10px;
-  margin: auto;
   justify-content: center;
 }
-.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupTitleContent .clickPopupContent span {
-  font-size: 17px;
+main .sectionRegister .registerContainer .registerWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .sectionRegister .registerContainer .registerWrapper .registerHeader {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+main .sectionRegister .registerContainer .registerWrapper .registerHeader img {
+  width: 167px;
+}
+main .sectionRegister .registerContainer .registerWrapper .register {
+  margin: 0 auto;
+}
+main .sectionRegister .registerContainer .registerWrapper .register .registerTitle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 100;
+}
+main .sectionRegister .registerContainer .registerWrapper .register .registerTitle h1 {
+  font-size: 50px;
+  font-weight: 800;
+  color: #fff;
+  width: 600px;
+  line-height: 58px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+main .sectionRegister .registerContainer .registerWrapper .register .registerTitle h6 {
+  font-size: 25px;
   font-weight: 600;
   color: #fff;
+  text-align: center;
+  padding-bottom: 12px;
 }
-.clickPopup .clickPopupContainer .clickPopupWrapper .clickPopupTitleContent .clickPopupSum p {
+main .sectionRegister .registerContainer .registerWrapper .register .registerTitle span {
   font-size: 18px;
   font-weight: 600;
   color: #fff;
+  text-align: center;
+  padding-bottom: 8px;
+}
+main .sectionRegister .registerContainer .registerWrapper .register .registerTitle .registerInput form {
+  display: flex;
+}
+main .sectionRegister .registerContainer .registerWrapper .register .registerTitle .registerInput form input {
+  width: 460px;
+  height: 60px;
+  outline: none;
+  border: none;
+  padding: 0 10px;
+}
+main .sectionRegister .registerContainer .registerWrapper .register .registerTitle .registerInput form button {
+  width: 212px;
+  border: none;
+  outline: none;
+  background-color: #ff0000;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+}
+main .info .infoContainer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 5px solid #222;
+}
+main .info .infoContainer .infoWrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+main .info .infoContainer .infoWrapper .part {
+  display: flex;
+  align-items: center;
+}
+main .info .infoContainer .infoWrapper .part .text h1 {
+  font-size: 3.125rem;
+  font-weight: 600;
+  color: #fff;
+  width: 84%;
+}
+main .info .infoContainer .infoWrapper .part .text h6 {
+  font-size: 1.625rem;
+  font-weight: 400;
+  color: #fff;
+  width: 84%;
+}
+main .info .infoContainer .infoWrapper .part .image {
+  position: relative;
+  z-index: 2;
+}
+main .info .infoContainer .infoWrapper .part .image .video {
+  position: absolute;
+  bottom: 52%;
+  transform: translate(-50%, 50%);
+  left: 50%;
+  z-index: -1;
+}
+main .info .infoContainer .infoWrapper .part .image .video video {
+  max-width: 265px;
+}
+main .info .infoContainer .infoWrapper .askedQuestions {
+  max-width: 1000px;
+}
+main .info .infoContainer .infoWrapper .askedQuestions h1 {
+  font-size: 3.125rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 30px;
+}
+main .info .infoContainer .infoWrapper .askedQuestions .asked {
+  max-width: 815px;
+  margin: 0 auto;
+  background-color: #303030;
+  margin-bottom: 10px;
+}
+main .info .infoContainer .infoWrapper .askedQuestions .asked .askedButton {
+  background-color: transparent;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+main .info .infoContainer .infoWrapper .askedQuestions .asked .askedButton .rotate {
+  transform: rotate(45deg);
+}
+main .info .infoContainer .infoWrapper .askedQuestions .asked .askedButton span {
+  width: 98%;
+  text-align: left;
+}
+main .info .infoContainer .infoWrapper .askedQuestions .asked .askedButton .plusIcon {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+main .info .infoContainer .infoWrapper .askedQuestions .asked .plusIcon {
+  transition: transform 0.3s;
+}
+main .info .infoContainer .infoWrapper .askedQuestions .asked .answer {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  max-height: 0px;
+  transition: max-height 1s;
+  visibility: collapse;
+}
+main .info .infoContainer .infoWrapper .askedQuestions .asked .answer p {
+  max-height: 0px;
+  overflow: hidden;
+}
+main .info .infoContainer .infoWrapper .askedQuestions .asked .block {
+  max-height: 1200px;
+  transition: max-height 1s;
+}
+main .info .infoContainer .infoWrapper .askedQuestions .asked .block .collapse {
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  max-width: 761px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.partInfoThird .video {
+  bottom: 66% !important;
+}
+.partInfoThird .video video {
+  max-width: 210px !important;
+}
+
+.partInfoSecond {
+  flex-flow: row-reverse;
+}
+.partInfoSecond h1 {
+  margin-left: auto;
+  width: 78%;
+}
+.partInfoSecond h6 {
+  margin-left: auto;
 }/*# sourceMappingURL=romance.css.map */

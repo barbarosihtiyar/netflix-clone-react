@@ -1,18 +1,15 @@
 @import "variables";
 
-.signup {
+.signup{
     display: flex;
     justify-content: center;
-
-    .signupContainer {
+    .signupContainer{
         max-width: 800px;
         margin: auto;
         padding: 15px 30px;
         margin-top: 150px;
-
-        .signupWrapper {
+        .signupWrapper{
             position: relative;
-
             .registerHeader {
                 position: fixed;
                 top: 2%;
@@ -22,86 +19,73 @@
                     width: 167px;
                 }
             }
-
-            .signupTitle {
+            .signupTitle{
                 max-width: 600px;
-
-                h1 {
-                    @include font(40px, 700, #fff);
+                h1{
+                    @include font(40px,700,#fff);
                     padding-bottom: 30px;
                     text-align: center;
-                }
-            }
-
-            .signupForm {
-                form {
+               }
+               }
+            .signupForm{
+                form{
                     display: flex;
                     flex-direction: column;
                     max-width: 700px;
-
-                    label {
-                        @include font(20px, 600, #fff);
+                    label{
+                        @include font(20px,600,#fff);
                     }
-
-                    input {
+                    input{
                         margin-bottom: 10px;
                         padding: 12px;
                         border-radius: 5px;
                         outline: none;
                         border: none;
-                        @include font(15px, 800, #000);
+                        @include font(15px,800,#000);
                         max-width: 600px;
 
                     }
-
-                    button {
+                    button{
                         width: 50%;
                         padding: 15px;
                         margin: 0 auto;
                         border: none;
                         outline: none;
-                        @include font(25px, 700, #000);
+                        @include font(25px,700,#000);
                         cursor: pointer;
                     }
-
-                    .malefemale {
+                    .malefemale{
                         display: flex;
                         align-items: center;
                         gap: 20px;
                         max-height: 30px;
-                        @include font(30px, 600, #fff);
+                        @include font(30px,600,#fff);
                     }
-
-                    input[type=radio] {
+                    input[type=radio]{
                         margin-right: 5px;
                     }
-
-                    .checkbox {
+                    .checkbox{
                         display: flex;
                         gap: 5px;
                         padding-top: 15px;
                         padding-bottom: 30px;
                         align-items: flex-start;
-
-                        input {
+                        input{
                             padding: 5px;
                             margin: 0;
                             width: auto;
                             margin-top: 5px;
                         }
                     }
-
+                    
                 }
-
-                span {
-                    @include font(25px, 600, #fff);
+                span{
+                    @include font(25px,600,#fff);
                     width: 100%;
                     text-align: center;
-
-                    a {
-                        @include font(25px, 600, #fff);
+                    a{
+                        @include font(25px,600,#fff);
                     }
-
                     display: inline-block;
                     padding-top: 30px;
                 }
@@ -110,44 +94,38 @@
     }
 }
 
-.redAlert {
+.redAlert{
     border: 3px solid red !important;
 }
-
-.warningColor {
+.warningColor{
     color: red !important;
 }
-
-.none {
+.none{
     display: none;
 }
-
-.passwordErrorMessage {
+.passwordErrorMessage{
     display: block;
     color: red !important;
 }
-
-.flex {
+.flex{
     display: flex;
     align-items: center;
-
-    input {
+    input{
         width: 100%;
     }
-
-    .showHidePassword {
-        margin-bottom: 8px;
-        margin-left: 5px;
+    .showHidePassword{
+            margin-bottom: 8px;
+            margin-left: 5px;
     }
 }
 
-.checkbox {
-    label {
+.checkbox{
+    label{
         max-width: 600px;
     }
 }
 
-.popup {
+.popup{
     width: 618px;
     height: 400px;
     display: flex;
@@ -157,29 +135,25 @@
     position: absolute;
     top: 20%;
     z-index: 99;
-
-    .headerPopup {
+    .headerPopup{
         color: #fff;
         margin-left: auto;
         font-size: 2rem;
         margin-bottom: auto;
         cursor: pointer;
     }
-
-    .bodyPopup {
+    .bodyPopup{
         color: #fff;
         text-align: center;
         font-size: 1.5rem;
         padding-bottom: 30px;
         margin-bottom: auto;
     }
-
-    .footerPopup {
+    .footerPopup{
         margin: 0 auto;
         text-align: center;
         padding-bottom: 30px;
-
-        button {
+        button{
             border: none;
             background-color: #fff;
             color: #000;
@@ -191,13 +165,13 @@
     }
 }
 
-.min {
-    transform: translateY(-500px);
-    transition: all 1s;
-    top: -10%;
+.min{
+transform: translateY(-500px);
+transition: all 1s;
+top: -10%;
 }
 
-.max {
+.max{
     transform: scale(1);
     transition: all 1s;
 }
