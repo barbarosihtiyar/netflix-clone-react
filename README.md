@@ -28,10 +28,10 @@
 
 ![1](https://github.com/barbarosihtiyar/netflix-clone-react/assets/104565169/831b88ea-f5b8-4faa-804d-c5a72d6685ae)
 ![2](https://github.com/barbarosihtiyar/netflix-clone-react/assets/104565169/51152fe9-df8f-48c2-8233-c1a8de72069a)
-![3](https://github.com/barbarosihtiyar/netflix-clone-react/assets/104565169/7a892f8d-16f7-4a84-b229-303dd206a460)
+![3](https://github.com/barbarosihtiyar/netflix-clone-react/assets/104565169/c4ccaf0e-0a25-436e-a3e2-5aee20073d8e)
 ![4](https://github.com/barbarosihtiyar/netflix-clone-react/assets/104565169/0cb23871-7986-4fe7-9561-4d896ec194c8)
 ![5](https://github.com/barbarosihtiyar/netflix-clone-react/assets/104565169/0f6aed5e-62b0-40b9-b585-c340829eecb7)
-![6](https://github.com/barbarosihtiyar/netflix-clone-react/assets/104565169/ee099145-0498-4165-89bc-07609e4f1b41)
+![6](https://github.com/barbarosihtiyar/netflix-clone-react/assets/104565169/170722f5-9f2e-4d14-bcf3-e038199cefe4)
 ![7](https://github.com/barbarosihtiyar/netflix-clone-react/assets/104565169/d2d75197-dc63-48cf-8511-483cea716527)
 ![8](https://github.com/barbarosihtiyar/netflix-clone-react/assets/104565169/63c9bfc9-389f-44bb-abe3-0842a79321f1)
 ![9](https://github.com/barbarosihtiyar/netflix-clone-react/assets/104565169/3ce78aa1-01c1-4af9-b35b-a142e0061d17)
